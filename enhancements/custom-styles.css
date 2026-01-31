@@ -1,0 +1,1240 @@
+/* ============================================
+   DE BEER BONSMARA - WORLD CLASS WEBSITE ENHANCEMENTS
+   Premium Farm Website CSS Effects
+   Version: 2.0
+   ============================================ */
+
+/* ============================================
+   1. ROOT VARIABLES - Premium Color Palette
+   ============================================ */
+:root {
+  /* Primary Colors - Earthy, Premium */
+  --db-gold: #c9a227;
+  --db-gold-light: #e8d48a;
+  --db-gold-dark: #8b7016;
+  --db-brown: #4a3728;
+  --db-brown-light: #6b5344;
+  --db-brown-dark: #2d1f17;
+  --db-cream: #f5f0e6;
+  --db-cream-dark: #e8e0d0;
+  --db-green: #2d5016;
+  --db-green-light: #4a7828;
+
+  /* Accent Colors */
+  --db-honey: #f4a300;
+  --db-grass: #7cb342;
+  --db-cattle: #8d6e63;
+
+  /* Gradients */
+  --gradient-gold: linear-gradient(
+    135deg,
+    var(--db-gold) 0%,
+    var(--db-gold-dark) 100%
+  );
+  --gradient-premium: linear-gradient(
+    135deg,
+    var(--db-brown-dark) 0%,
+    var(--db-brown) 50%,
+    var(--db-brown-light) 100%
+  );
+  --gradient-hero: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+
+  /* Shadows - Luxury Feel */
+  --shadow-soft: 0 4px 20px rgba(74, 55, 40, 0.1);
+  --shadow-medium: 0 8px 40px rgba(74, 55, 40, 0.15);
+  --shadow-strong: 0 16px 60px rgba(74, 55, 40, 0.2);
+  --shadow-gold: 0 4px 30px rgba(201, 162, 39, 0.3);
+
+  /* Typography */
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Lato", "Helvetica Neue", sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ============================================
+   2. GLOBAL TYPOGRAPHY ENHANCEMENTS
+   ============================================ */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap");
+
+body {
+  font-family: var(--font-body) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.et_pb_module_header,
+.et_pb_text h1,
+.et_pb_text h2,
+.et_pb_text h3 {
+  font-family: var(--font-heading) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em;
+}
+
+/* Elegant Text Selection */
+::selection {
+  background: var(--db-gold);
+  color: white;
+}
+
+/* ============================================
+   3. SMOOTH SCROLL & PAGE TRANSITIONS
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Page Load Animation */
+body {
+  animation: fadeInPage 0.8s ease-out;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   4. PREMIUM HEADER STYLING
+   ============================================ */
+#main-header,
+.et-fixed-header#main-header {
+  background: linear-gradient(
+    180deg,
+    rgba(45, 31, 23, 0.98) 0%,
+    rgba(74, 55, 40, 0.95) 100%
+  ) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+  transition: all var(--transition-medium) !important;
+}
+
+#main-header.et-fixed-header {
+  background: rgba(45, 31, 23, 0.98) !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+/* Logo Animation */
+#logo {
+  transition:
+    transform var(--transition-medium),
+    filter var(--transition-medium);
+}
+
+#logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Navigation Links - Premium Style */
+#top-menu li a,
+.et_mobile_menu li a {
+  font-family: var(--font-body) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 13px !important;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+#top-menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--db-gold);
+  transition: all var(--transition-medium);
+  transform: translateX(-50%);
+}
+
+#top-menu li a:hover::after,
+#top-menu li.current-menu-item a::after {
+  width: 100%;
+}
+
+#top-menu li a:hover {
+  color: var(--db-gold) !important;
+}
+
+/* ============================================
+   5. HERO SECTION - CINEMATIC EFFECT
+   ============================================ */
+.et_pb_fullwidth_header,
+.et_pb_section.hero-section,
+.et_pb_section:first-child {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Parallax Background Effect */
+.et_pb_fullwidth_header .et_pb_fullwidth_header_container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animated Gradient Overlay */
+.et_pb_fullwidth_header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(45, 31, 23, 0.7) 0%,
+    rgba(74, 55, 40, 0.5) 50%,
+    rgba(201, 162, 39, 0.3) 100%
+  );
+  z-index: 1;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Hero Text Animations */
+.et_pb_fullwidth_header h1,
+.et_pb_fullwidth_header .et_pb_fullwidth_header_title {
+  font-size: clamp(2.5rem, 5vw, 5rem) !important;
+  font-weight: 700 !important;
+  text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.4);
+  animation: heroTextReveal 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes heroTextReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.et_pb_fullwidth_header .et_pb_fullwidth_header_subhead {
+  font-size: clamp(1rem, 2vw, 1.5rem) !important;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  animation: heroTextReveal 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ============================================
+   6. PREMIUM BUTTONS
+   ============================================ */
+.et_pb_button,
+.et_pb_more_button,
+.button,
+button[type="submit"],
+input[type="submit"] {
+  position: relative;
+  background: var(--gradient-gold) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 16px 40px !important;
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: white !important;
+  overflow: hidden;
+  transition: all var(--transition-medium) !important;
+  box-shadow: var(--shadow-gold);
+  z-index: 1;
+}
+
+.et_pb_button::before {
+  content: "" !important;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+  z-index: -1;
+}
+
+.et_pb_button:hover::before {
+  left: 100%;
+}
+
+.et_pb_button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 40px rgba(201, 162, 39, 0.5) !important;
+}
+
+.et_pb_button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Secondary Button Style */
+.et_pb_button.secondary-btn,
+.et_pb_button[data-icon] {
+  background: transparent !important;
+  border: 2px solid var(--db-gold) !important;
+  color: var(--db-gold) !important;
+  box-shadow: none;
+}
+
+.et_pb_button.secondary-btn:hover {
+  background: var(--db-gold) !important;
+  color: white !important;
+}
+
+/* ============================================
+   7. PRODUCT CARDS - PREMIUM STYLE
+   ============================================ */
+.et_pb_shop .woocommerce ul.products li.product,
+.et_pb_wc_related_products ul.products li.product,
+.woocommerce ul.products li.product {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: all var(--transition-medium);
+  position: relative;
+}
+
+.et_pb_shop .woocommerce ul.products li.product:hover,
+.woocommerce ul.products li.product:hover {
+  transform: translateY(-15px);
+  box-shadow: var(--shadow-strong);
+}
+
+/* Product Image Container */
+.woocommerce ul.products li.product .woocommerce-loop-product__link img,
+.et_shop_image {
+  transition: transform var(--transition-slow);
+}
+
+.woocommerce ul.products li.product:hover .woocommerce-loop-product__link img,
+.woocommerce ul.products li.product:hover .et_shop_image img {
+  transform: scale(1.1);
+}
+
+/* Product Title */
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.et_shop_title {
+  font-family: var(--font-heading) !important;
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+  color: var(--db-brown-dark) !important;
+  transition: color var(--transition-fast);
+}
+
+/* Product Price - Premium Badge */
+.woocommerce ul.products li.product .price,
+.et_pb_shop_price {
+  font-family: var(--font-heading) !important;
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  color: var(--db-gold-dark) !important;
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--db-cream);
+  border-radius: 25px;
+  margin-top: 10px;
+}
+
+/* ============================================
+   8. SCROLL-TRIGGERED ANIMATIONS
+   ============================================ */
+/* Fade Up Animation Class */
+.db-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.db-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade In Scale */
+.db-scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.db-scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Slide In from Left */
+.db-slide-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.db-slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide In from Right */
+.db-slide-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.db-slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Staggered Animation for Children */
+.db-stagger-children > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.db-stagger-children.visible > *:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.db-stagger-children.visible > *:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.db-stagger-children.visible > *:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.db-stagger-children.visible > *:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.db-stagger-children.visible > *:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.db-stagger-children.visible > *:nth-child(6) {
+  transition-delay: 0.6s;
+}
+
+.db-stagger-children.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   9. PREMIUM SECTION DIVIDERS
+   ============================================ */
+.db-divider-gold {
+  width: 80px;
+  height: 3px;
+  background: var(--gradient-gold);
+  margin: 20px auto;
+  border-radius: 3px;
+  position: relative;
+}
+
+.db-divider-gold::before,
+.db-divider-gold::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--db-gold);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.db-divider-gold::before {
+  left: -15px;
+}
+
+.db-divider-gold::after {
+  right: -15px;
+}
+
+/* ============================================
+   10. IMAGE HOVER EFFECTS
+   ============================================ */
+.et_pb_image,
+.et_pb_gallery_image {
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.et_pb_image img,
+.et_pb_gallery_image img {
+  transition:
+    transform var(--transition-slow),
+    filter var(--transition-slow);
+}
+
+.et_pb_image:hover img,
+.et_pb_gallery_image:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+/* Ken Burns Effect for Featured Images */
+.db-ken-burns {
+  animation: kenBurns 20s ease infinite alternate;
+}
+
+@keyframes kenBurns {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  100% {
+    transform: scale(1.1) translateX(-2%);
+  }
+}
+
+/* ============================================
+   11. PREMIUM CARDS (Blurb Modules)
+   ============================================ */
+.et_pb_blurb {
+  background: white;
+  padding: 40px 30px !important;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  transition: all var(--transition-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.et_pb_blurb::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient-gold);
+  transform: scaleX(0);
+  transition: transform var(--transition-medium);
+}
+
+.et_pb_blurb:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-strong);
+}
+
+.et_pb_blurb:hover::before {
+  transform: scaleX(1);
+}
+
+/* Blurb Icon Animation */
+.et_pb_blurb_content .et_pb_main_blurb_image {
+  transition: transform var(--transition-bounce);
+}
+
+.et_pb_blurb:hover .et_pb_main_blurb_image {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* ============================================
+   12. PRODUCT CATEGORY ICONS
+   ============================================ */
+/* Cattle Icon Style */
+.category-cattle::before {
+  content: "🐄";
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+  animation: gentleBounce 3s ease-in-out infinite;
+}
+
+/* Grass Icon Style */
+.category-grass::before {
+  content: "🌾";
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+  animation: gentleWave 3s ease-in-out infinite;
+}
+
+/* Honey Icon Style */
+.category-honey::before {
+  content: "🍯";
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+  animation: gentleBounce 3s ease-in-out infinite 0.5s;
+}
+
+@keyframes gentleBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes gentleWave {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+/* ============================================
+   13. PREMIUM TABLE STYLING (Cattle Specs)
+   ============================================ */
+.et_pb_text table,
+table.shop_attributes {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.et_pb_text table thead th,
+table.shop_attributes tr:first-child th {
+  background: var(--gradient-premium);
+  color: white;
+  padding: 18px 20px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.et_pb_text table tbody tr {
+  transition: background var(--transition-fast);
+}
+
+.et_pb_text table tbody tr:nth-child(even) {
+  background: var(--db-cream);
+}
+
+.et_pb_text table tbody tr:hover {
+  background: var(--db-cream-dark);
+}
+
+.et_pb_text table td,
+.et_pb_text table th {
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+}
+
+/* ============================================
+   14. CONTACT FORM PREMIUM STYLING
+   ============================================ */
+.et_pb_contact_form,
+.wpcf7-form {
+  background: white;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: var(--shadow-medium);
+}
+
+.et_pb_contact_form input[type="text"],
+.et_pb_contact_form input[type="email"],
+.et_pb_contact_form textarea,
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea {
+  border: 2px solid var(--db-cream-dark) !important;
+  border-radius: 12px !important;
+  padding: 18px 20px !important;
+  font-family: var(--font-body);
+  transition: all var(--transition-fast) !important;
+  background: var(--db-cream) !important;
+}
+
+.et_pb_contact_form input:focus,
+.et_pb_contact_form textarea:focus {
+  border-color: var(--db-gold) !important;
+  box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.2) !important;
+  background: white !important;
+}
+
+/* Floating Labels Effect */
+.et_pb_contact_form_container .et_pb_contact_form p label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--db-brown);
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* ============================================
+   15. POPUP/MODAL PREMIUM STYLING
+   ============================================ */
+.bloom_optin,
+.et_bloom_form_container {
+  border-radius: 25px !important;
+  overflow: hidden;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3) !important;
+}
+
+.bloom_optin .bloom_form_header {
+  background: var(--gradient-premium) !important;
+  padding: 40px !important;
+}
+
+.bloom_optin h2 {
+  font-family: var(--font-heading) !important;
+  font-size: 2rem !important;
+}
+
+.bloom_optin input[type="email"] {
+  border-radius: 12px !important;
+  padding: 15px 20px !important;
+  border: 2px solid var(--db-cream-dark) !important;
+}
+
+.bloom_optin .bloom_submit_button {
+  background: var(--gradient-gold) !important;
+  border-radius: 50px !important;
+  padding: 15px 35px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em;
+  transition: all var(--transition-medium) !important;
+}
+
+.bloom_optin .bloom_submit_button:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-gold) !important;
+}
+
+/* ============================================
+   16. SHOPPING CART PREMIUM STYLING
+   ============================================ */
+.woocommerce-cart-form,
+.woocommerce-checkout {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+.woocommerce a.remove {
+  background: #ff6b6b !important;
+  color: white !important;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  transition: all var(--transition-fast);
+}
+
+.woocommerce a.remove:hover {
+  background: #ee5a5a !important;
+  transform: rotate(90deg);
+}
+
+/* Quantity Buttons */
+.woocommerce .quantity .qty {
+  border: 2px solid var(--db-cream-dark);
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-weight: 600;
+}
+
+/* ============================================
+   17. FOOTER PREMIUM STYLING
+   ============================================ */
+#main-footer {
+  background: var(--gradient-premium) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+#main-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-gold);
+}
+
+#footer-widgets {
+  padding: 80px 0 60px;
+}
+
+#footer-widgets .footer-widget h4 {
+  font-family: var(--font-heading) !important;
+  color: var(--db-gold) !important;
+  font-size: 1.3rem !important;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+#footer-widgets .footer-widget h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--db-gold);
+}
+
+#footer-bottom {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 25px 0;
+}
+
+/* Social Icons Animation */
+.et_pb_social_media_follow li a {
+  transition: all var(--transition-medium) !important;
+}
+
+.et_pb_social_media_follow li a:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   18. LOADING & MICRO-INTERACTIONS
+   ============================================ */
+/* Custom Cursor on Interactive Elements */
+a,
+button,
+.et_pb_button,
+.clickable {
+  cursor: pointer;
+}
+
+/* Ripple Effect on Click */
+.db-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.db-ripple::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s,
+    height 0.6s;
+}
+
+.db-ripple:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ============================================
+   19. PARALLAX BACKGROUND SECTIONS
+   ============================================ */
+.et_pb_section.et_pb_section_parallax {
+  background-attachment: fixed;
+}
+
+.db-parallax-overlay {
+  position: relative;
+}
+
+.db-parallax-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(45, 31, 23, 0.85) 0%,
+    rgba(45, 31, 23, 0.7) 50%,
+    rgba(45, 31, 23, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+/* ============================================
+   20. PRICE DISPLAY ANIMATION
+   ============================================ */
+.woocommerce-Price-amount,
+.price .amount {
+  display: inline-block;
+  animation: priceReveal 0.6s ease-out;
+}
+
+@keyframes priceReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sale Badge */
+.woocommerce span.onsale {
+  background: var(--gradient-gold) !important;
+  border-radius: 50% !important;
+  min-width: 60px;
+  min-height: 60px;
+  line-height: 60px !important;
+  font-weight: 700;
+  box-shadow: var(--shadow-gold);
+  animation: pulseSale 2s ease-in-out infinite;
+}
+
+@keyframes pulseSale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* ============================================
+   21. FEATURE PACKAGE HIGHLIGHT
+   ============================================ */
+.featured-package {
+  background: linear-gradient(135deg, var(--db-cream) 0%, white 100%);
+  border: 3px solid var(--db-gold);
+  border-radius: 25px;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-package::before {
+  content: "⭐ FEATURED";
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background: var(--gradient-gold);
+  color: white;
+  padding: 8px 50px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transform: rotate(45deg);
+}
+
+/* ============================================
+   22. TESTIMONIAL STYLING (if added)
+   ============================================ */
+.et_pb_testimonial {
+  background: white !important;
+  border-radius: 20px !important;
+  padding: 40px !important;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  transition: all var(--transition-medium);
+}
+
+.et_pb_testimonial::before {
+  content: '"';
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 6rem;
+  color: var(--db-gold);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.et_pb_testimonial:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+}
+
+.et_pb_testimonial_portrait {
+  border: 4px solid var(--db-gold) !important;
+}
+
+/* ============================================
+   23. MOBILE RESPONSIVE ENHANCEMENTS
+   ============================================ */
+@media (max-width: 980px) {
+  .et_pb_fullwidth_header h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .et_pb_blurb {
+    padding: 30px 20px !important;
+  }
+
+  .et_pb_contact_form {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .et_pb_fullwidth_header h1 {
+    font-size: 2rem !important;
+  }
+
+  .et_pb_button {
+    padding: 14px 30px !important;
+    font-size: 13px !important;
+  }
+
+  /* Stack animations on mobile */
+  .db-slide-left,
+  .db-slide-right {
+    transform: translateY(40px);
+  }
+
+  .db-slide-left.visible,
+  .db-slide-right.visible {
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   24. SPECIAL EFFECTS - GLOWING ELEMENTS
+   ============================================ */
+.db-glow {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(201, 162, 39, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(201, 162, 39, 0.6);
+  }
+}
+
+/* Shimmer Effect */
+.db-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.db-shimmer::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  transform: rotate(30deg);
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) rotate(30deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(30deg);
+  }
+}
+
+/* ============================================
+   25. COUNTER/STATS ANIMATION
+   ============================================ */
+.et_pb_number_counter {
+  transition: all var(--transition-medium);
+}
+
+.et_pb_number_counter:hover {
+  transform: scale(1.05);
+}
+
+.et_pb_number_counter .percent {
+  font-family: var(--font-heading) !important;
+  color: var(--db-gold) !important;
+}
+
+/* ============================================
+   26. BREADCRUMB STYLING
+   ============================================ */
+.woocommerce-breadcrumb {
+  font-size: 14px;
+  padding: 15px 25px;
+  background: var(--db-cream);
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.woocommerce-breadcrumb a {
+  color: var(--db-gold-dark);
+  transition: color var(--transition-fast);
+}
+
+.woocommerce-breadcrumb a:hover {
+  color: var(--db-gold);
+}
+
+/* ============================================
+   27. ADD TO CART SUCCESS ANIMATION
+   ============================================ */
+.added_to_cart {
+  display: inline-block;
+  background: var(--db-green) !important;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 25px;
+  animation: cartSuccess 0.5s ease-out;
+}
+
+@keyframes cartSuccess {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   28. SCROLL TO TOP BUTTON
+   ============================================ */
+.db-scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--gradient-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-medium);
+  box-shadow: var(--shadow-gold);
+  z-index: 999;
+}
+
+.db-scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.db-scroll-top:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* ============================================
+   29. PRELOADER (Optional)
+   ============================================ */
+.db-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--db-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition:
+    opacity 0.5s,
+    visibility 0.5s;
+}
+
+.db-preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.db-preloader-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid var(--db-cream-dark);
+  border-top-color: var(--db-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   30. FINAL POLISH - GLOBAL TRANSITIONS
+   ============================================ */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+img {
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+/* Ensure smooth rendering */
+.et_pb_section,
+.et_pb_row,
+.et_pb_module {
+  will-change: transform;
+  backface-visibility: hidden;
+}

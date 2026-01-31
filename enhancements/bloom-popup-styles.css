@@ -1,0 +1,356 @@
+/* ============================================
+   DE BEER BONSMARA - BLOOM POPUP ENHANCEMENTS
+   Premium Newsletter Popup Styling
+   ============================================ */
+
+/* ============================================
+   1. POPUP CONTAINER
+   ============================================ */
+.et_bloom .et_bloom_form_container,
+.bloom_optin {
+  border-radius: 30px !important;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4) !important;
+  max-width: 500px !important;
+  animation: popupSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes popupSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================================
+   2. POPUP HEADER
+   ============================================ */
+.et_bloom .et_bloom_form_header,
+.bloom_optin .bloom_form_header {
+  background: linear-gradient(135deg, #2d1f17 0%, #4a3728 100%) !important;
+  padding: 50px 40px 40px !important;
+  text-align: center;
+  position: relative;
+}
+
+/* Gold accent line */
+.bloom_optin .bloom_form_header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #c9a227, #e8d48a, #c9a227);
+}
+
+/* Header Image/Icon */
+.et_bloom .et_bloom_header_image img,
+.bloom_optin .bloom_header_image img {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50% !important;
+  border: 4px solid #c9a227 !important;
+  padding: 5px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   3. POPUP TITLE & TEXT
+   ============================================ */
+.et_bloom .et_bloom_form_header h2,
+.bloom_optin .bloom_form_title {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-size: 2rem !important;
+  font-weight: 600 !important;
+  color: white !important;
+  margin: 25px 0 15px !important;
+  line-height: 1.3;
+}
+
+.et_bloom .et_bloom_form_header p,
+.bloom_optin .bloom_description {
+  font-family: "Lato", sans-serif !important;
+  font-size: 15px !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ============================================
+   4. FORM CONTENT AREA
+   ============================================ */
+.et_bloom .et_bloom_form_content,
+.bloom_optin .bloom_form_content {
+  background: #f5f0e6 !important;
+  padding: 40px !important;
+}
+
+/* ============================================
+   5. INPUT FIELDS
+   ============================================ */
+.et_bloom input[type="text"],
+.et_bloom input[type="email"],
+.bloom_optin input[type="text"],
+.bloom_optin input[type="email"],
+.bloom_optin .et_bloom_field input {
+  width: 100% !important;
+  padding: 18px 25px !important;
+  border: 2px solid #e8e0d0 !important;
+  border-radius: 50px !important;
+  font-family: "Lato", sans-serif !important;
+  font-size: 15px !important;
+  background: white !important;
+  transition: all 0.3s ease !important;
+  margin-bottom: 15px !important;
+}
+
+.et_bloom input[type="text"]:focus,
+.et_bloom input[type="email"]:focus,
+.bloom_optin input:focus {
+  border-color: #c9a227 !important;
+  box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.15) !important;
+  outline: none !important;
+}
+
+.et_bloom input::placeholder,
+.bloom_optin input::placeholder {
+  color: #999 !important;
+  font-style: italic;
+}
+
+/* ============================================
+   6. SUBMIT BUTTON
+   ============================================ */
+.et_bloom .et_bloom_submit_button,
+.bloom_optin .bloom_submit_button,
+.bloom_optin button[type="submit"] {
+  width: 100% !important;
+  padding: 18px 35px !important;
+  background: linear-gradient(135deg, #c9a227 0%, #8b7016 100%) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  font-family: "Lato", sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  color: white !important;
+  cursor: pointer !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.et_bloom .et_bloom_submit_button::before,
+.bloom_optin .bloom_submit_button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.et_bloom .et_bloom_submit_button:hover::before,
+.bloom_optin .bloom_submit_button:hover::before {
+  left: 100%;
+}
+
+.et_bloom .et_bloom_submit_button:hover,
+.bloom_optin .bloom_submit_button:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 15px 40px rgba(201, 162, 39, 0.4) !important;
+}
+
+/* ============================================
+   7. CLOSE BUTTON
+   ============================================ */
+.et_bloom .et_bloom_close_button,
+.bloom_optin .bloom_close_button {
+  position: absolute !important;
+  top: 15px !important;
+  right: 15px !important;
+  width: 35px !important;
+  height: 35px !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+}
+
+.et_bloom .et_bloom_close_button:hover,
+.bloom_optin .bloom_close_button:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  transform: rotate(90deg);
+}
+
+.et_bloom .et_bloom_close_button::before,
+.et_bloom .et_bloom_close_button::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background: white;
+}
+
+.et_bloom .et_bloom_close_button::before {
+  transform: rotate(45deg);
+}
+
+.et_bloom .et_bloom_close_button::after {
+  transform: rotate(-45deg);
+}
+
+/* ============================================
+   8. SUCCESS MESSAGE
+   ============================================ */
+.et_bloom .et_bloom_success_message,
+.bloom_optin .bloom_success_message {
+  text-align: center;
+  padding: 50px 40px !important;
+  background: #f5f0e6 !important;
+}
+
+.et_bloom .et_bloom_success_message h2,
+.bloom_optin .bloom_success_message h2 {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-size: 1.8rem !important;
+  color: #2d5016 !important;
+  margin-bottom: 15px !important;
+}
+
+.et_bloom .et_bloom_success_message p,
+.bloom_optin .bloom_success_message p {
+  color: #4a3728 !important;
+  font-size: 15px !important;
+}
+
+/* Success checkmark animation */
+.bloom_optin .bloom_success_checkmark {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, #2d5016, #4a7828);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: checkmarkPop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.bloom_optin .bloom_success_checkmark::after {
+  content: "✓";
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+@keyframes checkmarkPop {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* ============================================
+   9. OVERLAY/BACKDROP
+   ============================================ */
+.et_bloom_overlay,
+.bloom_overlay {
+  background: rgba(45, 31, 23, 0.85) !important;
+  backdrop-filter: blur(5px);
+}
+
+/* ============================================
+   10. PRIVACY NOTE
+   ============================================ */
+.bloom_optin .bloom_privacy_note {
+  font-size: 12px !important;
+  color: #999 !important;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.bloom_optin .bloom_privacy_note a {
+  color: #c9a227 !important;
+  text-decoration: underline;
+}
+
+/* ============================================
+   11. MOBILE RESPONSIVE
+   ============================================ */
+@media (max-width: 600px) {
+  .et_bloom .et_bloom_form_container,
+  .bloom_optin {
+    margin: 15px !important;
+    border-radius: 20px !important;
+  }
+
+  .et_bloom .et_bloom_form_header,
+  .bloom_optin .bloom_form_header {
+    padding: 35px 25px 30px !important;
+  }
+
+  .et_bloom .et_bloom_form_header h2,
+  .bloom_optin .bloom_form_title {
+    font-size: 1.5rem !important;
+  }
+
+  .et_bloom .et_bloom_form_content,
+  .bloom_optin .bloom_form_content {
+    padding: 30px 25px !important;
+  }
+
+  .et_bloom input[type="text"],
+  .et_bloom input[type="email"] {
+    padding: 15px 20px !important;
+  }
+
+  .et_bloom .et_bloom_submit_button {
+    padding: 15px 30px !important;
+  }
+}
+
+/* ============================================
+   12. LOADING STATE
+   ============================================ */
+.bloom_optin.loading .bloom_submit_button {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.bloom_optin.loading .bloom_submit_button::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: buttonSpin 0.8s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes buttonSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}

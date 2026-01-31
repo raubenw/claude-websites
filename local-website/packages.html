@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breeding Packages | De Beer Bonsmara</title>
+    <meta
+      name="description"
+      content="Discover our premium Bonsmara breeding packages. Start or expand your herd with carefully curated packages offering exceptional value and proven genetics."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Snipcart -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css"
+    />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <style>
+      /* Page Header Styles */
+      .page-header {
+        position: relative;
+        padding: 180px 0 100px;
+        background: var(--brown-dark);
+        overflow: hidden;
+      }
+
+      .page-header-bg {
+        position: absolute;
+        inset: 0;
+        background: url("https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/De-beer-bonsmara-3.png?w=1200&ssl=1")
+          center/cover;
+        opacity: 0.2;
+      }
+
+      .page-header-content {
+        position: relative;
+        text-align: center;
+      }
+
+      .page-title {
+        font-family: var(--font-heading);
+        font-size: clamp(40px, 8vw, 64px);
+        color: var(--white);
+        margin-bottom: 15px;
+      }
+
+      .page-description {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+
+      .breadcrumb {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
+      }
+
+      .breadcrumb a {
+        color: var(--gold);
+      }
+
+      .breadcrumb span {
+        margin: 0 10px;
+      }
+
+      /* Package Page Specific Styles */
+      .packages-intro {
+        padding: 80px 0;
+        background: var(--cream);
+        text-align: center;
+      }
+
+      .packages-intro .section-title {
+        margin-bottom: 20px;
+      }
+
+      .packages-intro p {
+        max-width: 700px;
+        margin: 0 auto 40px;
+        font-size: 18px;
+        color: var(--brown-light);
+      }
+
+      .intro-features {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .intro-feature {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 500;
+        color: var(--brown);
+      }
+
+      .intro-feature span:first-child {
+        font-size: 24px;
+      }
+
+      /* Packages Grid */
+      .packages-section {
+        padding: var(--section-padding);
+        background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+      }
+
+      .packages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .package-card {
+        background: var(--white);
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition:
+          transform var(--transition-base),
+          box-shadow var(--transition-base);
+        position: relative;
+      }
+
+      .package-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .package-card.featured {
+        border: 3px solid var(--gold);
+      }
+
+      .package-card.featured::before {
+        content: "⭐ Most Popular";
+        position: absolute;
+        top: 20px;
+        right: -35px;
+        background: var(--gold);
+        color: var(--brown-dark);
+        padding: 8px 50px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transform: rotate(45deg);
+        z-index: 10;
+      }
+
+      .package-header {
+        background: var(--gradient-brown);
+        color: var(--white);
+        padding: 40px 30px;
+        text-align: center;
+      }
+
+      .package-card.featured .package-header {
+        background: linear-gradient(
+          135deg,
+          var(--gold-dark) 0%,
+          var(--gold) 100%
+        );
+      }
+
+      .package-icon {
+        font-size: 48px;
+        margin-bottom: 15px;
+      }
+
+      .package-name {
+        font-family: var(--font-heading);
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .package-tagline {
+        font-size: 14px;
+        opacity: 0.9;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .package-body {
+        padding: 40px 30px;
+      }
+
+      .package-price {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--cream-dark);
+      }
+
+      .price-amount {
+        font-family: var(--font-heading);
+        font-size: 48px;
+        font-weight: 700;
+        color: var(--brown-dark);
+      }
+
+      .price-savings {
+        display: inline-block;
+        background: rgba(63, 73, 41, 0.1);
+        color: var(--green);
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+
+      .package-details {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px;
+      }
+
+      .package-details li {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--cream-dark);
+      }
+
+      .package-details li:last-child {
+        border-bottom: none;
+      }
+
+      .detail-icon {
+        font-size: 24px;
+        flex-shrink: 0;
+      }
+
+      .detail-text strong {
+        display: block;
+        color: var(--brown-dark);
+        margin-bottom: 4px;
+      }
+
+      .detail-text span {
+        font-size: 14px;
+        color: var(--brown-light);
+      }
+
+      .package-footer {
+        padding: 0 30px 40px;
+      }
+
+      .package-footer .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .package-note {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 13px;
+        color: var(--brown-light);
+      }
+
+      /* Custom Packages CTA */
+      .custom-cta {
+        padding: 100px 0;
+        background: var(--brown-dark);
+        color: var(--white);
+        text-align: center;
+      }
+
+      .custom-cta .section-title {
+        color: var(--white);
+      }
+
+      .custom-cta .section-title .accent {
+        color: var(--gold);
+      }
+
+      .custom-cta p {
+        max-width: 600px;
+        margin: 0 auto 40px;
+        font-size: 18px;
+        opacity: 0.9;
+      }
+
+      .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      /* Why Choose Section */
+      .why-packages {
+        padding: var(--section-padding);
+        background: var(--cream);
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 60px;
+      }
+
+      .why-card {
+        background: var(--white);
+        padding: 40px 30px;
+        border-radius: var(--radius-lg);
+        text-align: center;
+        box-shadow: var(--shadow-sm);
+        transition: transform var(--transition-base);
+      }
+
+      .why-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .why-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--cream);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+        margin: 0 auto 20px;
+      }
+
+      .why-card h3 {
+        font-family: var(--font-heading);
+        font-size: 22px;
+        color: var(--brown-dark);
+        margin-bottom: 15px;
+      }
+
+      .why-card p {
+        color: var(--brown-light);
+        font-size: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .packages-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .package-card.featured::before {
+          font-size: 10px;
+          padding: 6px 40px;
+          right: -40px;
+        }
+
+        .intro-features {
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader-content">
+        <img
+          src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/08/DeBeer-Bonsmaara-Transparent-Logo.png?w=1000&ssl=1"
+          alt=""
+          class="preloader-logo-img"
+        />
+        <div class="preloader-spinner"></div>
+        <div class="preloader-text">De Beer Bonsmara</div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      class="navbar scrolled"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div class="nav-container">
+        <a
+          href="index.html"
+          class="nav-logo"
+          aria-label="De Beer Bonsmara - Home"
+        >
+          <img
+            src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/08/DeBeer-Bonsmaara-Transparent-Logo.png?w=1000&ssl=1"
+            alt="De Beer Bonsmara Logo"
+            class="logo-icon-img"
+          />
+          <span class="logo-text">De Beer<span>Bonsmara</span></span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu" role="menubar">
+          <li role="none">
+            <a href="index.html" class="nav-link" role="menuitem">Home</a>
+          </li>
+          <li role="none">
+            <a href="index.html#about" class="nav-link" role="menuitem"
+              >About</a
+            >
+          </li>
+          <li role="none">
+            <a href="index.html#products" class="nav-link" role="menuitem"
+              >Products</a
+            >
+          </li>
+          <li role="none">
+            <a href="cattle.html" class="nav-link" role="menuitem">Cattle</a>
+          </li>
+          <li role="none">
+            <a href="packages.html" class="nav-link active" role="menuitem"
+              >Packages</a
+            >
+          </li>
+          <li role="none">
+            <a href="index.html#contact" class="nav-link" role="menuitem"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="cart-btn snipcart-checkout" aria-label="Shopping cart">
+            <span class="cart-icon" aria-hidden="true">🛒</span>
+            <span class="cart-count snipcart-items-count" aria-live="polite"
+              >0</span
+            >
+          </button>
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="page-header-bg"></div>
+      <div class="container">
+        <div class="page-header-content" data-aos="fade-up">
+          <span class="section-eyebrow">Value & Excellence</span>
+          <h1 class="page-title">
+            Breeding <span class="accent">Packages</span>
+          </h1>
+          <p class="page-description">
+            Start or expand your Bonsmara herd with our carefully curated
+            breeding packages
+          </p>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Packages</span>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <main id="main-content">
+      <!-- Packages Introduction -->
+      <section class="packages-intro">
+        <div class="container">
+          <span class="section-eyebrow" data-aos="fade-up"
+            >Why Buy a Package?</span
+          >
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+            Save More, <span class="accent">Get More</span>
+          </h2>
+          <p data-aos="fade-up" data-aos-delay="200">
+            Our breeding packages offer exceptional value by bundling premium
+            genetics with essential services. Each package is thoughtfully
+            designed to give you the best start in your Bonsmara journey.
+          </p>
+          <div class="intro-features" data-aos="fade-up" data-aos-delay="300">
+            <div class="intro-feature">
+              <span>💰</span>
+              <span>Significant Savings</span>
+            </div>
+            <div class="intro-feature">
+              <span>📋</span>
+              <span>Complete Documentation</span>
+            </div>
+            <div class="intro-feature">
+              <span>🚚</span>
+              <span>Delivery Assistance</span>
+            </div>
+            <div class="intro-feature">
+              <span>🤝</span>
+              <span>Ongoing Support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Packages Grid -->
+      <section class="packages-section">
+        <div class="container">
+          <div class="packages-grid">
+            <!-- Starter Package -->
+            <article
+              class="package-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="package-header">
+                <div class="package-icon">🌱</div>
+                <h2 class="package-name">Starter Package</h2>
+                <p class="package-tagline">Perfect for New Farmers</p>
+              </div>
+              <div class="package-body">
+                <div class="package-price">
+                  <div class="price-amount">$28,000</div>
+                  <div class="price-savings">Save $3,200</div>
+                </div>
+                <ul class="package-details">
+                  <li>
+                    <span class="detail-icon">🐂</span>
+                    <div class="detail-text">
+                      <strong>1 × Premium Bull</strong>
+                      <span>Young, proven genetics, prime breeding age</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="detail-icon">🐄</span>
+                    <div class="detail-text">
+                      <strong>5 × Breeding Cows</strong>
+                      <span>Healthy females ready for breeding</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="detail-icon">📄</span>
+                    <div class="detail-text">
+                      <strong>Registration Papers</strong>
+                      <span>Full pedigree documentation</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="detail-icon">📞</span>
+                    <div class="detail-text">
+                      <strong>6-Month Support</strong>
+                      <span>Expert guidance for new farmers</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="package-footer">
+                <button
+                  class="btn btn-secondary snipcart-add-item"
+                  data-item-id="starter-package"
+                  data-item-name="Starter Breeding Package"
+                  data-item-price="28000"
+                  data-item-url="/packages.html"
+                  data-item-description="1 Bull + 5 Cows with documentation and support"
+                  data-item-image="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/bonsmara-running.jpg?w=600&ssl=1"
+                >
+                  Add to Cart
+                </button>
+                <p class="package-note">Ideal for starting a small herd</p>
+              </div>
+            </article>
+
+            <!-- Featured Package -->
+            <article
+              class="package-card featured"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="package-header">
+                <div class="package-icon">🏆</div>
+                <h2 class="package-name">Premium Package</h2>
+                <p class="package-tagline">Best Value for Growth</p>
+              </div>
+              <div class="package-body">
+                <div class="package-price">
+                  <div class="price-amount">$60,000</div>
+                  <div class="price-savings">Save $7,600</div>
+                </div>
+                <ul class="package-details">
+                  <li>
+                    <span class="detail-icon">🐂</span>
+                    <div class="detail-text">
+                      <strong>2 × Premium Bulls</strong>
+                      <span>Prime breeding age, certified pedigree</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="detail-icon">🐄</span>
+                    <div class="detail-text">
+                      <strong>10 × Proven Cows</strong>
+                      <span>Multiple successful calvings</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="detail-icon">📋</span>
+                    <div class="detail-text">
+                      <strong>Full Documentation</strong>
+                      <span>Complete pedigree & health records</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="detail-icon">🚚</span>
+                    <div class="detail-text">
+                      <strong>Delivery Coordination</strong>
+                      <span>Nationwide transport assistance</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="detail-icon">🎓</span>
+                    <div class="detail-text">
+                      <strong>12-Month Support</strong>
+                      <span>Priority expert consultation</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="package-footer">
+                <button
+                  class="btn btn-primary btn-glow snipcart-add-item"
+                  data-item-id="premium-package"
+                  data-item-name="Premium Breeding Package"
+                  data-item-price="60000"
+                  data-item-url="/packages.html"
+                  data-item-description="2 Bulls + 10 Cows with full documentation and delivery"
+                  data-item-image="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/De-beer-bonsmara-3.png?w=600&ssl=1"
+                >
+                  Add to Cart
+                </button>
+                <p class="package-note">Our most popular choice</p>
+              </div>
+            </article>
+
+            <!-- Elite Package -->
+            <article
+              class="package-card"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="package-header">
+                <div class="package-icon">👑</div>
+                <h2 class="package-name">Elite Package</h2>
+                <p class="package-tagline">For Serious Breeders</p>
+              </div>
+              <div class="package-body">
+                <div class="package-price">
+                  <div class="price-amount">$120,000</div>
+                  <div class="price-savings">Save $18,000</div>
+                </div>
+                <ul class="package-details">
+                  <li>
+                    <span class="detail-icon">🐂</span>
+                    <div class="detail-text">
+                      <strong>4 × Champion Bulls</strong>
+                      <span>Show-quality genetics, award winners</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="detail-icon">🐄</span>
+                    <div class="detail-text">
+                      <strong>20 × Elite Cows</strong>
+                      <span>Top-producing bloodlines</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="detail-icon">❄️</span>
+                    <div class="detail-text">
+                      <strong>50 × Semen Straws</strong>
+                      <span>Premium frozen genetics included</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="detail-icon">🏠</span>
+                    <div class="detail-text">
+                      <strong>Farm Visit</strong>
+                      <span>Personal tour and animal selection</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="detail-icon">🤝</span>
+                    <div class="detail-text">
+                      <strong>Lifetime Support</strong>
+                      <span>Ongoing partnership & guidance</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="package-footer">
+                <button
+                  class="btn btn-secondary snipcart-add-item"
+                  data-item-id="elite-package"
+                  data-item-name="Elite Breeding Package"
+                  data-item-price="120000"
+                  data-item-url="/packages.html"
+                  data-item-description="4 Bulls + 20 Cows + 50 Semen Straws with VIP service"
+                  data-item-image="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2020/07/WhatsApp-Image-2020-01-25-at-18.04.36-2.jpeg?w=600&ssl=1"
+                >
+                  Add to Cart
+                </button>
+                <p class="package-note">Ultimate breeding foundation</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Our Packages -->
+      <section class="why-packages">
+        <div class="container">
+          <div class="text-center">
+            <span class="section-eyebrow" data-aos="fade-up"
+              >The De Beer Advantage</span
+            >
+            <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+              Why Choose Our <span class="accent">Packages</span>
+            </h2>
+          </div>
+          <div class="why-grid">
+            <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="why-icon">🧬</div>
+              <h3>Proven Genetics</h3>
+              <p>
+                40+ years of selective breeding ensures every animal in our
+                packages carries exceptional DNA for optimal performance.
+              </p>
+            </div>
+            <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="why-icon">💵</div>
+              <h3>Bundled Savings</h3>
+              <p>
+                Save up to 15% compared to individual purchases. Our packages
+                offer the best value for building your herd.
+              </p>
+            </div>
+            <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="why-icon">🩺</div>
+              <h3>Health Guaranteed</h3>
+              <p>
+                Every animal is veterinarian-certified, vaccinated, and comes
+                with complete health documentation.
+              </p>
+            </div>
+            <div class="why-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="why-icon">📚</div>
+              <h3>Expert Guidance</h3>
+              <p>
+                Get personalized support from our team of experienced Bonsmara
+                breeders to ensure your success.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Custom Package CTA -->
+      <section class="custom-cta">
+        <div class="container">
+          <span class="section-eyebrow light" data-aos="fade-up"
+            >Need Something Different?</span
+          >
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+            Create Your <span class="accent">Custom Package</span>
+          </h2>
+          <p data-aos="fade-up" data-aos-delay="200">
+            Don't see exactly what you need? We'll work with you to create a
+            custom breeding package tailored to your specific goals and budget.
+          </p>
+          <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
+            <a href="index.html#contact" class="btn btn-primary btn-glow">
+              <span>Contact Us</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="tel:5551234567" class="btn btn-outline light">
+              <span>Call (555) 123-4567</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <a href="index.html" class="footer-logo">
+                <img
+                  src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/08/DeBeer-Bonsmaara-Transparent-Logo.png?w=1000&ssl=1"
+                  alt="De Beer Bonsmara Logo"
+                  class="logo-icon-img"
+                />
+                <span class="logo-text">De Beer<span>Bonsmara</span></span>
+              </a>
+              <p class="footer-tagline">
+                Premium Bonsmara genetics, grass seed mixes, and raw honey from
+                our family farm to yours.
+              </p>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook" class="social-link">📘</a>
+                <a href="#" aria-label="Instagram" class="social-link">📷</a>
+                <a href="#" aria-label="YouTube" class="social-link">🎬</a>
+              </div>
+            </div>
+
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links">
+              <h4>Products</h4>
+              <ul>
+                <li><a href="cattle.html">Bonsmara Cattle</a></li>
+                <li><a href="grass.html">Grass Seed Mixes</a></li>
+                <li><a href="honey.html">Raw Honey</a></li>
+                <li><a href="packages.html">Breeding Packages</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>📍 123 Farm Road, Georgia, USA</p>
+              <p>📞 (555) 123-4567</p>
+              <p>✉️ info@debeerbonsmara.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2026 De Beer Bonsmara. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Snipcart -->
+    <div
+      id="snipcart"
+      data-api-key="YOUR_SNIPCART_API_KEY"
+      data-config-modal-style="side"
+      hidden
+    ></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

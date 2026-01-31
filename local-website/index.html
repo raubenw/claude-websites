@@ -1,0 +1,872 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>De Beer Bonsmara | Premium Cattle, Grass & Honey</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Snipcart for Shopping Cart (free for testing) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader-content">
+        <img
+          src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/08/DeBeer-Bonsmaara-Transparent-Logo.png?w=1000&ssl=1"
+          alt=""
+          class="preloader-logo-img"
+        />
+        <div class="preloader-spinner"></div>
+        <div class="preloader-text">De Beer Bonsmara</div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      class="navbar"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div class="nav-container">
+        <a href="#" class="nav-logo" aria-label="De Beer Bonsmara - Home">
+          <img
+            src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/08/DeBeer-Bonsmaara-Transparent-Logo.png?w=1000&ssl=1"
+            alt="De Beer Bonsmara Logo"
+            class="logo-icon-img"
+          />
+          <span class="logo-text">De Beer<span>Bonsmara</span></span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu" role="menubar">
+          <li role="none">
+            <a href="#home" class="nav-link active" role="menuitem">Home</a>
+          </li>
+          <li role="none">
+            <a href="#about" class="nav-link" role="menuitem">About</a>
+          </li>
+          <li role="none">
+            <a href="#products" class="nav-link" role="menuitem">Products</a>
+          </li>
+          <li role="none">
+            <a href="#cattle" class="nav-link" role="menuitem">Cattle</a>
+          </li>
+          <li role="none">
+            <a href="packages.html" class="nav-link" role="menuitem"
+              >Packages</a
+            >
+          </li>
+          <li role="none">
+            <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="cart-btn snipcart-checkout" aria-label="Shopping cart">
+            <span class="cart-icon" aria-hidden="true">🛒</span>
+            <span class="cart-count snipcart-items-count" aria-live="polite"
+              >0</span
+            >
+          </button>
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+      <section class="hero" id="home" aria-label="Welcome to De Beer Bonsmara">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-overlay"></div>
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="hero-video"
+            poster="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/08/pexels-skylake-16668318-1-scaled.jpg?w=1920&ssl=1"
+            aria-hidden="true"
+          >
+            <!-- Fallback to image if no video -->
+          </video>
+        </div>
+
+        <div class="hero-content">
+          <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">
+            <span>Est. 1985 • Georgia, USA</span>
+          </div>
+
+          <h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">
+            <span class="title-line">De Beer</span>
+            <span class="title-line accent">Bonsmara</span>
+          </h1>
+
+          <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">
+            Superior Genetics • Exceptional Quality
+          </p>
+
+          <div class="hero-divider" data-aos="scale-in" data-aos-delay="800">
+            <span class="divider-dot"></span>
+            <span class="divider-line"></span>
+            <span class="divider-dot"></span>
+          </div>
+
+          <div class="hero-buttons" data-aos="fade-up" data-aos-delay="1000">
+            <a href="#products" class="btn btn-primary">
+              <span>Explore Products</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24">
+                <path d="M5 12h14m-7-7 7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#about" class="btn btn-secondary">
+              <span>Our Story</span>
+            </a>
+          </div>
+
+          <div class="hero-scroll" data-aos="fade-up" data-aos-delay="1200">
+            <span>Scroll to Discover</span>
+            <div class="scroll-indicator">
+              <div class="scroll-dot"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="hero-float float-1">🌾</div>
+        <div class="hero-float float-2">🍯</div>
+        <div class="hero-float float-3">🐄</div>
+      </section>
+
+      <!-- Trust Badges -->
+      <section class="trust-section">
+        <div class="container">
+          <div class="trust-grid">
+            <div class="trust-badge" data-aos="fade-up" data-aos-delay="100">
+              <div class="badge-icon">🏆</div>
+              <div class="badge-text">Award-Winning Genetics</div>
+            </div>
+            <div class="trust-badge" data-aos="fade-up" data-aos-delay="200">
+              <div class="badge-icon">✓</div>
+              <div class="badge-text">Certified Pedigree</div>
+            </div>
+            <div class="trust-badge" data-aos="fade-up" data-aos-delay="300">
+              <div class="badge-icon">🚚</div>
+              <div class="badge-text">Nationwide Delivery</div>
+            </div>
+            <div class="trust-badge" data-aos="fade-up" data-aos-delay="400">
+              <div class="badge-icon">❤️</div>
+              <div class="badge-text">Family Owned</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about-section" id="about" aria-labelledby="about-heading">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-images" data-aos="fade-right">
+              <div class="about-img-main">
+                <img
+                  src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/De-beer-bonsmara-3.png?w=600&ssl=1"
+                  alt="De Beer Bonsmara bull Storm - a premium red-brown Bonsmara stud bull showcasing the breed's distinctive muscular build"
+                />
+              </div>
+              <div class="about-img-secondary">
+                <img
+                  src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2022/01/Bonsmara-cows-2022-3.jpg?w=600&ssl=1"
+                  alt="Herd of Bonsmara cows grazing on De Beer farm pastures in the Georgia countryside"
+                />
+              </div>
+              <div class="about-experience">
+                <span class="exp-number">40+</span>
+                <span class="exp-text">Years of Excellence</span>
+              </div>
+            </div>
+
+            <div class="about-content" data-aos="fade-left">
+              <span class="section-eyebrow">Our Heritage</span>
+              <h2 class="section-title">
+                A Legacy of <span class="accent">Excellence</span>
+              </h2>
+              <div class="section-divider" aria-hidden="true"></div>
+              <p class="about-text">
+                For over four decades, De Beer Bonsmara has been at the
+                forefront of cattle breeding excellence. Our commitment to
+                superior genetics and sustainable farming practices has made us
+                a trusted name among farmers and ranchers across the nation.
+              </p>
+              <p class="about-text">
+                Beyond our renowned cattle, we've expanded to offer premium
+                grass seed mixes and pure raw honey, bringing the best of our
+                farm directly to your table and pastures.
+              </p>
+
+              <div class="about-features">
+                <div class="feature-item">
+                  <div class="feature-icon">🧬</div>
+                  <div class="feature-text">
+                    <strong>Premium Genetics</strong>
+                    <span>Carefully selected bloodlines</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">🌱</div>
+                  <div class="feature-text">
+                    <strong>Sustainable Practices</strong>
+                    <span>Earth-friendly farming</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">🤝</div>
+                  <div class="feature-text">
+                    <strong>Expert Support</strong>
+                    <span>Guidance at every step</span>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#contact" class="btn btn-primary">
+                <span>Get in Touch</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section class="products-section" id="products">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">What We Offer</span>
+            <h2 class="section-title">
+              Premium <span class="accent">Farm Products</span>
+            </h2>
+            <div class="section-divider centered"></div>
+            <p class="section-description">
+              Three exceptional offerings from our family farm to yours
+            </p>
+          </div>
+
+          <div class="products-grid">
+            <!-- Cattle Card -->
+            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="card-image">
+                <img
+                  src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/De-beer-bonsmara-3.png?w=600&ssl=1"
+                  alt="Bonsmara Cattle"
+                />
+                <div class="card-overlay">
+                  <span class="card-tag">Premium</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="card-icon">🐄</div>
+                <h3 class="card-title">Bonsmara Cattle</h3>
+                <p class="card-text">
+                  Discover premium breeding stock with exceptional genetics.
+                  Bulls, cows, semen, and embryos available.
+                </p>
+                <ul class="card-features">
+                  <li>Pedigree Certified</li>
+                  <li>Health Guaranteed</li>
+                  <li>Expert Support</li>
+                </ul>
+                <a href="cattle.html" class="btn btn-outline">
+                  <span>Explore Cattle</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Grass Card -->
+            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="card-image">
+                <img
+                  src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/heather-wilde-asKos13UfAM-unsplash.jpg?w=600&ssl=1"
+                  alt="Grass Fields"
+                />
+                <div class="card-overlay">
+                  <span class="card-tag">Organic</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="card-icon">🌾</div>
+                <h3 class="card-title">Grass Seed Mixes</h3>
+                <p class="card-text">
+                  Premium forage blends for optimal livestock nutrition. Summer,
+                  winter, and hunter mixes available.
+                </p>
+                <ul class="card-features">
+                  <li>Regional Varieties</li>
+                  <li>High Germination</li>
+                  <li>Drought Resistant</li>
+                </ul>
+                <a href="grass.html" class="btn btn-outline">
+                  <span>Shop Grass</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Honey Card -->
+            <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="card-image">
+                <img
+                  src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/art-rachen-Asj5DFw8UAw-unsplash.jpg?w=600&ssl=1"
+                  alt="Pure Honey"
+                />
+                <div class="card-overlay">
+                  <span class="card-tag">Raw & Pure</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="card-icon">🍯</div>
+                <h3 class="card-title">Pure Raw Honey</h3>
+                <p class="card-text">
+                  Unprocessed, naturally harvested honey straight from our
+                  apiaries to your table.
+                </p>
+                <ul class="card-features">
+                  <li>100% Raw</li>
+                  <li>Unfiltered</li>
+                  <li>Local Harvest</li>
+                </ul>
+                <a href="honey.html" class="btn btn-outline">
+                  <span>Shop Honey</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Package -->
+      <section class="featured-section" id="cattle">
+        <div class="featured-bg"></div>
+        <div class="container">
+          <div class="featured-grid">
+            <div class="featured-content" data-aos="fade-right">
+              <span class="featured-badge">⭐ Best Value</span>
+              <span class="section-eyebrow light">Limited Offer</span>
+              <h2 class="section-title light">
+                Featured <span class="accent">Breeding Package</span>
+              </h2>
+              <div class="section-divider light"></div>
+              <p class="featured-text">
+                Start or expand your Bonsmara herd with our carefully curated
+                breeding package. Hand-selected animals with exceptional
+                genetics and proven performance.
+              </p>
+
+              <div class="package-includes">
+                <div class="package-item">
+                  <span class="item-icon">🐂</span>
+                  <div class="item-details">
+                    <strong>2 × Premium Bulls</strong>
+                    <span>Prime breeding age, certified pedigree</span>
+                  </div>
+                </div>
+                <div class="package-item">
+                  <span class="item-icon">🐄</span>
+                  <div class="item-details">
+                    <strong>10 × Proven Cows</strong>
+                    <span>Multiple successful calvings</span>
+                  </div>
+                </div>
+                <div class="package-item">
+                  <span class="item-icon">📋</span>
+                  <div class="item-details">
+                    <strong>Full Documentation</strong>
+                    <span>Complete pedigree & health records</span>
+                  </div>
+                </div>
+                <div class="package-item">
+                  <span class="item-icon">🚚</span>
+                  <div class="item-details">
+                    <strong>Delivery Coordination</strong>
+                    <span>Nationwide transport assistance</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-pricing">
+                <div class="price-info">
+                  <span class="price-label">Package Price</span>
+                  <span class="price-amount">$60,000</span>
+                  <span class="price-savings">Save $7,600</span>
+                </div>
+                <button
+                  class="btn btn-primary btn-glow snipcart-add-item"
+                  data-item-id="breeding-package"
+                  data-item-name="Featured Breeding Package"
+                  data-item-price="60000"
+                  data-item-url="/index.html"
+                  data-item-description="2 Bulls + 10 Cows with documentation"
+                  data-item-image="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/De-beer-bonsmara-3.png?w=600&ssl=1"
+                >
+                  <span>Add to Cart</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="featured-image" data-aos="fade-left">
+              <div class="image-frame">
+                <img
+                  src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/De-beer-bonsmara-3.png?w=600&ssl=1"
+                  alt="Bonsmara Herd"
+                />
+              </div>
+              <div class="image-badge">
+                <span class="badge-number">12</span>
+                <span class="badge-text">Animals</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Shop Section -->
+      <section class="shop-section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Shop Now</span>
+            <h2 class="section-title">
+              Quick <span class="accent">Add to Cart</span>
+            </h2>
+            <div class="section-divider centered"></div>
+          </div>
+
+          <div class="shop-grid">
+            <!-- Product 1 -->
+            <div class="shop-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="shop-image">
+                <img
+                  src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/art-rachen-Asj5DFw8UAw-unsplash.jpg?w=600&ssl=1"
+                  alt="Honey 12oz"
+                />
+              </div>
+              <div class="shop-details">
+                <h4>Raw Honey - 12oz</h4>
+                <p>Pure, unfiltered wildflower honey</p>
+                <div class="shop-footer">
+                  <span class="shop-price">$15.00</span>
+                  <button
+                    class="btn-cart snipcart-add-item"
+                    data-item-id="honey-12oz"
+                    data-item-name="Raw Honey - 12oz"
+                    data-item-price="15.00"
+                    data-item-url="/index.html"
+                    data-item-description="Pure wildflower honey"
+                    data-item-image="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/art-rachen-Asj5DFw8UAw-unsplash.jpg?w=600&ssl=1"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="shop-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="shop-image">
+                <img
+                  src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/art-rachen-Asj5DFw8UAw-unsplash.jpg?w=400&ssl=1"
+                  alt="Honey 24oz"
+                />
+              </div>
+              <div class="shop-details">
+                <h4>Raw Honey - 24oz</h4>
+                <p>Family size, pure & unfiltered</p>
+                <div class="shop-footer">
+                  <span class="shop-price">$25.00</span>
+                  <button
+                    class="btn-cart snipcart-add-item"
+                    data-item-id="honey-24oz"
+                    data-item-name="Raw Honey - 24oz"
+                    data-item-price="25.00"
+                    data-item-url="/index.html"
+                    data-item-description="Family size pure honey"
+                    data-item-image="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/art-rachen-Asj5DFw8UAw-unsplash.jpg?w=400&ssl=1"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="shop-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="shop-image">
+                <img
+                  src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/heather-wilde-asKos13UfAM-unsplash.jpg?w=600&ssl=1"
+                  alt="Summer Mix"
+                />
+              </div>
+              <div class="shop-details">
+                <h4>Summer Grass Mix</h4>
+                <p>35 lbs per bag, warm season blend</p>
+                <div class="shop-footer">
+                  <span class="shop-price">$500.00</span>
+                  <button
+                    class="btn-cart snipcart-add-item"
+                    data-item-id="grass-summer"
+                    data-item-name="Summer Grass Mix - 35lbs"
+                    data-item-price="500.00"
+                    data-item-url="/index.html"
+                    data-item-description="Premium summer forage blend"
+                    data-item-image="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/heather-wilde-asKos13UfAM-unsplash.jpg?w=600&ssl=1"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="shop-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="shop-image">
+                <img
+                  src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/De-beer-bonsmara-3.png?w=600&ssl=1"
+                  alt="Bull Semen"
+                />
+              </div>
+              <div class="shop-details">
+                <h4>Bull Semen Straws</h4>
+                <p>10 straws from premium bull</p>
+                <div class="shop-footer">
+                  <span class="shop-price">$250.00</span>
+                  <button
+                    class="btn-cart snipcart-add-item"
+                    data-item-id="semen-straws"
+                    data-item-name="Bull Semen Straws (10)"
+                    data-item-price="250.00"
+                    data-item-url="/index.html"
+                    data-item-description="10 cryogenically frozen straws"
+                    data-item-image="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/De-beer-bonsmara-3.png?w=600&ssl=1"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials-section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Testimonials</span>
+            <h2 class="section-title">
+              What Our <span class="accent">Customers Say</span>
+            </h2>
+            <div class="section-divider centered"></div>
+          </div>
+
+          <div class="testimonials-grid">
+            <div
+              class="testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="quote-icon">"</div>
+              <p class="testimonial-text">
+                The quality of De Beer's Bonsmara cattle is unmatched. Our herd
+                has improved dramatically since we started buying from them.
+                Excellent genetics!
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">JM</div>
+                <div class="author-info">
+                  <strong>John Mitchell</strong>
+                  <span>Mitchell Ranch, Texas</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="quote-icon">"</div>
+              <p class="testimonial-text">
+                Their grass seed mixes have transformed our pastures. The summer
+                mix performed incredibly even during the drought. Highly
+                recommend!
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">SR</div>
+                <div class="author-info">
+                  <strong>Sarah Rodriguez</strong>
+                  <span>Green Valley Farm, Oklahoma</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="quote-icon">"</div>
+              <p class="testimonial-text">
+                Best honey I've ever tasted! You can really tell the difference
+                with raw, unprocessed honey. Now a regular customer.
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">MB</div>
+                <div class="author-info">
+                  <strong>Maria Blackwood</strong>
+                  <span>Atlanta, Georgia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info" data-aos="fade-right">
+              <span class="section-eyebrow">Get in Touch</span>
+              <h2 class="section-title">
+                Let's <span class="accent">Connect</span>
+              </h2>
+              <div class="section-divider"></div>
+              <p class="contact-text">
+                Have questions about our cattle, grass, or honey products? We're
+                here to help you make the best choice for your farm.
+              </p>
+
+              <div class="contact-details">
+                <div class="contact-item">
+                  <span class="contact-icon">📍</span>
+                  <div>
+                    <strong>Location</strong>
+                    <span>123 Farm Road, Georgia, USA</span>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">📞</span>
+                  <div>
+                    <strong>Phone</strong>
+                    <span>(555) 123-4567</span>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">✉️</span>
+                  <div>
+                    <strong>Email</strong>
+                    <span>info@debeerbonsmara.com</span>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">🕐</span>
+                  <div>
+                    <strong>Hours</strong>
+                    <span>Mon - Sat: 8am - 6pm</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">YouTube</a>
+              </div>
+            </div>
+
+            <div class="contact-form-wrapper" data-aos="fade-left">
+              <form class="contact-form" id="contactForm">
+                <h3>Send us a Message</h3>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <select id="subject" name="subject">
+                    <option value="">Select a topic...</option>
+                    <option value="cattle">Cattle Inquiry</option>
+                    <option value="grass">Grass Products</option>
+                    <option value="honey">Honey Products</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Your Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                  <span>Send Message</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24">
+                    <path d="M5 12h14m-7-7 7 7-7 7" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Popup -->
+      <div class="newsletter-popup" id="newsletterPopup">
+        <div class="popup-overlay"></div>
+        <div class="popup-content">
+          <button class="popup-close" id="popupClose">&times;</button>
+          <div class="popup-image">
+            <img
+              src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/09/De-beer-bonsmara-3.png?w=600&ssl=1"
+              alt="Newsletter"
+            />
+          </div>
+          <div class="popup-body">
+            <span class="popup-badge">🐄 Join the Herd</span>
+            <h3>Subscribe to De Beer Farm News</h3>
+            <p>
+              Get exclusive updates on new livestock, seasonal offers, and farm
+              tips.
+            </p>
+            <form class="popup-form" id="newsletterForm">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <span class="popup-note">No spam, unsubscribe anytime.</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <a href="#" class="footer-logo">
+                <img
+                  src="https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/08/DeBeer-Bonsmaara-Transparent-Logo.png?w=1000&ssl=1"
+                  alt="De Beer Bonsmara Logo"
+                  class="logo-icon-img"
+                />
+                <span class="logo-text">De Beer Bonsmara</span>
+              </a>
+              <p>
+                Premium Bonsmara cattle, grass seed mixes, and pure raw honey
+                from our family farm to yours.
+              </p>
+              <div class="footer-social">
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="YouTube">▶️</a>
+              </div>
+            </div>
+
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links">
+              <h4>Products</h4>
+              <ul>
+                <li><a href="cattle.html">Bonsmara Cattle</a></li>
+                <li><a href="grass.html">Grass Seed Mixes</a></li>
+                <li><a href="honey.html">Raw Honey</a></li>
+                <li><a href="packages.html">Featured Package</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>📍 123 Farm Road, Georgia, USA</p>
+              <p>📞 (555) 123-4567</p>
+              <p>✉️ info@debeerbonsmara.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2026 De Beer Bonsmara. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      <svg viewBox="0 0 24 24"><path d="M12 19V5m-7 7 7-7 7 7" /></svg>
+    </button>
+
+    <!-- Snipcart (Shopping Cart) -->
+    <div
+      hidden
+      id="snipcart"
+      data-api-key="YOUR_SNIPCART_API_KEY"
+      data-config-modal-style="side"
+    ></div>
+    <script
+      async
+      src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"
+    ></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

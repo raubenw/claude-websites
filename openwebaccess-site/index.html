@@ -1,0 +1,1143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Open Web Access | Professional Web Development & Accessible Websites
+    </title>
+    <meta
+      name="description"
+      content="We build beautiful, fast, and accessible websites that work for everyone. WCAG compliant web development, SEO optimization, and modern design solutions."
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader-content">
+        <div class="preloader-logo">🌐</div>
+        <div class="preloader-text">Open Web Access</div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      class="navbar"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div class="nav-container">
+        <a
+          href="index.html"
+          class="nav-logo"
+          aria-label="Open Web Access - Home"
+        >
+          <div class="nav-logo-icon">O</div>
+          <span class="nav-logo-text">Open<span>Web</span></span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu" role="menubar">
+          <li role="none">
+            <a href="#home" class="nav-link active" role="menuitem">Home</a>
+          </li>
+          <li role="none">
+            <a href="#services" class="nav-link" role="menuitem">Services</a>
+          </li>
+          <li role="none">
+            <a href="#accessibility" class="nav-link" role="menuitem"
+              >Accessibility</a
+            >
+          </li>
+          <li role="none">
+            <a href="#portfolio" class="nav-link" role="menuitem">Portfolio</a>
+          </li>
+          <li role="none">
+            <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+          </li>
+        </ul>
+
+        <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="hero" id="home" aria-label="Welcome to Open Web Access">
+        <div class="hero-bg">
+          <div class="hero-shapes" aria-hidden="true">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div
+            class="hero-content"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <div class="hero-badge">
+              <span class="hero-badge-dot"></span>
+              <span>Available for New Projects</span>
+            </div>
+
+            <h1 class="hero-title">
+              We Build Websites<br />
+              That <span class="gradient">Work For Everyone</span>
+            </h1>
+
+            <p class="hero-description">
+              Beautiful, fast, and accessible websites that reach all users.
+              From stunning designs to WCAG compliance, we deliver web solutions
+              that drive results and make a difference.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#contact" class="btn btn-primary">
+                <span>Start Your Project</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="#portfolio" class="btn btn-outline-light">
+                <span>View Our Work</span>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="hero-stat-number">
+                  <span data-counter="150">0</span>+
+                </div>
+                <div class="hero-stat-label">Projects Completed</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-number">
+                  <span data-counter="98">0</span><span>%</span>
+                </div>
+                <div class="hero-stat-label">Client Satisfaction</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-number">
+                  <span data-counter="10">0</span>+
+                </div>
+                <div class="hero-stat-label">Years Experience</div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hero-image"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <div class="hero-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&h=500&fit=crop"
+                alt="Modern website design on laptop screen showing responsive layouts"
+              />
+
+              <div class="hero-float-card hero-float-card-1">
+                <div class="float-card-icon">✓</div>
+                <div class="float-card-title">WCAG Compliant</div>
+              </div>
+
+              <div class="hero-float-card hero-float-card-2">
+                <div class="float-card-icon">⚡</div>
+                <div class="float-card-title">Performance</div>
+                <div class="float-card-value">99/100</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-scroll" aria-hidden="true">
+          <span>Scroll</span>
+          <div class="hero-scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="services" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <div class="text-center">
+            <span class="section-eyebrow" data-aos="fade-up">What We Do</span>
+            <h2
+              class="section-title"
+              id="services-title"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Services That <span class="gradient">Drive Results</span>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+              From concept to launch, we provide comprehensive web solutions
+              tailored to your business needs.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <!-- Service 1: Web Development -->
+            <article
+              class="service-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-icon">💻</div>
+              <h3 class="service-title">Web Development</h3>
+              <p class="service-description">
+                Custom websites built with modern technologies. From simple
+                landing pages to complex web applications, we create solutions
+                that perform.
+              </p>
+              <div class="service-features">
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Responsive Design</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Fast Load Times</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Modern Technologies</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>CMS Integration</span>
+                </div>
+              </div>
+              <a href="#contact" class="service-link">
+                Learn More
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </article>
+
+            <!-- Service 2: Accessible Websites -->
+            <article
+              class="service-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-icon">♿</div>
+              <h3 class="service-title">Accessible Websites</h3>
+              <p class="service-description">
+                WCAG 2.1 compliant websites that work for everyone. We ensure
+                your site is usable by people of all abilities, avoiding legal
+                risks.
+              </p>
+              <div class="service-features">
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>WCAG 2.1 AA/AAA</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>ADA Compliance</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Screen Reader Ready</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Keyboard Navigation</span>
+                </div>
+              </div>
+              <a href="#accessibility" class="service-link">
+                Learn More
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </article>
+
+            <!-- Service 3: SEO Optimization -->
+            <article
+              class="service-card"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-icon">📈</div>
+              <h3 class="service-title">SEO Optimization</h3>
+              <p class="service-description">
+                Get found on Google. We optimize your website structure,
+                content, and performance to rank higher and attract more organic
+                traffic.
+              </p>
+              <div class="service-features">
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Technical SEO</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>On-Page Optimization</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Core Web Vitals</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Local SEO</span>
+                </div>
+              </div>
+              <a href="#contact" class="service-link">
+                Learn More
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </article>
+
+            <!-- Service 4: Website Redesign -->
+            <article
+              class="service-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-icon">🎨</div>
+              <h3 class="service-title">Website Redesign</h3>
+              <p class="service-description">
+                Transform your outdated website into a modern, high-converting
+                digital experience that represents your brand beautifully.
+              </p>
+              <div class="service-features">
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Modern UI/UX Design</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Brand Consistency</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Content Migration</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Performance Boost</span>
+                </div>
+              </div>
+              <a href="#contact" class="service-link">
+                Learn More
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </article>
+
+            <!-- Service 5: E-Commerce -->
+            <article
+              class="service-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-icon">🛒</div>
+              <h3 class="service-title">E-Commerce Solutions</h3>
+              <p class="service-description">
+                Sell online with confidence. We build secure, user-friendly
+                online stores that convert visitors into customers.
+              </p>
+              <div class="service-features">
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Shopping Cart Setup</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Payment Integration</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Inventory Management</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Secure Checkout</span>
+                </div>
+              </div>
+              <a href="#contact" class="service-link">
+                Learn More
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </article>
+
+            <!-- Service 6: Website Maintenance -->
+            <article
+              class="service-card"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-icon">🔧</div>
+              <h3 class="service-title">Website Maintenance</h3>
+              <p class="service-description">
+                Keep your website secure, updated, and running smoothly with our
+                ongoing maintenance and support packages.
+              </p>
+              <div class="service-features">
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Security Updates</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Regular Backups</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Performance Monitoring</span>
+                </div>
+                <div class="service-feature">
+                  <span class="service-feature-icon">✓</span>
+                  <span>Content Updates</span>
+                </div>
+              </div>
+              <a href="#contact" class="service-link">
+                Learn More
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Accessibility Feature Section -->
+      <section
+        class="accessibility"
+        id="accessibility"
+        aria-labelledby="accessibility-title"
+      >
+        <div class="container">
+          <div class="accessibility-grid">
+            <div class="accessibility-visual" data-aos="fade-right">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop"
+                alt="Developer working on accessible website code on computer screen"
+                class="accessibility-image"
+              />
+              <div class="wcag-badge">
+                <div class="wcag-badge-icon">✓</div>
+                <div class="wcag-badge-text">
+                  WCAG 2.1 AA
+                  <span>Certified Compliant</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="accessibility-content" data-aos="fade-left">
+              <div class="accessibility-badge">
+                <span>♿</span>
+                <span>Accessibility First</span>
+              </div>
+
+              <h2 class="accessibility-title" id="accessibility-title">
+                Websites That Work For <span class="gradient">Everyone</span>
+              </h2>
+
+              <p class="accessibility-text">
+                As a legally blind developer, I understand firsthand the
+                importance of web accessibility. 20% of people have disabilities
+                that impact how they use the web. Our WCAG-compliant websites
+                ensure your business reaches all users while avoiding costly
+                legal issues.
+              </p>
+
+              <div class="accessibility-features">
+                <div class="access-feature">
+                  <div class="access-feature-icon">👥</div>
+                  <div class="access-feature-text">
+                    <strong>Reach More Customers</strong>
+                    <span>Include the 1+ billion people with disabilities</span>
+                  </div>
+                </div>
+                <div class="access-feature">
+                  <div class="access-feature-icon">⚖️</div>
+                  <div class="access-feature-text">
+                    <strong>Avoid Legal Risks</strong>
+                    <span>ADA compliance prevents costly lawsuits</span>
+                  </div>
+                </div>
+                <div class="access-feature">
+                  <div class="access-feature-icon">🔍</div>
+                  <div class="access-feature-text">
+                    <strong>Better SEO</strong>
+                    <span>Accessible sites rank higher on Google</span>
+                  </div>
+                </div>
+                <div class="access-feature">
+                  <div class="access-feature-icon">❤️</div>
+                  <div class="access-feature-text">
+                    <strong>Enhanced UX</strong>
+                    <span>Clear navigation benefits all users</span>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#contact" class="btn btn-primary">
+                <span>Get an Accessibility Audit</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section
+        class="portfolio"
+        id="portfolio"
+        aria-labelledby="portfolio-title"
+      >
+        <div class="container">
+          <div class="text-center">
+            <span class="section-eyebrow" data-aos="fade-up">Our Work</span>
+            <h2
+              class="section-title"
+              id="portfolio-title"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Recent <span class="gradient">Projects</span>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+              See the transformation - websites before and after our
+              accessibility and design improvements.
+            </p>
+          </div>
+
+          <div class="portfolio-grid">
+            <!-- Project 1 -->
+            <article
+              class="portfolio-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=375&fit=crop"
+                alt="Italian restaurant website redesign showing modern food photography and booking system"
+                class="portfolio-image"
+              />
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Restaurant Website</span>
+                <h3 class="portfolio-title">Italian Restaurant Redesign</h3>
+                <a href="#" class="portfolio-link">
+                  View Case Study
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article
+              class="portfolio-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=375&fit=crop"
+                alt="Flooring company website with product showcase and quote request system"
+                class="portfolio-image"
+              />
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Business Website</span>
+                <h3 class="portfolio-title">Flooring Company</h3>
+                <a href="#" class="portfolio-link">
+                  View Case Study
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article
+              class="portfolio-card"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=375&fit=crop"
+                alt="Women's health clinic website with appointment booking and patient resources"
+                class="portfolio-image"
+              />
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Healthcare Website</span>
+                <h3 class="portfolio-title">Women's Health Clinic</h3>
+                <a href="#" class="portfolio-link">
+                  View Case Study
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="why-us" aria-labelledby="why-title">
+        <div class="container">
+          <div class="text-center">
+            <span class="section-eyebrow" data-aos="fade-up"
+              >Why Choose Us</span
+            >
+            <h2
+              class="section-title"
+              id="why-title"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              The Open Web Access <span class="gradient">Difference</span>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+              What sets us apart from other web development agencies.
+            </p>
+          </div>
+
+          <div class="why-grid">
+            <article class="why-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="why-icon">🎯</div>
+              <h3 class="why-title">Results-Focused</h3>
+              <p class="why-description">
+                We don't just build pretty websites - we build websites that
+                achieve your business goals and deliver measurable results.
+              </p>
+            </article>
+
+            <article class="why-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="why-icon">♿</div>
+              <h3 class="why-title">Accessibility Experts</h3>
+              <p class="why-description">
+                With firsthand experience of disability, we truly understand
+                accessibility and build it into every project from day one.
+              </p>
+            </article>
+
+            <article class="why-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="why-icon">⚡</div>
+              <h3 class="why-title">Performance First</h3>
+              <p class="why-description">
+                Fast websites convert better. We optimize every site for speed,
+                ensuring quick load times and smooth user experiences.
+              </p>
+            </article>
+
+            <article class="why-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="why-icon">🤝</div>
+              <h3 class="why-title">Personal Service</h3>
+              <p class="why-description">
+                You work directly with experienced developers, not sales teams.
+                Clear communication and transparent processes throughout.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+          <div class="text-center">
+            <span class="section-eyebrow" data-aos="fade-up">Testimonials</span>
+            <h2
+              class="section-title"
+              id="testimonials-title"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              What Our <span class="gradient">Clients Say</span>
+            </h2>
+          </div>
+
+          <div class="testimonials-grid">
+            <article
+              class="testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <span class="testimonial-quote">"</span>
+              <p class="testimonial-text">
+                Open Web Access transformed our outdated website into a modern,
+                accessible platform. Our traffic increased by 40% and we've had
+                zero accessibility complaints since launch.
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">M</div>
+                <div class="testimonial-info">
+                  <strong>Maria Santos</strong>
+                  <span>Owner, Santos Flooring</span>
+                  <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <span class="testimonial-quote">"</span>
+              <p class="testimonial-text">
+                The team's understanding of accessibility is unmatched. They
+                didn't just make our site compliant - they made it genuinely
+                better for all our patients to use.
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">D</div>
+                <div class="testimonial-info">
+                  <strong>Dr. Jennifer Walsh</strong>
+                  <span>Director, Women's Health Clinic</span>
+                  <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <span class="testimonial-quote">"</span>
+              <p class="testimonial-text">
+                Professional, responsive, and incredibly knowledgeable. Our
+                restaurant's online reservations doubled after the redesign.
+                Highly recommend!
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">A</div>
+                <div class="testimonial-info">
+                  <strong>Antonio Rossi</strong>
+                  <span>Owner, Bella Italia Restaurant</span>
+                  <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta" aria-label="Call to action">
+        <div class="container">
+          <div class="cta-content" data-aos="fade-up">
+            <h2 class="cta-title">Ready to Transform Your Website?</h2>
+            <p class="cta-text">
+              Get a free website audit and discover how we can improve your
+              site's performance, accessibility, and conversions.
+            </p>
+            <div class="cta-buttons">
+              <a href="#contact" class="btn btn-primary">
+                <span>Get Free Audit</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="text-center">
+            <span class="section-eyebrow" data-aos="fade-up">Get In Touch</span>
+            <h2
+              class="section-title"
+              id="contact-title"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Let's <span class="gradient">Work Together</span>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+              Ready to start your project? Fill out the form and we'll get back
+              to you within 24 hours.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info" data-aos="fade-right">
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                  <div class="contact-item-title">Email Us</div>
+                  <div class="contact-item-value">info@openwebaccess.com</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <div class="contact-item-title">Call Us</div>
+                  <div class="contact-item-value">(555) 123-4567</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <div class="contact-item-title">Location</div>
+                  <div class="contact-item-value">
+                    Remote - Serving Clients Worldwide
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">⏰</div>
+                <div>
+                  <div class="contact-item-title">Response Time</div>
+                  <div class="contact-item-value">Within 24 Hours</div>
+                </div>
+              </div>
+
+              <div class="contact-social">
+                <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                <a href="#" class="social-link" aria-label="GitHub">💻</a>
+              </div>
+            </div>
+
+            <div class="contact-form" data-aos="fade-left">
+              <h3 class="form-title">Send Us a Message</h3>
+              <p class="form-subtitle">
+                Fill out the form below and we'll be in touch soon.
+              </p>
+
+              <div class="form-message" id="formMessage" role="alert"></div>
+
+              <!-- IMPORTANT: Replace YOUR_FORM_ID with your actual Formspree form ID -->
+              <form
+                id="contactForm"
+                action="https://formspree.io/f/YOUR_FORM_ID"
+                method="POST"
+              >
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name" class="form-label">
+                      Full Name <span class="required">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="form-input"
+                      placeholder="John Smith"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="form-label">
+                      Email Address <span class="required">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-input"
+                      placeholder="john@example.com"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="form-input"
+                      placeholder="(555) 123-4567"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="website" class="form-label"
+                      >Current Website</label
+                    >
+                    <input
+                      type="url"
+                      id="website"
+                      name="website"
+                      class="form-input"
+                      placeholder="https://yoursite.com"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="service" class="form-label">
+                    Service Interested In <span class="required">*</span>
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    class="form-select"
+                    required
+                  >
+                    <option value="">Select a service...</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="accessibility-audit">
+                      Accessibility Audit
+                    </option>
+                    <option value="website-redesign">Website Redesign</option>
+                    <option value="seo-optimization">SEO Optimization</option>
+                    <option value="ecommerce">E-Commerce</option>
+                    <option value="maintenance">Website Maintenance</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="message" class="form-label">
+                    Tell Us About Your Project <span class="required">*</span>
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-textarea"
+                    placeholder="Describe your project, goals, and timeline..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary form-submit">
+                  <span>Send Message</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                  </svg>
+                </button>
+
+                <p class="form-note">
+                  🔒 Your information is secure and will never be shared.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <div class="footer-logo-icon">🌐</div>
+              <span class="footer-logo-text">Open Web Access</span>
+            </a>
+            <p class="footer-description">
+              We build beautiful, fast, and accessible websites that work for
+              everyone. Your partner in creating inclusive digital experiences.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="footer-social-link" aria-label="LinkedIn"
+                >💼</a
+              >
+              <a href="#" class="footer-social-link" aria-label="Twitter">🐦</a>
+              <a href="#" class="footer-social-link" aria-label="GitHub">💻</a>
+              <a href="#" class="footer-social-link" aria-label="Facebook"
+                >📘</a
+              >
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h4>Services</h4>
+            <div class="footer-links">
+              <a href="#services" class="footer-link">Web Development</a>
+              <a href="#accessibility" class="footer-link"
+                >Accessible Websites</a
+              >
+              <a href="#services" class="footer-link">SEO Optimization</a>
+              <a href="#services" class="footer-link">Website Redesign</a>
+              <a href="#services" class="footer-link">E-Commerce</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h4>Company</h4>
+            <div class="footer-links">
+              <a href="#home" class="footer-link">About Us</a>
+              <a href="#portfolio" class="footer-link">Portfolio</a>
+              <a href="#testimonials" class="footer-link">Testimonials</a>
+              <a href="#contact" class="footer-link">Contact</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <div class="footer-links">
+              <a href="#" class="footer-link">Blog</a>
+              <a href="#" class="footer-link">Free Audit</a>
+              <a href="#" class="footer-link">WCAG Guidelines</a>
+              <a href="#" class="footer-link">FAQ</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Open Web Access. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Accessibility Statement</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
