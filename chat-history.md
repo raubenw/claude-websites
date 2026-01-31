@@ -11,10 +11,12 @@ This document captures the conversation history for creating and managing websit
 ## De Beer Bonsmara Website Updates
 
 ### Logo Replacement
+
 - Replaced cow emoji (🐄) icons with actual De Beer Bonsmara logo image across all pages
 - Logo URL: `https://i0.wp.com/debeerbonsmara.com/wp-content/uploads/2025/08/DeBeer-Bonsmaara-Transparent-Logo.png`
 
 ### Logo Sizing Updates
+
 - **Preloader logo:** Updated to `400px` width (was 120px)
 - **Nav logo:** Updated to `150px` width (was 55px)
 - Updated in `css/styles.css`:
@@ -22,7 +24,9 @@ This document captures the conversation history for creating and managing websit
   - `.logo-icon-img { width: 150px; }`
 
 ### Contact Form Implementation
+
 Created PHP backend (`send-mail.php`) for HostGator hosting:
+
 - Handles both contact form and newsletter subscriptions
 - Sends all submissions to `subscribe@debeerbonsmara.com`
 - Features:
@@ -32,13 +36,16 @@ Created PHP backend (`send-mail.php`) for HostGator hosting:
   - No third-party services required (no Formspree/Mailchimp)
 
 ### JavaScript Form Handlers Updated
+
 Updated `js/main.js` to:
+
 - Submit forms via AJAX to PHP handler
 - Show loading states while sending
 - Display success/error messages
 - Handle both contact form and newsletter popup
 
 ### Deployment
+
 - Site deployed to live at debeerbonsmara.com
 - Contact form: ✅ Working
 - Newsletter form: ✅ Working
@@ -48,11 +55,13 @@ Updated `js/main.js` to:
 ## GitHub Repository Setup
 
 ### Repository Created
+
 - **URL:** https://github.com/raubenw/claude-websites
 - **Visibility:** Public
 - **Description:** Websites created with Claude AI - De Beer Bonsmara, Open Web Access
 
 ### Repository Structure
+
 ```
 claude-websites/
 ├── debeerbonsmara/          # De Beer Bonsmara website (live)
@@ -78,6 +87,7 @@ claude-websites/
 ```
 
 ### Git Commands Used
+
 ```bash
 # Initialize repository
 git init
@@ -105,6 +115,7 @@ git push
 ## Projects in Repository
 
 ### 1. De Beer Bonsmara (`/debeerbonsmara`)
+
 - **Type:** Static HTML5/CSS3/JavaScript website
 - **Purpose:** Cattle farm website selling Bonsmara cattle, grass products, and honey
 - **Shopping Cart:** Snipcart (integrated, awaiting live API key)
@@ -112,6 +123,7 @@ git push
 - **Hosting:** HostGator
 
 ### 2. Open Web Access (`/openwebaccess-site`)
+
 - **Type:** Web agency portfolio site
 - **Purpose:** Marketing site for Open Web Access web development services
 - **Demo Sites:** Includes SpineAlign Chiropractic demo for South African market
@@ -136,4 +148,4 @@ git push
 
 ---
 
-*This chat history is maintained as part of the claude-websites repository.*
+_This chat history is maintained as part of the claude-websites repository._
