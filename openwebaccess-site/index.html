@@ -1,1143 +1,478 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Open Web Access | Professional Web Development & Accessible Websites
-    </title>
-    <meta
-      name="description"
-      content="We build beautiful, fast, and accessible websites that work for everyone. WCAG compliant web development, SEO optimization, and modern design solutions."
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Web Access | Accessible Web Development & SEO</title>
+  <meta name="description" content="We build inclusive, WCAG-compliant websites that reach all users. Expert web development, accessibility audits, and SEO optimization. As a legally blind developer, accessibility is personal." />
+  <meta name="theme-color" content="#0052CC" />
 
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>"
-    />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://openwebaccess.com/wp-content/uploads/2025/08/cropped-imageedit_2_5569829411-32x32.png" />
+  <link rel="apple-touch-icon" href="https://openwebaccess.com/wp-content/uploads/2025/08/cropped-imageedit_2_5569829411.png" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Open Web Access | Accessible Web Development" />
+  <meta property="og:description" content="We build inclusive, WCAG-compliant websites that reach all users." />
+  <meta property="og:image" content="https://openwebaccess.com/wp-content/uploads/2025/08/cropped-imageedit_2_5569829411.png" />
+  <meta property="og:type" content="website" />
 
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
 
-    <!-- Preloader -->
-    <div class="preloader" id="preloader" aria-hidden="true">
-      <div class="preloader-content">
-        <div class="preloader-logo">🌐</div>
-        <div class="preloader-text">Open Web Access</div>
-      </div>
-    </div>
+  <!-- Skip Navigation -->
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation -->
-    <nav
-      class="navbar"
-      id="navbar"
-      role="navigation"
-      aria-label="Main navigation"
-    >
-      <div class="nav-container">
-        <a
-          href="index.html"
-          class="nav-logo"
-          aria-label="Open Web Access - Home"
-        >
-          <div class="nav-logo-icon">O</div>
-          <span class="nav-logo-text">Open<span>Web</span></span>
-        </a>
+  <!-- Header -->
+  <header class="header" id="header" role="banner">
+    <div class="container">
+      <a href="#home" class="logo" aria-label="Open Web Access — Home">
+        <img src="https://openwebaccess.com/wp-content/uploads/2025/08/cropped-imageedit_2_5569829411.png" alt="Open Web Access logo" class="logo-img" width="48" height="48" />
+        <span class="logo-text">Open<strong>Web</strong>Access</span>
+      </a>
 
-        <ul class="nav-menu" id="navMenu" role="menubar">
-          <li role="none">
-            <a href="#home" class="nav-link active" role="menuitem">Home</a>
-          </li>
-          <li role="none">
-            <a href="#services" class="nav-link" role="menuitem">Services</a>
-          </li>
-          <li role="none">
-            <a href="#accessibility" class="nav-link" role="menuitem"
-              >Accessibility</a
-            >
-          </li>
-          <li role="none">
-            <a href="#portfolio" class="nav-link" role="menuitem">Portfolio</a>
-          </li>
-          <li role="none">
-            <a href="#contact" class="nav-link" role="menuitem">Contact</a>
-          </li>
+      <nav class="nav" id="nav" role="navigation" aria-label="Primary navigation">
+        <ul class="nav-list" id="navList" role="menubar">
+          <li role="none"><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
+          <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
+          <li role="none"><a href="#why" class="nav-link" role="menuitem">Why Accessibility</a></li>
+          <li role="none"><a href="#portfolio" class="nav-link" role="menuitem">Portfolio</a></li>
+          <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
         </ul>
+      </nav>
 
-        <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
-
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">Get Free Audit</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navList">
+          <span class="hamburger" aria-hidden="true"></span>
         </button>
       </div>
-    </nav>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main id="main-content">
-      <!-- Hero Section -->
-      <section class="hero" id="home" aria-label="Welcome to Open Web Access">
-        <div class="hero-bg">
-          <div class="hero-shapes" aria-hidden="true">
-            <div class="hero-shape hero-shape-1"></div>
-            <div class="hero-shape hero-shape-2"></div>
-            <div class="hero-shape hero-shape-3"></div>
-          </div>
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="https://openwebaccess.com/wp-content/uploads/2025/08/thisisengineering-o6jUolZ7QJk-unsplash.jpg" alt="" loading="eager" />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          WCAG 2.1 AA Compliant Development
         </div>
-
-        <div class="container">
-          <div
-            class="hero-content"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-          >
-            <div class="hero-badge">
-              <span class="hero-badge-dot"></span>
-              <span>Available for New Projects</span>
-            </div>
-
-            <h1 class="hero-title">
-              We Build Websites<br />
-              That <span class="gradient">Work For Everyone</span>
-            </h1>
-
-            <p class="hero-description">
-              Beautiful, fast, and accessible websites that reach all users.
-              From stunning designs to WCAG compliance, we deliver web solutions
-              that drive results and make a difference.
-            </p>
-
-            <div class="hero-buttons">
-              <a href="#contact" class="btn btn-primary">
-                <span>Start Your Project</span>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a href="#portfolio" class="btn btn-outline-light">
-                <span>View Our Work</span>
-              </a>
-            </div>
-
-            <div class="hero-stats">
-              <div class="hero-stat">
-                <div class="hero-stat-number">
-                  <span data-counter="150">0</span>+
-                </div>
-                <div class="hero-stat-label">Projects Completed</div>
-              </div>
-              <div class="hero-stat">
-                <div class="hero-stat-number">
-                  <span data-counter="98">0</span><span>%</span>
-                </div>
-                <div class="hero-stat-label">Client Satisfaction</div>
-              </div>
-              <div class="hero-stat">
-                <div class="hero-stat-number">
-                  <span data-counter="10">0</span>+
-                </div>
-                <div class="hero-stat-label">Years Experience</div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="hero-image"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-delay="200"
-          >
-            <div class="hero-image-wrapper">
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&h=500&fit=crop"
-                alt="Modern website design on laptop screen showing responsive layouts"
-              />
-
-              <div class="hero-float-card hero-float-card-1">
-                <div class="float-card-icon">✓</div>
-                <div class="float-card-title">WCAG Compliant</div>
-              </div>
-
-              <div class="hero-float-card hero-float-card-2">
-                <div class="float-card-icon">⚡</div>
-                <div class="float-card-title">Performance</div>
-                <div class="float-card-value">99/100</div>
-              </div>
-            </div>
-          </div>
+        <h1 id="hero-heading">
+          Websites Built for
+          <span class="text-gradient">Everyone</span>
+        </h1>
+        <p class="hero-subtitle">
+          We build inclusive, compliant, and high-performing websites with a focus on accessibility and SEO. As a legally blind developer, I understand ADA standards firsthand — ensuring your site reaches <em>all</em> users and avoids costly legal issues.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary btn-lg">
+            Request Free Audit
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+          </a>
+          <a href="#portfolio" class="btn btn-outline btn-lg">View Our Work</a>
         </div>
-
-        <div class="hero-scroll" aria-hidden="true">
-          <span>Scroll</span>
-          <div class="hero-scroll-line"></div>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section class="services" id="services" aria-labelledby="services-title">
-        <div class="container">
-          <div class="text-center">
-            <span class="section-eyebrow" data-aos="fade-up">What We Do</span>
-            <h2
-              class="section-title"
-              id="services-title"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              Services That <span class="gradient">Drive Results</span>
-            </h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
-              From concept to launch, we provide comprehensive web solutions
-              tailored to your business needs.
-            </p>
+        <div class="hero-stats" role="list" aria-label="Key statistics">
+          <div class="stat" role="listitem">
+            <span class="stat-number" data-target="20">0</span><span class="stat-suffix">%</span>
+            <span class="stat-label">of people have disabilities</span>
           </div>
-
-          <div class="services-grid">
-            <!-- Service 1: Web Development -->
-            <article
-              class="service-card"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="service-icon">💻</div>
-              <h3 class="service-title">Web Development</h3>
-              <p class="service-description">
-                Custom websites built with modern technologies. From simple
-                landing pages to complex web applications, we create solutions
-                that perform.
-              </p>
-              <div class="service-features">
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Responsive Design</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Fast Load Times</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Modern Technologies</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>CMS Integration</span>
-                </div>
-              </div>
-              <a href="#contact" class="service-link">
-                Learn More
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-            </article>
-
-            <!-- Service 2: Accessible Websites -->
-            <article
-              class="service-card"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="service-icon">♿</div>
-              <h3 class="service-title">Accessible Websites</h3>
-              <p class="service-description">
-                WCAG 2.1 compliant websites that work for everyone. We ensure
-                your site is usable by people of all abilities, avoiding legal
-                risks.
-              </p>
-              <div class="service-features">
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>WCAG 2.1 AA/AAA</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>ADA Compliance</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Screen Reader Ready</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Keyboard Navigation</span>
-                </div>
-              </div>
-              <a href="#accessibility" class="service-link">
-                Learn More
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-            </article>
-
-            <!-- Service 3: SEO Optimization -->
-            <article
-              class="service-card"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="service-icon">📈</div>
-              <h3 class="service-title">SEO Optimization</h3>
-              <p class="service-description">
-                Get found on Google. We optimize your website structure,
-                content, and performance to rank higher and attract more organic
-                traffic.
-              </p>
-              <div class="service-features">
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Technical SEO</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>On-Page Optimization</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Core Web Vitals</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Local SEO</span>
-                </div>
-              </div>
-              <a href="#contact" class="service-link">
-                Learn More
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-            </article>
-
-            <!-- Service 4: Website Redesign -->
-            <article
-              class="service-card"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="service-icon">🎨</div>
-              <h3 class="service-title">Website Redesign</h3>
-              <p class="service-description">
-                Transform your outdated website into a modern, high-converting
-                digital experience that represents your brand beautifully.
-              </p>
-              <div class="service-features">
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Modern UI/UX Design</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Brand Consistency</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Content Migration</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Performance Boost</span>
-                </div>
-              </div>
-              <a href="#contact" class="service-link">
-                Learn More
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-            </article>
-
-            <!-- Service 5: E-Commerce -->
-            <article
-              class="service-card"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="service-icon">🛒</div>
-              <h3 class="service-title">E-Commerce Solutions</h3>
-              <p class="service-description">
-                Sell online with confidence. We build secure, user-friendly
-                online stores that convert visitors into customers.
-              </p>
-              <div class="service-features">
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Shopping Cart Setup</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Payment Integration</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Inventory Management</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Secure Checkout</span>
-                </div>
-              </div>
-              <a href="#contact" class="service-link">
-                Learn More
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-            </article>
-
-            <!-- Service 6: Website Maintenance -->
-            <article
-              class="service-card"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="service-icon">🔧</div>
-              <h3 class="service-title">Website Maintenance</h3>
-              <p class="service-description">
-                Keep your website secure, updated, and running smoothly with our
-                ongoing maintenance and support packages.
-              </p>
-              <div class="service-features">
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Security Updates</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Regular Backups</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Performance Monitoring</span>
-                </div>
-                <div class="service-feature">
-                  <span class="service-feature-icon">✓</span>
-                  <span>Content Updates</span>
-                </div>
-              </div>
-              <a href="#contact" class="service-link">
-                Learn More
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-            </article>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat-number" data-target="50">0</span><span class="stat-suffix">K+</span>
+            <span class="stat-label">ADA lawsuits yearly in the US</span>
           </div>
-        </div>
-      </section>
-
-      <!-- Accessibility Feature Section -->
-      <section
-        class="accessibility"
-        id="accessibility"
-        aria-labelledby="accessibility-title"
-      >
-        <div class="container">
-          <div class="accessibility-grid">
-            <div class="accessibility-visual" data-aos="fade-right">
-              <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop"
-                alt="Developer working on accessible website code on computer screen"
-                class="accessibility-image"
-              />
-              <div class="wcag-badge">
-                <div class="wcag-badge-icon">✓</div>
-                <div class="wcag-badge-text">
-                  WCAG 2.1 AA
-                  <span>Certified Compliant</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="accessibility-content" data-aos="fade-left">
-              <div class="accessibility-badge">
-                <span>♿</span>
-                <span>Accessibility First</span>
-              </div>
-
-              <h2 class="accessibility-title" id="accessibility-title">
-                Websites That Work For <span class="gradient">Everyone</span>
-              </h2>
-
-              <p class="accessibility-text">
-                As a legally blind developer, I understand firsthand the
-                importance of web accessibility. 20% of people have disabilities
-                that impact how they use the web. Our WCAG-compliant websites
-                ensure your business reaches all users while avoiding costly
-                legal issues.
-              </p>
-
-              <div class="accessibility-features">
-                <div class="access-feature">
-                  <div class="access-feature-icon">👥</div>
-                  <div class="access-feature-text">
-                    <strong>Reach More Customers</strong>
-                    <span>Include the 1+ billion people with disabilities</span>
-                  </div>
-                </div>
-                <div class="access-feature">
-                  <div class="access-feature-icon">⚖️</div>
-                  <div class="access-feature-text">
-                    <strong>Avoid Legal Risks</strong>
-                    <span>ADA compliance prevents costly lawsuits</span>
-                  </div>
-                </div>
-                <div class="access-feature">
-                  <div class="access-feature-icon">🔍</div>
-                  <div class="access-feature-text">
-                    <strong>Better SEO</strong>
-                    <span>Accessible sites rank higher on Google</span>
-                  </div>
-                </div>
-                <div class="access-feature">
-                  <div class="access-feature-icon">❤️</div>
-                  <div class="access-feature-text">
-                    <strong>Enhanced UX</strong>
-                    <span>Clear navigation benefits all users</span>
-                  </div>
-                </div>
-              </div>
-
-              <a href="#contact" class="btn btn-primary">
-                <span>Get an Accessibility Audit</span>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Portfolio Section -->
-      <section
-        class="portfolio"
-        id="portfolio"
-        aria-labelledby="portfolio-title"
-      >
-        <div class="container">
-          <div class="text-center">
-            <span class="section-eyebrow" data-aos="fade-up">Our Work</span>
-            <h2
-              class="section-title"
-              id="portfolio-title"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              Recent <span class="gradient">Projects</span>
-            </h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
-              See the transformation - websites before and after our
-              accessibility and design improvements.
-            </p>
-          </div>
-
-          <div class="portfolio-grid">
-            <!-- Project 1 -->
-            <article
-              class="portfolio-card"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=375&fit=crop"
-                alt="Italian restaurant website redesign showing modern food photography and booking system"
-                class="portfolio-image"
-              />
-              <div class="portfolio-overlay">
-                <span class="portfolio-category">Restaurant Website</span>
-                <h3 class="portfolio-title">Italian Restaurant Redesign</h3>
-                <a href="#" class="portfolio-link">
-                  View Case Study
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </article>
-
-            <!-- Project 2 -->
-            <article
-              class="portfolio-card"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=375&fit=crop"
-                alt="Flooring company website with product showcase and quote request system"
-                class="portfolio-image"
-              />
-              <div class="portfolio-overlay">
-                <span class="portfolio-category">Business Website</span>
-                <h3 class="portfolio-title">Flooring Company</h3>
-                <a href="#" class="portfolio-link">
-                  View Case Study
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </article>
-
-            <!-- Project 3 -->
-            <article
-              class="portfolio-card"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=375&fit=crop"
-                alt="Women's health clinic website with appointment booking and patient resources"
-                class="portfolio-image"
-              />
-              <div class="portfolio-overlay">
-                <span class="portfolio-category">Healthcare Website</span>
-                <h3 class="portfolio-title">Women's Health Clinic</h3>
-                <a href="#" class="portfolio-link">
-                  View Case Study
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Why Choose Us Section -->
-      <section class="why-us" aria-labelledby="why-title">
-        <div class="container">
-          <div class="text-center">
-            <span class="section-eyebrow" data-aos="fade-up"
-              >Why Choose Us</span
-            >
-            <h2
-              class="section-title"
-              id="why-title"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              The Open Web Access <span class="gradient">Difference</span>
-            </h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
-              What sets us apart from other web development agencies.
-            </p>
-          </div>
-
-          <div class="why-grid">
-            <article class="why-card" data-aos="fade-up" data-aos-delay="100">
-              <div class="why-icon">🎯</div>
-              <h3 class="why-title">Results-Focused</h3>
-              <p class="why-description">
-                We don't just build pretty websites - we build websites that
-                achieve your business goals and deliver measurable results.
-              </p>
-            </article>
-
-            <article class="why-card" data-aos="fade-up" data-aos-delay="200">
-              <div class="why-icon">♿</div>
-              <h3 class="why-title">Accessibility Experts</h3>
-              <p class="why-description">
-                With firsthand experience of disability, we truly understand
-                accessibility and build it into every project from day one.
-              </p>
-            </article>
-
-            <article class="why-card" data-aos="fade-up" data-aos-delay="300">
-              <div class="why-icon">⚡</div>
-              <h3 class="why-title">Performance First</h3>
-              <p class="why-description">
-                Fast websites convert better. We optimize every site for speed,
-                ensuring quick load times and smooth user experiences.
-              </p>
-            </article>
-
-            <article class="why-card" data-aos="fade-up" data-aos-delay="400">
-              <div class="why-icon">🤝</div>
-              <h3 class="why-title">Personal Service</h3>
-              <p class="why-description">
-                You work directly with experienced developers, not sales teams.
-                Clear communication and transparent processes throughout.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Testimonials Section -->
-      <section class="testimonials" aria-labelledby="testimonials-title">
-        <div class="container">
-          <div class="text-center">
-            <span class="section-eyebrow" data-aos="fade-up">Testimonials</span>
-            <h2
-              class="section-title"
-              id="testimonials-title"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              What Our <span class="gradient">Clients Say</span>
-            </h2>
-          </div>
-
-          <div class="testimonials-grid">
-            <article
-              class="testimonial-card"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <span class="testimonial-quote">"</span>
-              <p class="testimonial-text">
-                Open Web Access transformed our outdated website into a modern,
-                accessible platform. Our traffic increased by 40% and we've had
-                zero accessibility complaints since launch.
-              </p>
-              <div class="testimonial-author">
-                <div class="testimonial-avatar">M</div>
-                <div class="testimonial-info">
-                  <strong>Maria Santos</strong>
-                  <span>Owner, Santos Flooring</span>
-                  <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="testimonial-card"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <span class="testimonial-quote">"</span>
-              <p class="testimonial-text">
-                The team's understanding of accessibility is unmatched. They
-                didn't just make our site compliant - they made it genuinely
-                better for all our patients to use.
-              </p>
-              <div class="testimonial-author">
-                <div class="testimonial-avatar">D</div>
-                <div class="testimonial-info">
-                  <strong>Dr. Jennifer Walsh</strong>
-                  <span>Director, Women's Health Clinic</span>
-                  <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="testimonial-card"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <span class="testimonial-quote">"</span>
-              <p class="testimonial-text">
-                Professional, responsive, and incredibly knowledgeable. Our
-                restaurant's online reservations doubled after the redesign.
-                Highly recommend!
-              </p>
-              <div class="testimonial-author">
-                <div class="testimonial-avatar">A</div>
-                <div class="testimonial-info">
-                  <strong>Antonio Rossi</strong>
-                  <span>Owner, Bella Italia Restaurant</span>
-                  <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA Section -->
-      <section class="cta" aria-label="Call to action">
-        <div class="container">
-          <div class="cta-content" data-aos="fade-up">
-            <h2 class="cta-title">Ready to Transform Your Website?</h2>
-            <p class="cta-text">
-              Get a free website audit and discover how we can improve your
-              site's performance, accessibility, and conversions.
-            </p>
-            <div class="cta-buttons">
-              <a href="#contact" class="btn btn-primary">
-                <span>Get Free Audit</span>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="contact" id="contact" aria-labelledby="contact-title">
-        <div class="container">
-          <div class="text-center">
-            <span class="section-eyebrow" data-aos="fade-up">Get In Touch</span>
-            <h2
-              class="section-title"
-              id="contact-title"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              Let's <span class="gradient">Work Together</span>
-            </h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
-              Ready to start your project? Fill out the form and we'll get back
-              to you within 24 hours.
-            </p>
-          </div>
-
-          <div class="contact-grid">
-            <div class="contact-info" data-aos="fade-right">
-              <div class="contact-item">
-                <div class="contact-icon">📧</div>
-                <div>
-                  <div class="contact-item-title">Email Us</div>
-                  <div class="contact-item-value">info@openwebaccess.com</div>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">📞</div>
-                <div>
-                  <div class="contact-item-title">Call Us</div>
-                  <div class="contact-item-value">(555) 123-4567</div>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">📍</div>
-                <div>
-                  <div class="contact-item-title">Location</div>
-                  <div class="contact-item-value">
-                    Remote - Serving Clients Worldwide
-                  </div>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">⏰</div>
-                <div>
-                  <div class="contact-item-title">Response Time</div>
-                  <div class="contact-item-value">Within 24 Hours</div>
-                </div>
-              </div>
-
-              <div class="contact-social">
-                <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
-                <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-                <a href="#" class="social-link" aria-label="GitHub">💻</a>
-              </div>
-            </div>
-
-            <div class="contact-form" data-aos="fade-left">
-              <h3 class="form-title">Send Us a Message</h3>
-              <p class="form-subtitle">
-                Fill out the form below and we'll be in touch soon.
-              </p>
-
-              <div class="form-message" id="formMessage" role="alert"></div>
-
-              <!-- IMPORTANT: Replace YOUR_FORM_ID with your actual Formspree form ID -->
-              <form
-                id="contactForm"
-                action="https://formspree.io/f/YOUR_FORM_ID"
-                method="POST"
-              >
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="name" class="form-label">
-                      Full Name <span class="required">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      class="form-input"
-                      placeholder="John Smith"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="email" class="form-label">
-                      Email Address <span class="required">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      class="form-input"
-                      placeholder="john@example.com"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="phone" class="form-label">Phone Number</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      class="form-input"
-                      placeholder="(555) 123-4567"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="website" class="form-label"
-                      >Current Website</label
-                    >
-                    <input
-                      type="url"
-                      id="website"
-                      name="website"
-                      class="form-input"
-                      placeholder="https://yoursite.com"
-                    />
-                  </div>
-                </div>
-
-                <div class="form-group full-width">
-                  <label for="service" class="form-label">
-                    Service Interested In <span class="required">*</span>
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    class="form-select"
-                    required
-                  >
-                    <option value="">Select a service...</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="accessibility-audit">
-                      Accessibility Audit
-                    </option>
-                    <option value="website-redesign">Website Redesign</option>
-                    <option value="seo-optimization">SEO Optimization</option>
-                    <option value="ecommerce">E-Commerce</option>
-                    <option value="maintenance">Website Maintenance</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div class="form-group full-width">
-                  <label for="message" class="form-label">
-                    Tell Us About Your Project <span class="required">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    class="form-textarea"
-                    placeholder="Describe your project, goals, and timeline..."
-                    required
-                  ></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary form-submit">
-                  <span>Send Message</span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
-                  </svg>
-                </button>
-
-                <p class="form-note">
-                  🔒 Your information is secure and will never be shared.
-                </p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <a href="index.html" class="footer-logo">
-              <div class="footer-logo-icon">🌐</div>
-              <span class="footer-logo-text">Open Web Access</span>
-            </a>
-            <p class="footer-description">
-              We build beautiful, fast, and accessible websites that work for
-              everyone. Your partner in creating inclusive digital experiences.
-            </p>
-            <div class="footer-social">
-              <a href="#" class="footer-social-link" aria-label="LinkedIn"
-                >💼</a
-              >
-              <a href="#" class="footer-social-link" aria-label="Twitter">🐦</a>
-              <a href="#" class="footer-social-link" aria-label="GitHub">💻</a>
-              <a href="#" class="footer-social-link" aria-label="Facebook"
-                >📘</a
-              >
-            </div>
-          </div>
-
-          <div class="footer-column">
-            <h4>Services</h4>
-            <div class="footer-links">
-              <a href="#services" class="footer-link">Web Development</a>
-              <a href="#accessibility" class="footer-link"
-                >Accessible Websites</a
-              >
-              <a href="#services" class="footer-link">SEO Optimization</a>
-              <a href="#services" class="footer-link">Website Redesign</a>
-              <a href="#services" class="footer-link">E-Commerce</a>
-            </div>
-          </div>
-
-          <div class="footer-column">
-            <h4>Company</h4>
-            <div class="footer-links">
-              <a href="#home" class="footer-link">About Us</a>
-              <a href="#portfolio" class="footer-link">Portfolio</a>
-              <a href="#testimonials" class="footer-link">Testimonials</a>
-              <a href="#contact" class="footer-link">Contact</a>
-            </div>
-          </div>
-
-          <div class="footer-column">
-            <h4>Resources</h4>
-            <div class="footer-links">
-              <a href="#" class="footer-link">Blog</a>
-              <a href="#" class="footer-link">Free Audit</a>
-              <a href="#" class="footer-link">WCAG Guidelines</a>
-              <a href="#" class="footer-link">FAQ</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>&copy; 2026 Open Web Access. All rights reserved.</p>
-          <div class="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Accessibility Statement</a>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+            <span class="stat-label">WCAG compliant builds</span>
           </div>
         </div>
       </div>
-    </footer>
+      <div class="scroll-indicator" aria-hidden="true"><span></span></div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    <!-- ===== SERVICES ===== -->
+    <section class="section services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What We Do</span>
+          <h2 id="services-heading">Services That Drive Results</h2>
+          <p class="section-desc">Comprehensive web solutions designed to make your digital presence accessible, performant, and impactful.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+            </div>
+            <h3>Web Development</h3>
+            <p>Custom-built, responsive websites using modern standards. Clean code, fast loading, and designed to convert visitors into customers.</p>
+          </article>
+
+          <article class="service-card featured">
+            <div class="service-badge">Most Requested</div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3>Accessibility Audits</h3>
+            <p>Comprehensive WCAG 2.1 AA compliance testing. We identify barriers, provide actionable reports, and help you fix issues before they become lawsuits.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            </div>
+            <h3>SEO Optimization</h3>
+            <p>Boost search visibility with semantic markup, structured data, and performance optimization that search engines love.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>Performance Tuning</h3>
+            <p>Speed matters. We optimize load times, reduce file sizes, and implement best practices for lightning-fast experiences.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>ADA Remediation</h3>
+            <p>Already have a site that needs fixing? We bring existing websites into full ADA and WCAG compliance with minimal disruption.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
+            </div>
+            <h3>Ongoing Support</h3>
+            <p>Continuous monitoring, updates, and improvements to keep your site secure, compliant, and performing at its best.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY ACCESSIBILITY ===== -->
+    <section class="section why-section" id="why" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="why-layout">
+          <div class="why-content">
+            <span class="section-tag">Why It Matters</span>
+            <h2 id="why-heading">Accessibility Is Good Business</h2>
+            <p class="why-intro">Accessibility ensures all people, including the 20% with disabilities, can fully engage with your digital presence. It's not just the right thing to do — it's smart business.</p>
+
+            <div class="why-grid">
+              <div class="why-card">
+                <div class="why-card-icon" aria-hidden="true">
+                  <img src="https://openwebaccess.com/wp-content/uploads/2025/08/icons8-lightbulb-50.png" alt="" width="40" height="40" loading="lazy" />
+                </div>
+                <div>
+                  <h3>Reach More Customers</h3>
+                  <p>20% of people have disabilities impacting web use. Accessibility ensures equal access to your products and services.</p>
+                </div>
+              </div>
+
+              <div class="why-card">
+                <div class="why-card-icon" aria-hidden="true">
+                  <img src="https://openwebaccess.com/wp-content/uploads/2025/08/icons8-search-50.png" alt="" width="40" height="40" loading="lazy" />
+                </div>
+                <div>
+                  <h3>SEO Advantages</h3>
+                  <p>Accessible websites rank better with cleaner code, alt text, and better structure — boosting visibility and traffic.</p>
+                </div>
+              </div>
+
+              <div class="why-card">
+                <div class="why-card-icon" aria-hidden="true">
+                  <img src="https://openwebaccess.com/wp-content/uploads/2025/08/icons8-future-50.png" alt="" width="40" height="40" loading="lazy" />
+                </div>
+                <div>
+                  <h3>Future-Proofing</h3>
+                  <p>Accessible design readies products for evolving tech and diverse user needs, ensuring long-term inclusivity.</p>
+                </div>
+              </div>
+
+              <div class="why-card">
+                <div class="why-card-icon" aria-hidden="true">
+                  <img src="https://openwebaccess.com/wp-content/uploads/2025/08/icons8-law-50.png" alt="" width="40" height="40" loading="lazy" />
+                </div>
+                <div>
+                  <h3>Avoid Legal Risks</h3>
+                  <p>US businesses face thousands of ADA lawsuits yearly, with settlements up to $50K. Compliance avoids costly penalties.</p>
+                </div>
+              </div>
+
+              <div class="why-card">
+                <div class="why-card-icon" aria-hidden="true">
+                  <img src="https://openwebaccess.com/wp-content/uploads/2025/08/icons8-paper-64.png" alt="" width="40" height="40" loading="lazy" />
+                </div>
+                <div>
+                  <h3>Enhanced Experience</h3>
+                  <p>Clear navigation and captions benefit all users, not just those with disabilities — enhancing overall usability.</p>
+                </div>
+              </div>
+
+              <div class="why-card">
+                <div class="why-card-icon" aria-hidden="true">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <div>
+                  <h3>Brand Reputation</h3>
+                  <p>Accessibility shows commitment to diversity and inclusion, building user trust and loyalty for the long term.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="why-image">
+            <img src="https://openwebaccess.com/wp-content/uploads/2025/07/guide-dog-helping-blind-man-29191382.png" alt="Guide dog assisting a visually impaired person, representing the importance of digital accessibility" loading="lazy" />
+            <div class="why-image-badge" aria-hidden="true">
+              <span class="badge-number">1B+</span>
+              <span class="badge-text">People worldwide live with a disability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section class="section portfolio" id="portfolio" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Work</span>
+          <h2 id="portfolio-heading">Before &amp; After Transformations</h2>
+          <p class="section-desc">See the difference accessibility makes. We transform inaccessible websites into WCAG-compliant experiences that work for everyone.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="https://openwebaccess.com/wp-content/uploads/2025/07/attractive-healthy-smiling-woman.png" alt="Women's health website demo preview" loading="lazy" />
+              <div class="portfolio-overlay">
+                <span class="portfolio-tag">Healthcare</span>
+              </div>
+            </div>
+            <div class="portfolio-body">
+              <h3>Women's Health Clinic</h3>
+              <p>Complete accessibility overhaul with keyboard navigation, screen reader support, and WCAG-compliant color contrast.</p>
+              <div class="portfolio-links">
+                <a href="https://openwebaccess.com/demos/womenshealth-before/" target="_blank" rel="noopener noreferrer" class="portfolio-link before">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6m0-6 6 6"/></svg>
+                  Before
+                </a>
+                <a href="https://openwebaccess.com/demos/womenshealth-after/" target="_blank" rel="noopener noreferrer" class="portfolio-link after">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  After
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="https://openwebaccess.com/wp-content/uploads/2025/07/spaghetti-bolognaise.png" alt="Italian restaurant website demo preview showing spaghetti bolognaise" loading="lazy" />
+              <div class="portfolio-overlay">
+                <span class="portfolio-tag">Restaurant</span>
+              </div>
+            </div>
+            <div class="portfolio-body">
+              <h3>Italian Restaurant</h3>
+              <p>Menu accessibility, alt text for food imagery, semantic HTML structure, and compliant reservation forms.</p>
+              <div class="portfolio-links">
+                <a href="https://openwebaccess.com/demos/italianrestaurant-before/" target="_blank" rel="noopener noreferrer" class="portfolio-link before">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6m0-6 6 6"/></svg>
+                  Before
+                </a>
+                <a href="https://openwebaccess.com/demos/italianrestaurant-after/" target="_blank" rel="noopener noreferrer" class="portfolio-link after">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  After
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="https://openwebaccess.com/wp-content/uploads/2025/07/vinyl-flooring.png" alt="Flooring company website demo preview showing vinyl flooring" loading="lazy" />
+              <div class="portfolio-overlay">
+                <span class="portfolio-tag">Retail</span>
+              </div>
+            </div>
+            <div class="portfolio-body">
+              <h3>Flooring Company</h3>
+              <p>Product catalog accessibility, image descriptions, keyboard-navigable galleries, and accessible e-commerce.</p>
+              <div class="portfolio-links">
+                <a href="https://openwebaccess.com/demos/flooring-before/" target="_blank" rel="noopener noreferrer" class="portfolio-link before">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6m0-6 6 6"/></svg>
+                  Before
+                </a>
+                <a href="https://openwebaccess.com/demos/flooring-after/" target="_blank" rel="noopener noreferrer" class="portfolio-link after">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  After
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-content">
+          <h2 id="cta-heading">Ready to Make Your Website Accessible?</h2>
+          <p>Get a free, comprehensive audit report and a personalized quote. No commitment — just actionable insights.</p>
+          <a href="#contact" class="btn btn-white btn-lg">
+            Start Your Free Audit
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info">
+            <span class="section-tag">Get in Touch</span>
+            <h2 id="contact-heading">Let's Build Something Inclusive</h2>
+            <p>Ready to enhance your online presence? Fill out the form to request a comprehensive website audit report and a personalized quote.</p>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <span class="contact-detail-label">Email</span>
+                  <a href="mailto:info@openwebaccess.com">info@openwebaccess.com</a>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <span class="contact-detail-label">Based In</span>
+                  <span>South Africa · Serving Globally</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trust-badges" aria-label="Trust indicators">
+              <div class="trust-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                WCAG 2.1 AA
+              </div>
+              <div class="trust-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                ADA Compliant
+              </div>
+              <div class="trust-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                Modern Standards
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form class="contact-form" id="contactForm" novalidate>
+              <h3 class="visually-hidden">Contact form</h3>
+              <div class="form-group">
+                <label for="name">Name <span class="required" aria-label="required">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name or business" />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email <span class="required" aria-label="required">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com" />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="website">Website URL <span class="required" aria-label="required">*</span></label>
+                <input type="url" id="website" name="website" required placeholder="https://yourwebsite.com" />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your project or request an audit..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-full" id="submitBtn">
+                <span class="btn-text">Request Audit &amp; Quote</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-arrow" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+              </button>
+              <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="logo" aria-label="Open Web Access — Home">
+            <img src="https://openwebaccess.com/wp-content/uploads/2025/08/cropped-imageedit_2_5569829411.png" alt="Open Web Access logo" class="logo-img" width="40" height="40" />
+            <span class="logo-text">Open<strong>Web</strong>Access</span>
+          </a>
+          <p>Building inclusive digital experiences that work for everyone. Accessibility is not an afterthought — it's our foundation.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">Why Accessibility</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-services">
+          <h4>Services</h4>
+          <ul>
+            <li>Web Development</li>
+            <li>Accessibility Audits</li>
+            <li>SEO Optimization</li>
+            <li>ADA Remediation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Open Web Access. All rights reserved.</p>
+        <div class="footer-a11y">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          Built with WCAG 2.1 AA compliance
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
