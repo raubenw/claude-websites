@@ -1801,6 +1801,12 @@ h6 {
    Responsive Design
    ============================================ */
 
+/* Prevent horizontal overflow on all screen sizes */
+html,
+body {
+  overflow-x: hidden;
+}
+
 @media (max-width: 1024px) {
   .about-grid {
     gap: 50px;
@@ -1818,6 +1824,18 @@ h6 {
 
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Fix about absolute elements on tablets */
+  .about-experience {
+    left: 0;
+    top: 0;
+  }
+
+  .about-image-secondary {
+    right: 0;
+    bottom: -15px;
+    width: 160px;
   }
 }
 
@@ -1896,14 +1914,37 @@ h6 {
   .process-connector {
     display: none;
   }
+
+  .process-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .process-step {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
   :root {
-    --section-padding: 70px;
+    --section-padding: 60px;
+    --container-padding: 16px;
+  }
+
+  /* Top bar - compact for mobile */
+  .top-bar {
+    padding: 10px 0;
   }
 
   .top-bar-content {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .top-bar-left {
+    gap: 10px;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -1911,27 +1952,79 @@ h6 {
     display: none;
   }
 
+  .top-bar-item {
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .top-bar-item.contact-highlight {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+
+  .top-bar-icon {
+    font-size: 16px;
+  }
+
+  /* Navbar */
   .navbar {
     top: 0;
   }
 
+  .navbar .container {
+    padding: 12px 16px;
+  }
+
+  .nav-logo-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .nav-logo-text {
+    font-size: 20px;
+  }
+
+  /* Hero */
   .hero {
-    padding: 120px 0 60px;
+    min-height: auto;
+    padding: 100px 0 50px;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+    padding: 8px 14px;
+    margin-bottom: 15px;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 8vw, 40px);
+    margin-bottom: 20px;
   }
 
   .hero-buttons {
     flex-direction: column;
+    margin-bottom: 25px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .hero-features {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+  }
+
+  .hero-feature {
+    font-size: 13px;
   }
 
   .hero-scroll {
     display: none;
   }
 
+  /* Info Bar */
   .info-bar {
     margin-top: 0;
   }
@@ -1942,6 +2035,7 @@ h6 {
   }
 
   .info-item {
+    padding: 18px 20px;
     border-right: none;
     border-bottom: 1px solid var(--gray-200);
     border-left: none !important;
@@ -1951,19 +2045,175 @@ h6 {
     border-bottom: none;
   }
 
+  .info-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .info-text {
+    font-size: 13px;
+  }
+
+  /* About section */
+  .about-experience {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-bottom: 15px;
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .experience-number {
+    font-size: 36px;
+  }
+
+  .about-image-secondary {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 15px;
+    border: 3px solid var(--white);
+  }
+
+  .about-features {
+    margin: 20px 0;
+  }
+
+  .about-feature-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  /* Services */
   .services-grid,
   .team-grid,
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
 
+  .service-card {
+    padding: 25px 20px;
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+
+  .service-title {
+    font-size: 19px;
+  }
+
+  .services-note {
+    padding: 18px 20px;
+  }
+
+  .services-note p {
+    font-size: 14px;
+  }
+
+  /* Process */
+  .process-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+  }
+
+  .process-number {
+    font-size: 36px;
+  }
+
+  /* Team */
+  .team-image img {
+    height: 240px;
+  }
+
+  .team-info {
+    padding: 18px;
+  }
+
+  .team-name {
+    font-size: 18px;
+  }
+
+  .team-social {
+    transform: translateY(0);
+    position: relative;
+    background: var(--gray-100);
+    padding: 12px;
+  }
+
+  .team-social a {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    background: var(--white);
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: 25px;
+  }
+
   .testimonials-stats {
     grid-template-columns: repeat(2, 1fr);
-    padding: 30px 20px;
+    padding: 25px 15px;
+    gap: 20px;
   }
 
   .stat-number {
-    font-size: 32px;
+    font-size: 28px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+
+  /* Medical Aid */
+  .medical-aid {
+    padding: 40px 0;
+  }
+
+  .medical-aid-title {
+    font-size: 22px;
+  }
+
+  .medical-aid-logos {
+    gap: 10px;
+  }
+
+  .aid-logo {
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+
+  /* Contact */
+  .contact-card {
+    padding: 25px;
+  }
+
+  .contact-card-title {
+    font-size: 20px;
+  }
+
+  .contact-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+
+  .form-title {
+    font-size: 22px;
   }
 
   .form-row {
@@ -1974,9 +2224,41 @@ h6 {
     grid-column: span 1;
   }
 
+  .form-input,
+  .form-select,
+  .form-textarea {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 50px 0;
+  }
+
+  .cta-text {
+    font-size: 15px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 50px 0 25px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 35px;
   }
 
   .footer-social {
@@ -1995,10 +2277,20 @@ h6 {
     gap: 15px;
   }
 
+  .footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .footer-description {
+    font-size: 13px;
+  }
+
+  /* Floating buttons */
   .whatsapp-float {
     bottom: 20px;
-    right: 20px;
-    padding: 12px 20px;
+    right: 15px;
+    padding: 12px 18px;
   }
 
   .whatsapp-text {
@@ -2007,34 +2299,181 @@ h6 {
 
   .scroll-top {
     bottom: 80px;
-    right: 20px;
-    width: 45px;
-    height: 45px;
+    right: 15px;
+    width: 42px;
+    height: 42px;
+  }
+
+  /* General button sizing */
+  .btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .btn-lg {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+
+  /* Section typography */
+  .section-eyebrow {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .section-subtitle {
+    font-size: 15px;
+    margin-bottom: 30px;
   }
 }
 
+/* Small phones (iPhone SE, Galaxy S8, etc.) */
 @media (max-width: 480px) {
+  :root {
+    --container-padding: 12px;
+  }
+
+  /* Top bar - single line compact */
+  .top-bar {
+    padding: 8px 0;
+  }
+
+  .top-bar-left {
+    gap: 6px;
+  }
+
+  .top-bar-item.contact-highlight {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  /* Hero even more compact */
+  .hero {
+    padding: 85px 0 40px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .hero-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  /* About */
   .about-experience {
-    position: relative;
-    left: 0;
-    top: 0;
-    margin-bottom: 20px;
-    display: inline-block;
+    padding: 12px 16px;
   }
 
-  .about-image-secondary {
-    position: relative;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    margin-top: 20px;
+  .experience-number {
+    font-size: 30px;
   }
 
+  .experience-text {
+    font-size: 12px;
+  }
+
+  /* Services */
+  .service-card {
+    padding: 20px 15px;
+  }
+
+  .price-value {
+    font-size: 22px;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+  }
+
+  .testimonial-avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  /* Contact form */
   .contact-form {
-    padding: 25px;
+    padding: 18px;
   }
 
-  .cta-buttons {
+  .contact-card {
+    padding: 18px;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 40px 0;
+  }
+
+  .cta-buttons .btn {
+    max-width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-grid {
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  .footer-social-link {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  /* Medical aid */
+  .aid-logo {
+    padding: 8px 14px;
+    font-size: 11px;
+  }
+
+  /* Stat adjustments */
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+
+  .testimonials-stats {
+    padding: 20px 12px;
+    gap: 15px;
+  }
+}
+
+/* Extra small phones (320px width, e.g. iPhone 5/SE 1st gen) */
+@media (max-width: 360px) {
+  .top-bar-left {
     flex-direction: column;
+    gap: 4px;
+  }
+
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .hero-feature {
+    font-size: 12px;
+  }
+
+  .nav-logo-text {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 24px;
   }
 }
