@@ -1993,7 +1993,8 @@ body {
   .hero-badge {
     font-size: 12px;
     padding: 8px 14px;
-    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
   }
 
   .hero-title {
@@ -2003,7 +2004,7 @@ body {
 
   .hero-buttons {
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 0;
   }
 
   .hero-buttons .btn {
@@ -2011,13 +2012,14 @@ body {
     justify-content: center;
   }
 
-  .hero-features {
-    flex-direction: column;
-    gap: 10px;
+  /* Hide "Our Services" button on mobile - keep only Book Appointment */
+  .hero-buttons .btn-outline-light {
+    display: none;
   }
 
-  .hero-feature {
-    font-size: 13px;
+  /* Hide hero features on mobile to reduce clutter */
+  .hero-features {
+    display: none;
   }
 
   .hero-scroll {
@@ -2069,13 +2071,9 @@ body {
     font-size: 36px;
   }
 
+  /* Hide secondary about image on mobile */
   .about-image-secondary {
-    position: relative;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    margin-top: 15px;
-    border: 3px solid var(--white);
+    display: none;
   }
 
   .about-features {
@@ -2129,9 +2127,11 @@ body {
     font-size: 36px;
   }
 
-  /* Team */
+  /* Team - don't constrain height so faces aren't cut off */
   .team-image img {
-    height: 240px;
+    height: auto;
+    max-height: 350px;
+    object-position: top center;
   }
 
   .team-info {
