@@ -575,9 +575,18 @@ h6 {
 }
 
 .hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-bg-image.active {
+  opacity: 1;
 }
 
 .hero-overlay {
@@ -588,9 +597,10 @@ h6 {
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(13, 59, 77, 0.7) 0%,
-    rgba(26, 95, 122, 0.6) 100%
+    rgba(13, 59, 77, 0.35) 0%,
+    rgba(26, 95, 122, 0.25) 100%
   );
+  z-index: 1;
 }
 
 .hero .container {

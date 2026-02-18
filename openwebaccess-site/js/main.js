@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // SCROLL ANIMATIONS (IntersectionObserver)
   // ============================================
   const animateElements = document.querySelectorAll(
-    ".service-card, .why-card, .portfolio-card, .section-header, .why-image, .contact-info, .contact-form-wrap, .cta-content"
+    ".service-card, .why-card, .portfolio-card, .section-header, .why-image, .contact-info, .contact-form-wrap, .cta-content",
   );
 
   const animObserver = new IntersectionObserver(
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
               (el) =>
                 el.classList.contains("service-card") ||
                 el.classList.contains("why-card") ||
-                el.classList.contains("portfolio-card")
+                el.classList.contains("portfolio-card"),
             );
             const index = siblings.indexOf(entry.target);
             if (index > -1) {
@@ -143,12 +143,12 @@ document.addEventListener("DOMContentLoaded", () => {
       root: null,
       rootMargin: "0px 0px -60px 0px",
       threshold: 0.1,
-    }
+    },
   );
 
   // Check for reduced motion preference
   const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
+    "(prefers-reduced-motion: reduce)",
   ).matches;
 
   if (prefersReducedMotion) {
@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.5 }
+    { threshold: 0.5 },
   );
 
   statNumbers.forEach((num) => counterObserver.observe(num));
@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
         backToTop.classList.remove("visible");
       }
     },
-    { passive: true }
+    { passive: true },
   );
 
   // ============================================

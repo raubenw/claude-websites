@@ -5,6 +5,19 @@
 document.addEventListener('DOMContentLoaded', function() {
   
   // ============================================
+  // Hero Banner Rotation
+  // ============================================
+  const heroImages = document.querySelectorAll('.hero-bg-image');
+  if (heroImages.length > 1) {
+    let currentSlide = 0;
+    setInterval(() => {
+      heroImages[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % heroImages.length;
+      heroImages[currentSlide].classList.add('active');
+    }, 5000);
+  }
+
+  // ============================================
   // Preloader
   // ============================================
   const preloader = document.getElementById('preloader');
