@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Werner — Building in Public</title>
+  <meta name="description" content="Werner builds apps in public and shares what actually works (and what doesn't)." />
+
+  <style>
+    :root {
+      --bg: #0f1220;
+      --card: #171a2e;
+      --text: #f4f5f7;
+      --muted: #a3a7c2;
+      --accent: #6ee7b7;
+      --border: #262a4a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #1a1f4a, transparent), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 96px 24px 72px;
+    }
+
+    header { margin-bottom: 48px; }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      margin: 0 0 16px 0;
+      letter-spacing: -0.02em;
+    }
+
+    p.lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 600px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin: 48px 0;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    .card p { color: var(--muted); }
+
+    footer {
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    /* ===== Waitlist Form ===== */
+    .waitlist-form {
+      margin-top: 28px;
+    }
+
+    .waitlist-form h4 {
+      margin: 0 0 8px 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .waitlist-form .form-hint {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0 0 16px 0;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .form-row input[type="email"] {
+      flex: 1;
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-row input[type="email"]::placeholder {
+      color: var(--muted);
+      opacity: 0.7;
+    }
+
+    .form-row input[type="email"]:focus {
+      border-color: var(--accent);
+    }
+
+    .form-row button {
+      padding: 12px 24px;
+      background: var(--accent);
+      color: #0f1220;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+      white-space: nowrap;
+    }
+
+    .form-row button:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .form-row button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-message {
+      margin-top: 12px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      display: none;
+    }
+
+    .form-message.success {
+      display: block;
+      background: rgba(110, 231, 183, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(110, 231, 183, 0.3);
+    }
+
+    .form-message.error {
+      display: block;
+      background: rgba(239, 68, 68, 0.12);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    @media (max-width: 480px) {
+      .form-row {
+        flex-direction: column;
+      }
+
+      .form-row button {
+        width: 100%;
+      }
+
+      .container {
+        padding: 64px 18px 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <header>
+      <img
+        src="https://pbs.twimg.com/profile_images/2009600372436844544/ea3Kcvvo_400x400.jpg"
+        alt="Werner pencil sketch"
+        style="width:120px;height:120px;border-radius:50%;border:2px solid var(--border);margin-bottom:24px;"
+      />
+      <h1>I'm Werner.</h1>
+      <p class="lead">
+        I build apps, learn in public, and share what actually works (and what doesn't).
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>Why I'm doing this</h2>
+      <p>
+        I've shipped products I genuinely believed in — including one I built purely for myself.
+        I launched it, learned a lot, and discovered the hard truth: building is only half the job.
+      </p>
+      <p>
+        Now I'm focused on validating ideas early, sharing the process openly, and improving one honest step at a time.
+        No hype. No guru promises. Just real work and real lessons.
+      </p>
+
+      <!-- Waitlist Signup Form -->
+      <div class="waitlist-form">
+        <h4>Join the Journey</h4>
+        <p class="form-hint">Signup and be the first to get updates!</p>
+
+        <form id="waitlistForm" novalidate>
+          <div class="form-row">
+            <input
+              type="email"
+              id="emailInput"
+              name="email"
+              placeholder="you@example.com"
+              required
+              autocomplete="email"
+              aria-label="Email address"
+            />
+            <button type="submit" id="submitBtn">Subscribe</button>
+          </div>
+        </form>
+
+        <div id="formMessage" class="form-message" role="alert"></div>
+
+        <p style="margin-top:12px; font-size:0.85rem; color:var(--muted);">
+          Occasional updates only. No spam. Unsubscribe anytime.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div>&copy; <span id="year"></span> Werner</div>
+      <div>
+        <a href="https://x.com/BydesignIlive" target="_blank" rel="noopener">X / Twitter</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Waitlist form handler
+    const form = document.getElementById('waitlistForm');
+    const emailInput = document.getElementById('emailInput');
+    const submitBtn = document.getElementById('submitBtn');
+    const formMessage = document.getElementById('formMessage');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const email = emailInput.value.trim();
+      if (!email) return;
+
+      // Basic email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showMessage('Please enter a valid email address.', 'error');
+        return;
+      }
+
+      // Disable button, show loading
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      formMessage.className = 'form-message';
+      formMessage.style.display = 'none';
+
+      try {
+        const response = await fetch('subscribe.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          showMessage(data.message, 'success');
+          emailInput.value = '';
+        } else {
+          showMessage(data.message || 'Something went wrong. Please try again.', 'error');
+        }
+      } catch (err) {
+        showMessage('Connection error. Please try again later.', 'error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Subscribe';
+      }
+    });
+
+    function showMessage(text, type) {
+      formMessage.textContent = text;
+      formMessage.className = 'form-message ' + type;
+      formMessage.style.display = 'block';
+
+      // Auto-hide after 8 seconds
+      setTimeout(function() {
+        formMessage.style.display = 'none';
+      }, 8000);
+    }
+  </script>
+</body>
+</html>
