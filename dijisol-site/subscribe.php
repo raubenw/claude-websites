@@ -103,4 +103,4 @@ wp_mail($admin_email, $subject, $body);
 
 // ─── Success response ────────────────────────────────────────────────
 
-wp_send_json(['success' => true, 'message' => "Welcome aboard! You're subscriber #$subscriber_count."]);
+wp_send_json(['success' => true, 'message' => 'Thanks for signing up! We\'ll keep you posted.']);
