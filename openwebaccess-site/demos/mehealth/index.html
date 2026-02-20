@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MeHealth by Mariaan | Handmade Creams & Mushroom Coffee</title>
+  <meta name="description" content="Handcrafted natural creams and premium mushroom coffee by Mariaan. Pure ingredients, made with love in South Africa." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Snipcart -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-leaf">🌿</div>
+      <div class="preloader-text">MeHealth</div>
+    </div>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <p>✨ Free delivery on orders over R500 | Handmade with love in South Africa 🇿🇦</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="#" class="nav-logo" aria-label="MeHealth - Home">
+        <span class="nav-logo-icon">🌿</span>
+        <span class="nav-logo-text">Me<span>Health</span></span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li role="none"><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
+        <li role="none"><a href="#about" class="nav-link" role="menuitem">Our Story</a></li>
+        <li role="none"><a href="#products" class="nav-link" role="menuitem">Shop</a></li>
+        <li role="none"><a href="#testimonials" class="nav-link" role="menuitem">Reviews</a></li>
+        <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-btn snipcart-checkout" aria-label="Shopping cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-count snipcart-items-count">0</span>
+        </button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" aria-label="Welcome to MeHealth">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=1600&h=900&fit=crop" alt="" class="hero-bg-image" aria-hidden="true" />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+          <span class="hero-badge">🌱 100% Natural Ingredients</span>
+
+          <h1 class="hero-title">
+            Nature's Best,<br />
+            <span class="highlight">Handcrafted</span> for You
+          </h1>
+
+          <p class="hero-description">
+            Discover Mariaan's collection of lovingly handmade creams and premium
+            mushroom-infused coffee. Pure, natural, and made in small batches.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#products" class="btn btn-primary btn-lg">
+              <span>Shop Now</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#about" class="btn btn-outline-light btn-lg">
+              <span>Our Story</span>
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <div class="trust-item">
+              <span>🧴</span> <span>Handmade</span>
+            </div>
+            <div class="trust-item">
+              <span>🍃</span> <span>All Natural</span>
+            </div>
+            <div class="trust-item">
+              <span>🚚</span> <span>Free Delivery 500+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories" aria-label="Product categories">
+      <div class="container">
+        <div class="categories-grid">
+          <a href="#products" class="category-card" data-aos="fade-up" data-aos-delay="100" data-filter="creams">
+            <div class="category-image">
+              <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=500&h=400&fit=crop" alt="Handmade natural creams" />
+            </div>
+            <div class="category-info">
+              <h3>Handmade Creams</h3>
+              <p>Nourish your skin naturally</p>
+            </div>
+          </a>
+          <a href="#products" class="category-card" data-aos="fade-up" data-aos-delay="200" data-filter="coffee">
+            <div class="category-image">
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=500&h=400&fit=crop" alt="Mushroom coffee blends" />
+            </div>
+            <div class="category-info">
+              <h3>Mushroom Coffee</h3>
+              <p>Fuel your mind & body</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-images" data-aos="fade-right">
+            <div class="about-image-main">
+              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=500&h=600&fit=crop" alt="Mariaan making handmade creams" />
+            </div>
+            <div class="about-badge">
+              <span class="badge-icon">💚</span>
+              <span class="badge-text">Made with<br />Love</span>
+            </div>
+          </div>
+
+          <div class="about-content" data-aos="fade-left">
+            <span class="section-eyebrow">Our Story</span>
+            <h2 class="section-title" id="about-title">
+              Meet <span class="highlight">Mariaan</span>
+            </h2>
+
+            <p class="about-text">
+              What started as a passion for natural wellness in her kitchen has grown
+              into MeHealth — a small-batch brand dedicated to pure, handcrafted skincare
+              and wellness products.
+            </p>
+            <p class="about-text">
+              Every cream is made by hand using carefully sourced natural ingredients.
+              No harsh chemicals, no preservatives — just nature's goodness. Mariaan also
+              brings you premium mushroom coffee, known for its incredible health benefits
+              including enhanced focus, immune support, and natural energy.
+            </p>
+
+            <div class="about-values">
+              <div class="value-item">
+                <span class="value-icon">🌸</span>
+                <div>
+                  <strong>Natural Ingredients</strong>
+                  <span>Only the purest, ethically sourced ingredients</span>
+                </div>
+              </div>
+              <div class="value-item">
+                <span class="value-icon">👩‍🍳</span>
+                <div>
+                  <strong>Small Batch</strong>
+                  <span>Every product made fresh in small quantities</span>
+                </div>
+              </div>
+              <div class="value-item">
+                <span class="value-icon">🍄</span>
+                <div>
+                  <strong>Functional Wellness</strong>
+                  <span>Products that nourish inside and out</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products" aria-labelledby="products-title">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-eyebrow" data-aos="fade-up">Shop</span>
+          <h2 class="section-title" id="products-title" data-aos="fade-up" data-aos-delay="100">
+            Our <span class="highlight">Products</span>
+          </h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Handcrafted with care. Each product is made in small batches to ensure the highest quality.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="product-filters" data-aos="fade-up" data-aos-delay="250">
+          <button class="filter-btn active" data-filter="all">All Products</button>
+          <button class="filter-btn" data-filter="creams">Creams</button>
+          <button class="filter-btn" data-filter="coffee">Mushroom Coffee</button>
+        </div>
+
+        <div class="products-grid">
+
+          <!-- Product 1: Lavender Body Butter -->
+          <article class="product-card" data-category="creams" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400&h=400&fit=crop" alt="Lavender Body Butter" />
+              <span class="product-tag">Bestseller</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Lavender Body Butter</h3>
+              <p class="product-desc">Rich, whipped body butter infused with calming lavender essential oil. Deeply moisturising.</p>
+              <div class="product-meta">
+                <span class="product-size">200ml</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">R185</span>
+                <button
+                  class="btn btn-primary btn-sm snipcart-add-item"
+                  data-item-id="cream-lavender-body-butter"
+                  data-item-name="Lavender Body Butter"
+                  data-item-price="185.00"
+                  data-item-url="/demos/mehealth/index.html"
+                  data-item-description="Rich whipped body butter with lavender essential oil - 200ml"
+                  data-item-image="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400&h=400&fit=crop"
+                >Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2: Rosehip Face Cream -->
+          <article class="product-card" data-category="creams" data-aos="fade-up" data-aos-delay="150">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1570194065650-d99fb4b38b17?w=400&h=400&fit=crop" alt="Rosehip Face Cream" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Rosehip Face Cream</h3>
+              <p class="product-desc">Lightweight face cream with rosehip oil. Rich in vitamins A & C for radiant, youthful skin.</p>
+              <div class="product-meta">
+                <span class="product-size">50ml</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">R220</span>
+                <button
+                  class="btn btn-primary btn-sm snipcart-add-item"
+                  data-item-id="cream-rosehip-face"
+                  data-item-name="Rosehip Face Cream"
+                  data-item-price="220.00"
+                  data-item-url="/demos/mehealth/index.html"
+                  data-item-description="Lightweight face cream with rosehip oil - 50ml"
+                  data-item-image="https://images.unsplash.com/photo-1570194065650-d99fb4b38b17?w=400&h=400&fit=crop"
+                >Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3: Shea Butter Hand Cream -->
+          <article class="product-card" data-category="creams" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?w=400&h=400&fit=crop" alt="Shea Butter Hand Cream" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Shea Butter Hand Cream</h3>
+              <p class="product-desc">Intensive repair hand cream with pure shea butter. Heals dry, cracked hands overnight.</p>
+              <div class="product-meta">
+                <span class="product-size">100ml</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">R145</span>
+                <button
+                  class="btn btn-primary btn-sm snipcart-add-item"
+                  data-item-id="cream-shea-hand"
+                  data-item-name="Shea Butter Hand Cream"
+                  data-item-price="145.00"
+                  data-item-url="/demos/mehealth/index.html"
+                  data-item-description="Intensive repair hand cream with pure shea butter - 100ml"
+                  data-item-image="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?w=400&h=400&fit=crop"
+                >Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4: Calendula Healing Balm -->
+          <article class="product-card" data-category="creams" data-aos="fade-up" data-aos-delay="250">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1601049676869-702ea24cfd58?w=400&h=400&fit=crop" alt="Calendula Healing Balm" />
+              <span class="product-tag tag-new">New</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Calendula Healing Balm</h3>
+              <p class="product-desc">Multi-purpose healing balm with calendula extract. Soothes irritated skin, eczema & minor burns.</p>
+              <div class="product-meta">
+                <span class="product-size">60ml</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">R165</span>
+                <button
+                  class="btn btn-primary btn-sm snipcart-add-item"
+                  data-item-id="cream-calendula-balm"
+                  data-item-name="Calendula Healing Balm"
+                  data-item-price="165.00"
+                  data-item-url="/demos/mehealth/index.html"
+                  data-item-description="Multi-purpose healing balm with calendula extract - 60ml"
+                  data-item-image="https://images.unsplash.com/photo-1601049676869-702ea24cfd58?w=400&h=400&fit=crop"
+                >Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 5: Coconut & Honey Body Lotion -->
+          <article class="product-card" data-category="creams" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=400&fit=crop" alt="Coconut & Honey Body Lotion" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Coconut &amp; Honey Body Lotion</h3>
+              <p class="product-desc">Silky-smooth body lotion blending coconut oil and raw honey. Hydrates and softens all day.</p>
+              <div class="product-meta">
+                <span class="product-size">250ml</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">R175</span>
+                <button
+                  class="btn btn-primary btn-sm snipcart-add-item"
+                  data-item-id="cream-coconut-honey-lotion"
+                  data-item-name="Coconut & Honey Body Lotion"
+                  data-item-price="175.00"
+                  data-item-url="/demos/mehealth/index.html"
+                  data-item-description="Silky body lotion with coconut oil and raw honey - 250ml"
+                  data-item-image="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=400&fit=crop"
+                >Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 6: Anti-Aging Night Cream -->
+          <article class="product-card" data-category="creams" data-aos="fade-up" data-aos-delay="150">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1590393802688-ab3fd917e61a?w=400&h=400&fit=crop" alt="Anti-Aging Night Cream" />
+              <span class="product-tag">Popular</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Anti-Aging Night Cream</h3>
+              <p class="product-desc">Restorative night cream with retinol alternatives from nature. Wake up to firmer, glowing skin.</p>
+              <div class="product-meta">
+                <span class="product-size">50ml</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">R265</span>
+                <button
+                  class="btn btn-primary btn-sm snipcart-add-item"
+                  data-item-id="cream-anti-aging-night"
+                  data-item-name="Anti-Aging Night Cream"
+                  data-item-price="265.00"
+                  data-item-url="/demos/mehealth/index.html"
+                  data-item-description="Restorative night cream with natural retinol alternatives - 50ml"
+                  data-item-image="https://images.unsplash.com/photo-1590393802688-ab3fd917e61a?w=400&h=400&fit=crop"
+                >Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 7: Lion's Mane Mushroom Coffee -->
+          <article class="product-card" data-category="coffee" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=400&h=400&fit=crop" alt="Lion's Mane Mushroom Coffee" />
+              <span class="product-tag">Bestseller</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Lion's Mane Focus Coffee</h3>
+              <p class="product-desc">Premium coffee blended with lion's mane mushroom. Boosts focus, memory, and mental clarity.</p>
+              <div class="product-meta">
+                <span class="product-size">250g</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">R340</span>
+                <button
+                  class="btn btn-primary btn-sm snipcart-add-item"
+                  data-item-id="coffee-lions-mane"
+                  data-item-name="Lion's Mane Focus Coffee"
+                  data-item-price="340.00"
+                  data-item-url="/demos/mehealth/index.html"
+                  data-item-description="Premium coffee with lion's mane mushroom for focus - 250g"
+                  data-item-image="https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=400&h=400&fit=crop"
+                >Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 8: Reishi Calm Coffee -->
+          <article class="product-card" data-category="coffee" data-aos="fade-up" data-aos-delay="250">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop" alt="Reishi Calm Coffee" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Reishi Calm Coffee</h3>
+              <p class="product-desc">Smooth coffee infused with reishi mushroom. Supports stress relief, immunity, and restful sleep.</p>
+              <div class="product-meta">
+                <span class="product-size">250g</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">R320</span>
+                <button
+                  class="btn btn-primary btn-sm snipcart-add-item"
+                  data-item-id="coffee-reishi-calm"
+                  data-item-name="Reishi Calm Coffee"
+                  data-item-price="320.00"
+                  data-item-url="/demos/mehealth/index.html"
+                  data-item-description="Smooth coffee with reishi mushroom for calm - 250g"
+                  data-item-image="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop"
+                >Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 9: Chaga Immunity Coffee -->
+          <article class="product-card" data-category="coffee" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=400&fit=crop" alt="Chaga Immunity Coffee" />
+              <span class="product-tag tag-new">New</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Chaga Immunity Coffee</h3>
+              <p class="product-desc">Bold coffee blended with chaga mushroom. Packed with antioxidants to supercharge your immune system.</p>
+              <div class="product-meta">
+                <span class="product-size">250g</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">R350</span>
+                <button
+                  class="btn btn-primary btn-sm snipcart-add-item"
+                  data-item-id="coffee-chaga-immunity"
+                  data-item-name="Chaga Immunity Coffee"
+                  data-item-price="350.00"
+                  data-item-url="/demos/mehealth/index.html"
+                  data-item-description="Bold coffee with chaga mushroom for immunity - 250g"
+                  data-item-image="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=400&fit=crop"
+                >Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 10: Cordyceps Energy Coffee -->
+          <article class="product-card" data-category="coffee" data-aos="fade-up" data-aos-delay="150">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=400&h=400&fit=crop" alt="Cordyceps Energy Coffee" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cordyceps Energy Coffee</h3>
+              <p class="product-desc">High-performance coffee with cordyceps mushroom. Natural energy, endurance, and vitality boost.</p>
+              <div class="product-meta">
+                <span class="product-size">250g</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">R360</span>
+                <button
+                  class="btn btn-primary btn-sm snipcart-add-item"
+                  data-item-id="coffee-cordyceps-energy"
+                  data-item-name="Cordyceps Energy Coffee"
+                  data-item-price="360.00"
+                  data-item-url="/demos/mehealth/index.html"
+                  data-item-description="High-performance coffee with cordyceps mushroom - 250g"
+                  data-item-image="https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=400&h=400&fit=crop"
+                >Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Banner -->
+    <section class="benefits" aria-label="Why choose MeHealth">
+      <div class="container">
+        <div class="benefits-grid">
+          <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+            <span class="benefit-icon">🌿</span>
+            <h3>100% Natural</h3>
+            <p>No parabens, no chemicals — just pure natural goodness</p>
+          </div>
+          <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+            <span class="benefit-icon">🤲</span>
+            <h3>Handcrafted</h3>
+            <p>Every product made by hand in small, fresh batches</p>
+          </div>
+          <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+            <span class="benefit-icon">🍄</span>
+            <h3>Functional</h3>
+            <p>Mushroom coffee for focus, energy, and immune support</p>
+          </div>
+          <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+            <span class="benefit-icon">🚚</span>
+            <h3>Free Delivery</h3>
+            <p>Free shipping on all orders over R500 nationwide</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-eyebrow" data-aos="fade-up">Reviews</span>
+          <h2 class="section-title" id="testimonials-title" data-aos="fade-up" data-aos-delay="100">
+            What Our Customers <span class="highlight">Say</span>
+          </h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">
+              "The Lavender Body Butter is absolutely divine! My skin has never felt this soft. You can tell it's made with love and real ingredients. I'll never go back to commercial creams."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">A</div>
+              <div class="testimonial-info">
+                <strong>Anrike V.</strong>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">
+              "I was skeptical about mushroom coffee, but the Lion's Mane blend changed my mind! I feel more focused at work and don't get that afternoon crash. Amazing product, Mariaan!"
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">J</div>
+              <div class="testimonial-info">
+                <strong>Johan M.</strong>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">
+              "The Calendula Balm healed my son's eczema that no pharmacy cream could fix. Mariaan is so passionate about what she does and it shows in every product. Highly recommend!"
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">S</div>
+              <div class="testimonial-info">
+                <strong>Suzanne d.P.</strong>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram / Social Proof -->
+    <section class="social-proof" aria-label="Follow us">
+      <div class="container text-center">
+        <span class="section-eyebrow" data-aos="fade-up">Follow Along</span>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+          <span class="highlight">@mehealth_sa</span>
+        </h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+          Follow Mariaan's journey on social media for recipes, behind-the-scenes, and wellness tips.
+        </p>
+        <div class="social-grid" data-aos="fade-up" data-aos-delay="300">
+          <div class="social-item"><img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=300&h=300&fit=crop" alt="Natural creams" /></div>
+          <div class="social-item"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=300&h=300&fit=crop" alt="Mushroom coffee" /></div>
+          <div class="social-item"><img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=300&h=300&fit=crop" alt="Body butter" /></div>
+          <div class="social-item"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300&h=300&fit=crop" alt="Coffee brewing" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-eyebrow" data-aos="fade-up">Get In Touch</span>
+          <h2 class="section-title" id="contact-title" data-aos="fade-up" data-aos-delay="100">
+            Contact <span class="highlight">Mariaan</span>
+          </h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Have a question about our products or want to place a custom order? Get in touch!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-cards" data-aos="fade-right">
+            <div class="contact-card">
+              <span class="contact-icon">📱</span>
+              <div>
+                <strong>WhatsApp</strong>
+                <p><a href="https://wa.me/27000000000">+27 00 000 0000</a></p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:hello@mehealth.co.za">hello@mehealth.co.za</a></p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Location</strong>
+                <p>Pretoria, Gauteng<br />South Africa</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <span class="contact-icon">🕐</span>
+              <div>
+                <strong>Order Hours</strong>
+                <p>Mon - Fri: 8:00 - 17:00<br />Sat: 9:00 - 13:00</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm" data-aos="fade-left" action="https://formspree.io/f/placeholder" method="POST">
+            <h3 class="form-title">Send a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" class="form-input" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <select id="subject" name="subject" class="form-select">
+                <option value="">Choose a topic...</option>
+                <option value="product-inquiry">Product Inquiry</option>
+                <option value="custom-order">Custom Order</option>
+                <option value="wholesale">Wholesale Inquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message <span class="required">*</span></label>
+              <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg form-submit">
+              <span>Send Message</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" aria-label="Call to action">
+      <div class="container">
+        <div class="cta-content" data-aos="fade-up">
+          <h2 class="cta-title">Ready to Go Natural?</h2>
+          <p class="cta-text">Browse Mariaan's handcrafted collection and discover the difference that pure, natural ingredients make.</p>
+          <div class="cta-buttons">
+            <a href="#products" class="btn btn-white btn-lg">Shop Now</a>
+            <a href="https://wa.me/27000000000" class="btn btn-outline-white btn-lg" target="_blank" rel="noopener">WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="footer-logo-icon">🌿</span>
+            <span class="footer-logo-text">MeHealth</span>
+          </div>
+          <p class="footer-description">
+            Handcrafted natural creams and premium mushroom coffee. Made with love by Mariaan in South Africa.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="footer-social-link" aria-label="Instagram">📸</a>
+            <a href="https://wa.me/27000000000" class="footer-social-link" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">Our Story</a></li>
+            <li><a href="#products" class="footer-link">Shop</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="#products" class="footer-link">Handmade Creams</a></li>
+            <li><a href="#products" class="footer-link">Mushroom Coffee</a></li>
+            <li><a href="#products" class="footer-link">Bestsellers</a></li>
+            <li><a href="#products" class="footer-link">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li class="footer-contact">📍 Pretoria, South Africa</li>
+            <li class="footer-contact"><a href="tel:+27000000000">📞 +27 00 000 0000</a></li>
+            <li class="footer-contact"><a href="mailto:hello@mehealth.co.za">✉️ hello@mehealth.co.za</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 MeHealth by Mariaan. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/27000000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span class="whatsapp-icon">💬</span>
+    <span class="whatsapp-text">Chat with Mariaan</span>
+  </a>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Snipcart (demo key) -->
+  <div hidden id="snipcart" data-api-key="MjcwMjc5YWYtYTgyNy00N2MwLWJhNjMtZjRjNWIyYWI3NTMyNjM4OTAxNTYxMjQ4OTk0NzI0" data-currency="zar"></div>
+  <script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+
+  <!-- Built by Open Web Access -->
+  <div style="display:none">Built by Open Web Access | https://openwebaccess.com</div>
+</body>
+</html>
