@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // -------- Contact Form --------
+  // -------- Contact Form (AJAX → contact.php → WordPress wp_mail) --------
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -212,21 +212,44 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.innerHTML = '<span>Sending...</span>';
       btn.disabled = true;
 
-      // Simulate sending (demo)
-      setTimeout(() => {
-        btn.innerHTML = '<span>✓ Message Sent!</span>';
-        btn.style.background = '#4caf50';
-        btn.style.borderColor = '#4caf50';
+      const formData = new FormData(contactForm);
 
-        contactForm.reset();
+      fetch('contact.php', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.success) {
+            btn.innerHTML = '<span>✓ Message Sent!</span>';
+            btn.style.background = '#4caf50';
+            btn.style.borderColor = '#4caf50';
+            contactForm.reset();
+          } else {
+            btn.innerHTML = '<span>✗ ' + (data.message || 'Failed to send') + '</span>';
+            btn.style.background = '#e74c3c';
+            btn.style.borderColor = '#e74c3c';
+          }
 
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-          btn.style.background = '';
-          btn.style.borderColor = '';
-          btn.disabled = false;
-        }, 3000);
-      }, 1500);
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+            btn.style.borderColor = '';
+            btn.disabled = false;
+          }, 3000);
+        })
+        .catch(() => {
+          btn.innerHTML = '<span>✗ Network error</span>';
+          btn.style.background = '#e74c3c';
+          btn.style.borderColor = '#e74c3c';
+
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+            btn.style.borderColor = '';
+            btn.disabled = false;
+          }, 3000);
+        });
     });
   }
 
