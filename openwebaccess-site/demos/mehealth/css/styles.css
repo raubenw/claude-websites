@@ -27,8 +27,8 @@
   --clr-dark: #2a2622;
 
   /* Typography */
-  --font-heading: 'Cormorant Garamond', 'Georgia', serif;
-  --font-body: 'Nunito Sans', 'Helvetica Neue', sans-serif;
+  --font-heading: "Cormorant Garamond", "Georgia", serif;
+  --font-body: "Nunito Sans", "Helvetica Neue", sans-serif;
 
   /* Sizes */
   --container: 1200px;
@@ -246,7 +246,9 @@ ul {
   align-items: center;
   justify-content: center;
   z-index: 99999;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
 }
 
 .preloader.hidden {
@@ -273,8 +275,13 @@ ul {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(5deg); }
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
 }
 
 /* ---------- Announcement Bar ---------- */
@@ -354,7 +361,7 @@ ul {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1108,7 +1115,11 @@ ul {
 /* ---------- CTA ---------- */
 .cta {
   padding: 100px 0;
-  background: linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-primary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--clr-primary-dark) 0%,
+    var(--clr-primary) 100%
+  );
   text-align: center;
 }
 
