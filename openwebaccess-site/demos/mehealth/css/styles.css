@@ -60,7 +60,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -70,7 +70,8 @@ body {
   color: var(--clr-text);
   background: var(--clr-bg);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
+  position: relative;
 }
 
 img {
@@ -302,6 +303,7 @@ ul {
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
   z-index: 1000;
   background: rgba(253, 252, 250, 0.95);
   backdrop-filter: blur(12px);
@@ -309,6 +311,7 @@ ul {
   padding: 16px 0;
   transition: var(--transition);
   transform: translateY(36px);
+  overflow: visible;
 }
 
 .navbar.scrolled {
@@ -329,6 +332,7 @@ ul {
   align-items: center;
   gap: 8px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .nav-logo-icon {
@@ -386,6 +390,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0;
 }
 
 .cart-btn {
@@ -410,8 +415,8 @@ ul {
 
 .cart-count {
   position: absolute;
-  top: -4px;
-  right: -4px;
+  top: 0;
+  right: -2px;
   background: var(--clr-accent);
   color: var(--clr-white);
   font-size: 0.65rem;
@@ -435,6 +440,7 @@ ul {
   width: 28px;
   height: 28px;
   padding: 0;
+  flex-shrink: 0;
 }
 
 .nav-toggle span {
