@@ -60,6 +60,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 
 body {
@@ -485,8 +486,8 @@ ul {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(42, 38, 34, 0.75) 0%,
-    rgba(91, 124, 94, 0.5) 100%
+    rgba(42, 38, 34, 0.88) 0%,
+    rgba(91, 124, 94, 0.75) 100%
   );
 }
 
