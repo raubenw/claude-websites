@@ -155,16 +155,14 @@ git push
 ### Products (8 total)
 
 **Oils & Creams:**
+
 1. Lavender & Wintergreen Gift Set — R285
 2. Homemade Natural Cream — R185
 3. doTERRA Essential Oils — R340
 4. Tea Tree Essential Oil — R195
 5. Essential Oil Gift Package — R450
 
-**Coffee & Wellness:**
-6. Reishi Mushroom Coffee — R340
-7. Mushroom Coffee Blend — R320
-8. Alkaline Water — R85
+**Coffee & Wellness:** 6. Reishi Mushroom Coffee — R340 7. Mushroom Coffee Blend — R320 8. Alkaline Water — R85
 
 ### Database Credentials
 
@@ -189,6 +187,8 @@ git push
 
 - `d41c635` — contact.php WordPress handler, AJAX contact form
 - `f140652` — Replace Unsplash with real product images, restructure for M&E Pure Essential Oils
+- `2b98ff6` — Fix mobile horizontal overflow and improve hero text readability
+- `ca4d224` — Fix mobile horizontal shift: overflow-x clip, flex-shrink on navbar items, reposition cart badge
 
 ---
 
