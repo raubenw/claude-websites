@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumière Photography | Capturing Life's Beautiful Moments</title>
+    <meta
+      name="description"
+      content="Professional photography in South Africa — weddings, couples, families, portraits & events. Timeless, elegant images that tell your story."
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📷</text></svg>"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader-content">
+        <div class="preloader-shutter">
+          <svg viewBox="0 0 50 50" class="shutter-icon">
+            <circle cx="25" cy="25" r="22" fill="none" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="25" cy="25" r="10" fill="none" stroke="currentColor" stroke-width="1" />
+            <line x1="25" y1="3" x2="25" y2="15" stroke="currentColor" stroke-width="1" />
+            <line x1="25" y1="35" x2="25" y2="47" stroke="currentColor" stroke-width="1" />
+            <line x1="3" y1="25" x2="15" y2="25" stroke="currentColor" stroke-width="1" />
+            <line x1="35" y1="25" x2="47" y2="25" stroke="currentColor" stroke-width="1" />
+          </svg>
+        </div>
+        <div class="preloader-text">Lumière</div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <a href="#" class="nav-logo" aria-label="Lumière Photography - Home">
+          <span class="nav-logo-text">Lumière</span>
+          <span class="nav-logo-sub">Photography</span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu" role="menubar">
+          <li role="none"><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
+          <li role="none"><a href="#portfolio" class="nav-link" role="menuitem">Portfolio</a></li>
+          <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
+          <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+          <li role="none"><a href="#testimonials" class="nav-link" role="menuitem">Kind Words</a></li>
+          <li role="none"><a href="#pricing" class="nav-link" role="menuitem">Investment</a></li>
+          <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+        </ul>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+      <!-- Hero Section -->
+      <section class="hero" id="home" aria-label="Welcome">
+        <div class="hero-slider">
+          <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80')"></div>
+          <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1920&q=80')"></div>
+          <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1920&q=80')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <span class="hero-eyebrow" data-aos="fade-down" data-aos-duration="800">Photography is Poetry</span>
+          <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            Capturing the Moments<br />
+            <span class="hero-title-italic">You Never Want to Forget</span>
+          </h1>
+          <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
+            Timeless, elegant photography that tells your unique story.
+            Every frame crafted with love and artistry.
+          </p>
+          <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+            <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-scroll" aria-hidden="true">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- Featured / Marquee Strip -->
+      <section class="marquee-strip" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Weddings</span>
+          <span class="marquee-dot">◆</span>
+          <span>Couples</span>
+          <span class="marquee-dot">◆</span>
+          <span>Families</span>
+          <span class="marquee-dot">◆</span>
+          <span>Portraits</span>
+          <span class="marquee-dot">◆</span>
+          <span>Events</span>
+          <span class="marquee-dot">◆</span>
+          <span>Matric Farewell</span>
+          <span class="marquee-dot">◆</span>
+          <span>Graduation</span>
+          <span class="marquee-dot">◆</span>
+          <span>Maternity</span>
+          <span class="marquee-dot">◆</span>
+          <span>Weddings</span>
+          <span class="marquee-dot">◆</span>
+          <span>Couples</span>
+          <span class="marquee-dot">◆</span>
+          <span>Families</span>
+          <span class="marquee-dot">◆</span>
+          <span>Portraits</span>
+          <span class="marquee-dot">◆</span>
+          <span>Events</span>
+          <span class="marquee-dot">◆</span>
+          <span>Matric Farewell</span>
+          <span class="marquee-dot">◆</span>
+          <span>Graduation</span>
+          <span class="marquee-dot">◆</span>
+          <span>Maternity</span>
+          <span class="marquee-dot">◆</span>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <span class="section-eyebrow">Portfolio</span>
+            <h2 class="section-title">Embrace the Beauty<br /><em>of Your Story</em></h2>
+            <p class="section-subtitle">A selection of moments that took our breath away</p>
+          </div>
+
+          <!-- Portfolio Filter -->
+          <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="weddings">Weddings</button>
+            <button class="filter-btn" data-filter="couples">Couples</button>
+            <button class="filter-btn" data-filter="family">Family</button>
+            <button class="filter-btn" data-filter="portraits">Portraits</button>
+          </div>
+
+          <!-- Portfolio Grid -->
+          <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="weddings" data-aos="fade-up" data-aos-delay="100">
+              <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Wedding ceremony with couple exchanging vows" loading="lazy" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-category">Wedding</span>
+                  <h3>Sarah & James</h3>
+                  <p>A golden hour celebration</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item tall" data-category="couples" data-aos="fade-up" data-aos-delay="150">
+              <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&q=80" alt="Couple embracing at sunset" loading="lazy" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-category">Couples</span>
+                  <h3>Emma & Liam</h3>
+                  <p>Engagement at Signal Hill</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item" data-category="family" data-aos="fade-up" data-aos-delay="200">
+              <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&q=80" alt="Happy family laughing together outdoors" loading="lazy" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-category">Family</span>
+                  <h3>The Van der Merwe's</h3>
+                  <p>Autumn family session</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item" data-category="weddings" data-aos="fade-up" data-aos-delay="100">
+              <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80" alt="Bride and groom walking through vineyard" loading="lazy" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-category">Wedding</span>
+                  <h3>Mia & Daniel</h3>
+                  <p>Vineyard romance</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item tall" data-category="portraits" data-aos="fade-up" data-aos-delay="150">
+              <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80" alt="Professional portrait in natural light" loading="lazy" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-category">Portrait</span>
+                  <h3>Zanele</h3>
+                  <p>Natural light portrait</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item" data-category="couples" data-aos="fade-up" data-aos-delay="200">
+              <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?w=600&q=80" alt="Couple walking hand in hand on the beach" loading="lazy" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-category">Couples</span>
+                  <h3>Thandi & Sipho</h3>
+                  <p>Beach magic</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item" data-category="family" data-aos="fade-up" data-aos-delay="100">
+              <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=600&q=80" alt="Mother and baby in tender moment" loading="lazy" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-category">Family</span>
+                  <h3>Little Noah</h3>
+                  <p>Newborn session</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item" data-category="portraits" data-aos="fade-up" data-aos-delay="150">
+              <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Matric farewell portrait" loading="lazy" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-category">Portrait</span>
+                  <h3>Graduation Day</h3>
+                  <p>A milestone captured</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="services" id="services">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <span class="section-eyebrow">Services</span>
+            <h2 class="section-title">What I <em>Photograph</em></h2>
+            <p class="section-subtitle">Every love story, milestone and moment deserves to be beautifully preserved</p>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=500&q=80" alt="Stunning wedding photography" loading="lazy" />
+              </div>
+              <div class="service-content">
+                <h3>Weddings &amp; Proposals</h3>
+                <p>Your love story deserves to be told in the most captivating way. From intimate elopements to grand celebrations, I capture every magical moment.</p>
+              </div>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?w=500&q=80" alt="Engagement and couple photography" loading="lazy" />
+              </div>
+              <div class="service-content">
+                <h3>Engagements &amp; Couples</h3>
+                <p>Whether you've just said "yes" or want to celebrate your journey together, let's create beautiful memories in stunning locations.</p>
+              </div>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=500&q=80" alt="Family photography session" loading="lazy" />
+              </div>
+              <div class="service-content">
+                <h3>Family &amp; Maternity</h3>
+                <p>Those precious bonds and growing bumps — captured naturally and joyfully. Sessions that are relaxed, fun, and full of genuine connection.</p>
+              </div>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&q=80" alt="Portrait photography" loading="lazy" />
+              </div>
+              <div class="service-content">
+                <h3>Portraits &amp; Fashion</h3>
+                <p>Matric farewell, graduation, personal branding, or just because — confident, beautiful portraits that show the real you.</p>
+              </div>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80" alt="Event photography" loading="lazy" />
+              </div>
+              <div class="service-content">
+                <h3>Events &amp; Corporate</h3>
+                <p>Conferences, launches, birthdays, and celebrations — professional coverage that captures the energy and essence of your event.</p>
+              </div>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&q=80" alt="Product photography" loading="lazy" />
+              </div>
+              <div class="service-content">
+                <h3>Product &amp; Branding</h3>
+                <p>Crisp, eye-catching product shots and brand imagery that elevate your business and tell your brand's visual story.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Parallax Quote -->
+      <section class="parallax-quote" aria-label="Quote">
+        <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1920&q=80')"></div>
+        <div class="parallax-overlay"></div>
+        <div class="container">
+          <blockquote data-aos="fade-up">
+            <p>"Photography is the story I fail to put into words."</p>
+            <cite>— Destin Sparks</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-images" data-aos="fade-right">
+              <div class="about-image-main">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=80" alt="Photographer portrait" loading="lazy" />
+              </div>
+              <div class="about-image-accent">
+                <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=400&q=80" alt="Camera close-up" loading="lazy" />
+              </div>
+            </div>
+
+            <div class="about-content" data-aos="fade-left">
+              <span class="section-eyebrow">About Me</span>
+              <h2 class="section-title">Hi, I'm <em>Sophie</em></h2>
+              <p class="about-lead">
+                I'm a natural light photographer based in South Africa, and I have an absolute passion for capturing authentic, beautiful moments.
+              </p>
+              <p>
+                Whether it's your wedding day, a cozy couple shoot, or a joyful family session — I'll make sure you feel completely at ease, have a blast, and walk away with images you'll treasure forever.
+              </p>
+              <p>
+                Think of our shoot as a fun hangout where we happen to snap some stunning pictures. No awkward poses, no stiff smiles — just real, candid moments filled with love and laughter.
+              </p>
+              <div class="about-stats">
+                <div class="stat">
+                  <strong>500+</strong>
+                  <span>Sessions</span>
+                </div>
+                <div class="stat">
+                  <strong>8</strong>
+                  <span>Years</span>
+                </div>
+                <div class="stat">
+                  <strong>50k+</strong>
+                  <span>Photos Delivered</span>
+                </div>
+              </div>
+              <a href="#contact" class="btn btn-primary">Let's Chat</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials" id="testimonials">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <span class="section-eyebrow">Kind Words</span>
+            <h2 class="section-title">What People <em>Say</em></h2>
+          </div>
+
+          <div class="testimonials-slider" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-track" id="testimonialTrack">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Sophie was both incredibly professional yet also so fun to work with. My fiancé and I were extremely nervous, but she made us feel so comfortable and relaxed. The photos came out absolutely stunning — I couldn't be happier!"</p>
+                <div class="testimonial-author">
+                  <strong>Chelsea E.</strong>
+                  <span>Engagement Shoot</span>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"This was our first shoot and we were very nervous, but Sophie knew exactly what to do. She directed us naturally and made the whole experience so enjoyable. The pictures are absolutely gorgeous — we've had so many compliments!"</p>
+                <div class="testimonial-author">
+                  <strong>Faith &amp; Thomas</strong>
+                  <span>Couple Shoot</span>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Her energy and enthusiasm was contagious! Our wedding anniversary photoshoot turned into a memorable adventure. The photos are a true reflection of our love and happiness. Highly recommend for anyone wanting to capture special moments!"</p>
+                <div class="testimonial-author">
+                  <strong>Faheeza K.</strong>
+                  <span>Anniversary Shoot</span>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"We couldn't have asked for a better photographer for our special day. Sophie was calm, creative, and captured every single moment beautifully. She even got sneak peeks to us within days! Our families were blown away."</p>
+                <div class="testimonial-author">
+                  <strong>Mia &amp; Daniel</strong>
+                  <span>Wedding</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-controls">
+              <button class="testimonial-btn prev" id="testimonialPrev" aria-label="Previous testimonial">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              </button>
+              <div class="testimonial-dots" id="testimonialDots"></div>
+              <button class="testimonial-btn next" id="testimonialNext" aria-label="Next testimonial">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section class="pricing" id="pricing">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <span class="section-eyebrow">Investment</span>
+            <h2 class="section-title">Photography <em>Packages</em></h2>
+            <p class="section-subtitle">Beautiful photographs are an investment in memories that last a lifetime</p>
+          </div>
+
+          <div class="pricing-grid">
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="pricing-header">
+                <h3>Mini Session</h3>
+                <div class="pricing-amount">
+                  <span class="currency">R</span>
+                  <span class="price">1,200</span>
+                </div>
+                <span class="pricing-duration">30 minutes</span>
+              </div>
+              <ul class="pricing-features">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  1 location
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  30+ edited photos
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Online gallery
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Sneak peeks within 48hrs
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Print-ready files
+                </li>
+              </ul>
+              <a href="#contact" class="btn btn-outline">Book Now</a>
+            </div>
+
+            <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+              <div class="pricing-badge">Most Popular</div>
+              <div class="pricing-header">
+                <h3>Full Session</h3>
+                <div class="pricing-amount">
+                  <span class="currency">R</span>
+                  <span class="price">2,500</span>
+                </div>
+                <span class="pricing-duration">1 - 2 hours</span>
+              </div>
+              <ul class="pricing-features">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Up to 2 locations
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  100+ edited photos
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Online gallery
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Outfit change welcome
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Sneak peeks within 48hrs
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Print-ready files
+                </li>
+              </ul>
+              <a href="#contact" class="btn btn-primary">Book Now</a>
+            </div>
+
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="pricing-header">
+                <h3>Wedding</h3>
+                <div class="pricing-amount">
+                  <span class="currency">from R</span>
+                  <span class="price">8,500</span>
+                </div>
+                <span class="pricing-duration">Full day</span>
+              </div>
+              <ul class="pricing-features">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Pre-wedding consultation
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Up to 8 hours coverage
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  400+ edited photos
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Online gallery
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Sneak peeks within 48hrs
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Print-ready &amp; album-ready
+                </li>
+              </ul>
+              <a href="#contact" class="btn btn-outline">Enquire</a>
+            </div>
+          </div>
+
+          <p class="pricing-note text-center" data-aos="fade-up">
+            Travel fees apply outside a 30km radius. A 50% deposit secures your booking.<br />
+            Custom packages available — <a href="#contact">let's chat</a> about your needs!
+          </p>
+        </div>
+      </section>
+
+      <!-- Instagram / Social Grid -->
+      <section class="instagram" aria-label="Instagram feed">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-eyebrow">Follow Along</span>
+          <h2 class="section-title">@lumiere.photography</h2>
+        </div>
+        <div class="instagram-grid">
+          <a href="#" class="instagram-item" aria-label="Instagram photo">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&q=80" alt="Wedding photo" loading="lazy" />
+            <div class="instagram-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+          </a>
+          <a href="#" class="instagram-item" aria-label="Instagram photo">
+            <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=400&q=80" alt="Couple photo" loading="lazy" />
+            <div class="instagram-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+          </a>
+          <a href="#" class="instagram-item" aria-label="Instagram photo">
+            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&q=80" alt="Wedding detail" loading="lazy" />
+            <div class="instagram-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+          </a>
+          <a href="#" class="instagram-item" aria-label="Instagram photo">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80" alt="Portrait" loading="lazy" />
+            <div class="instagram-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+          </a>
+          <a href="#" class="instagram-item" aria-label="Instagram photo">
+            <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=400&q=80" alt="Baby session" loading="lazy" />
+            <div class="instagram-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+          </a>
+          <a href="#" class="instagram-item" aria-label="Instagram photo">
+            <img src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?w=400&q=80" alt="Couple at beach" loading="lazy" />
+            <div class="instagram-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info" data-aos="fade-right">
+              <span class="section-eyebrow">Get in Touch</span>
+              <h2 class="section-title">Let's Create<br /><em>Something Beautiful</em></h2>
+              <p>
+                Ready to capture some unforgettable moments? I'd love to hear from you!
+                Send me a message or reach out directly via WhatsApp — I'm always happy to chat about your ideas, answer questions, or help you plan the perfect session.
+              </p>
+
+              <div class="contact-methods">
+                <a href="https://wa.me/27000000000" class="contact-method">
+                  <div class="contact-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  </div>
+                  <div>
+                    <strong>WhatsApp</strong>
+                    <span>Chat anytime — I reply fast!</span>
+                  </div>
+                </a>
+
+                <a href="mailto:hello@lumiere.photography" class="contact-method">
+                  <div class="contact-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div>
+                    <strong>Email</strong>
+                    <span>hello@lumiere.photography</span>
+                  </div>
+                </a>
+
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <strong>Location</strong>
+                    <span>Based in South Africa &mdash; will travel!</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-social">
+                <a href="#" aria-label="Instagram">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="#" aria-label="Facebook">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="#" aria-label="TikTok">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-form-wrap" data-aos="fade-left">
+              <form class="contact-form" id="contactForm" action="#" method="POST">
+                <div class="form-group">
+                  <input type="text" id="name" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" id="email" name="email" placeholder="Your email" required />
+                </div>
+                <div class="form-group">
+                  <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
+                </div>
+                <div class="form-group">
+                  <select id="service" name="service">
+                    <option value="" disabled selected>Type of session</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="engagement">Engagement / Couples</option>
+                    <option value="family">Family / Maternity</option>
+                    <option value="portrait">Portrait / Fashion</option>
+                    <option value="event">Event / Corporate</option>
+                    <option value="product">Product / Branding</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea id="message" name="message" rows="5" placeholder="Tell me about your vision..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                  <span>Send Message</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="footer-logo">
+              <span class="footer-logo-text">Lumière</span>
+              <span class="footer-logo-sub">Photography</span>
+            </a>
+            <p>Capturing life's most beautiful moments with timeless elegance and artistry.</p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#pricing">Investment</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">Weddings</a></li>
+              <li><a href="#services">Couples &amp; Engagements</a></li>
+              <li><a href="#services">Family &amp; Maternity</a></li>
+              <li><a href="#services">Portraits</a></li>
+              <li><a href="#services">Events</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h4>Let's Connect</h4>
+            <p>Based in South Africa</p>
+            <a href="https://wa.me/27000000000" class="footer-whatsapp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp Me
+            </a>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <a href="#" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="#" aria-label="TikTok">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Lumière Photography. All rights reserved.</p>
+          <p>Crafted with love by <a href="https://openwebaccess.com" target="_blank" rel="noopener">Open Web Access</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/27000000000" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span class="whatsapp-text">Chat with me</span>
+    </a>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+      <button class="lightbox-prev" aria-label="Previous image">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </button>
+      <div class="lightbox-content">
+        <img src="" alt="" id="lightboxImage" />
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+      </div>
+      <button class="lightbox-next" aria-label="Next image">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
