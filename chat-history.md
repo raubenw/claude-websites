@@ -192,10 +192,64 @@ git push
 
 ---
 
+## Photography Demo Site — Lumière Photography
+
+### Date: March 10, 2026
+
+### Overview
+
+Created a photography demo site for the Open Web Access agency portfolio, located at `openwebaccess-site/demos/photography/`. Inspired by three South African photography websites:
+
+- nadineduttonphotography.co.za
+- dianthusphotography.mypixieset.com
+- vschoor.wixsite.com/larissaphotography
+
+### Demo Brand
+
+- **Name:** Lumière Photography
+- **Persona:** Sophie — natural light photographer based in South Africa
+- **Style:** Moody elegant, warm tones, serif + sans-serif pairing
+
+### Files Created
+
+- `openwebaccess-site/demos/photography/index.html` — Full single-page site
+- `openwebaccess-site/demos/photography/css/styles.css` — Complete responsive stylesheet
+- `openwebaccess-site/demos/photography/js/main.js` — All interactivity
+
+### Features
+
+- **Hero:** 3-image crossfade slider with Ken Burns effect, overlay, dual CTAs
+- **Marquee Strip:** Scrolling service categories (Weddings, Couples, Families, etc.)
+- **Portfolio:** 8-item masonry grid with category filter (All/Weddings/Couples/Family/Portraits), hover overlays, lightbox with keyboard navigation
+- **Services:** 6 cards — Weddings, Engagements, Family, Portraits, Events, Product
+- **Parallax Quote:** Fixed background with inspirational photography quote
+- **About:** Dual image layout, photographer bio, stats (500+ Sessions, 8 Years, 50k+ Photos)
+- **Testimonials:** Slider with 4 cards, prev/next, dots, autoplay
+- **Pricing:** 3 tiers — Mini Session R1,200 / Full Session R2,500 / Wedding from R8,500
+- **Instagram Grid:** 6 images with hover overlay
+- **Contact:** Split layout — info + form with service dropdown
+- **WhatsApp Float:** Fixed bottom-right CTA
+- **Preloader:** SVG shutter icon with pulse animation
+- **Responsive:** Full breakpoints at 1024/900/768/480px
+
+### Design
+
+- **Fonts:** Playfair Display (headings) + Raleway (body)
+- **Palette:** Warm gold `#b08d6e`, charcoal `#1a1714`, cream `#f2ece4`, off-white `#faf8f5`
+- **Animations:** AOS (Animate on Scroll), CSS keyframes for marquee/preloader/scroll indicator
+- **Images:** Unsplash placeholders (wedding, couple, family, portrait themes)
+- **Footer:** "Crafted by Open Web Access" attribution
+
+### Commits
+
+- `4c0ffbb` — Add photography demo site - Lumière Photography portfolio
+
+---
+
 ## Future Tasks
 
 - [ ] Configure Snipcart live API key (pending client payment method decision)
-- [ ] Add more demo sites to Open Web Access portfolio
+- [x] Add more demo sites to Open Web Access portfolio (photography demo added)
 - [ ] Consider adding more product pages to De Beer Bonsmara
 - [ ] Replace Snipcart demo API key with live key for MeHealth
 - [ ] Generate WordPress salts for mehealth.co.za wp-config.php

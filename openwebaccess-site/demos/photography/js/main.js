@@ -62,7 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showHeroSlide(index) {
     heroSlides.forEach((s) => s.classList.remove("active"));
-    currentSlide = ((index % heroSlides.length) + heroSlides.length) % heroSlides.length;
+    currentSlide =
+      ((index % heroSlides.length) + heroSlides.length) % heroSlides.length;
     heroSlides[currentSlide].classList.add("active");
   }
 
@@ -110,17 +111,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function collectLightboxImages() {
     lightboxImages = [];
-    document.querySelectorAll(".portfolio-item:not(.hidden)").forEach((item) => {
-      const img = item.querySelector("img");
-      const overlay = item.querySelector(".portfolio-overlay");
-      const title = overlay ? overlay.querySelector("h3") : null;
-      if (img) {
-        lightboxImages.push({
-          src: img.src,
-          caption: title ? title.textContent : "",
-        });
-      }
-    });
+    document
+      .querySelectorAll(".portfolio-item:not(.hidden)")
+      .forEach((item) => {
+        const img = item.querySelector("img");
+        const overlay = item.querySelector(".portfolio-overlay");
+        const title = overlay ? overlay.querySelector("h3") : null;
+        if (img) {
+          lightboxImages.push({
+            src: img.src,
+            caption: title ? title.textContent : "",
+          });
+        }
+      });
   }
 
   function openLightbox(index) {
@@ -204,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }%)`;
     }
     dots.forEach((d, i) =>
-      d.classList.toggle("active", i === testimonialIndex)
+      d.classList.toggle("active", i === testimonialIndex),
     );
   }
 
@@ -212,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (testimonialCards.length < 2) return;
     testimonialTimer = setInterval(
       () => goToTestimonial(testimonialIndex + 1),
-      7000
+      7000,
     );
   }
 
@@ -290,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navLinks.forEach((link) => {
           link.classList.toggle(
             "active",
-            link.getAttribute("href") === `#${id}`
+            link.getAttribute("href") === `#${id}`,
           );
         });
       }

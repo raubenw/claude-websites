@@ -205,7 +205,9 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
 }
 
 .preloader.hidden {
@@ -231,8 +233,15 @@ ul {
 }
 
 @keyframes preloaderPulse {
-  0%, 100% { opacity: 0.5; transform: scale(0.95); }
-  50% { opacity: 1; transform: scale(1.05); }
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
 }
 
 .preloader-text {
@@ -389,7 +398,9 @@ ul {
   background-position: center;
   opacity: 0;
   transform: scale(1.05);
-  transition: opacity 1.5s ease, transform 8s ease;
+  transition:
+    opacity 1.5s ease,
+    transform 8s ease;
 }
 
 .hero-slide.active {
@@ -495,8 +506,12 @@ ul {
 }
 
 @keyframes scrollDown {
-  0% { top: -50%; }
-  100% { top: 100%; }
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 100%;
+  }
 }
 
 /* ---------- Marquee Strip ---------- */
@@ -529,8 +544,12 @@ ul {
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ---------- Portfolio ---------- */
@@ -665,7 +684,9 @@ ul {
   background: var(--clr-white);
   border-radius: var(--radius-md);
   overflow: hidden;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .service-card:hover {
@@ -986,7 +1007,9 @@ ul {
   padding: 40px 32px;
   text-align: center;
   position: relative;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .pricing-card:hover {
@@ -1497,8 +1520,12 @@ ul {
   padding: 16px;
 }
 
-.lightbox-prev { left: 16px; }
-.lightbox-next { right: 16px; }
+.lightbox-prev {
+  left: 16px;
+}
+.lightbox-next {
+  right: 16px;
+}
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
