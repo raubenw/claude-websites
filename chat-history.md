@@ -243,6 +243,46 @@ Created a photography demo site for the Open Web Access agency portfolio, locate
 ### Commits
 
 - `4c0ffbb` — Add photography demo site - Lumière Photography portfolio
+- `872a9f6` — Update chat history with photography demo, finalize all demo files
+
+---
+
+## FTP Deployment Setup
+
+### Date: March 16, 2026
+
+### Overview
+
+Set up FTP deployment via `curl.exe` in PowerShell to upload demos directly to the openwebaccess.com server. DNS for `ftp.wernerraubenheimer.com` did not resolve, so the server IP is used instead.
+
+### FTP Credentials
+
+- **FTP Username:** claude@openwebaccess.com
+- **FTP Password:** `K-b#PMY4f59qS,U)M6sXo7G%`
+- **FTP Server (hostname):** ftp.wernerraubenheimer.com (DNS not resolving — use IP)
+- **FTP Server (IP):** 108.167.143.76
+- **FTP Port:** 21 (FTP & explicit FTPS)
+- **Server Directory:** /home2/solutions/openwebaccess.com
+- **FTP Root maps to:** openwebaccess.com/ (website root)
+
+### Upload Method
+
+Using `curl.exe` with passive FTP from PowerShell:
+
+```powershell
+# Create directory
+curl.exe --ftp-pasv --max-time 10 -u "claude@openwebaccess.com:PASSWORD" ftp://108.167.143.76/ -Q "MKD demos/photography"
+
+# Upload file
+curl.exe --ftp-pasv --max-time 30 -u "claude@openwebaccess.com:PASSWORD" -T "local/file.html" ftp://108.167.143.76/demos/photography/file.html
+```
+
+### Deployed
+
+- **Photography demo:** uploaded to `openwebaccess.com/demos/photography/`
+  - `index.html` (65,866 bytes)
+  - `css/styles.css`
+  - `js/main.js`
 
 ---
 
@@ -250,9 +290,11 @@ Created a photography demo site for the Open Web Access agency portfolio, locate
 
 - [ ] Configure Snipcart live API key (pending client payment method decision)
 - [x] Add more demo sites to Open Web Access portfolio (photography demo added)
+- [x] Set up FTP deployment for openwebaccess.com
 - [ ] Consider adding more product pages to De Beer Bonsmara
 - [ ] Replace Snipcart demo API key with live key for MeHealth
 - [ ] Generate WordPress salts for mehealth.co.za wp-config.php
+- [ ] Consider GitHub Actions for automated deployment on push
 
 ---
 
