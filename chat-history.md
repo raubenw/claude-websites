@@ -351,15 +351,89 @@ https://openwebaccess.com/demos/dental/
 
 ---
 
+## New Client: Back on Track Chiropractic & Wellness — Dr Sarvesh Maharajh
+
+### Date: March 16, 2026
+
+### Client Details
+
+- **Business:** Back on Track Chiropractic and Wellness
+- **Practitioner:** Dr Sarvesh Maharajh
+- **Location:** Kloof, KwaZulu-Natal, South Africa
+- **Website URL:** https://backontrackwellness.co.za/
+- **Facebook:** https://www.facebook.com/p/Back-on-track-Chiropractic-and-Wellness-Dr-Sarvesh-Maharajh-61556066109976/
+
+### Hosting & WordPress
+
+- **Hosting:** HostGator (same server as other sites)
+- **Server IP:** 108.167.143.76
+- **WordPress:** Installed and running
+- **WP Login:** `backontrackwellness.co.za/wp-login.php`
+- **WP Username:** `solutions`
+- **WP Password:** `J@nuar132022P@5sw0rd`
+
+### Application Password (for MCP/API access)
+
+- **App Name:** VSCode MCP
+- **App Password:** `Z1Mc WxZB 82sO 4HfY kEA7 Ziap`
+
+### MCP Configuration
+
+- **File:** `.vscode/mcp.json`
+- **Server name:** `BackOnTrackWellness`
+- **Package:** `@automattic/mcp-wordpress-remote` (installed globally via npm)
+- **Status:** Server starts and shows "Running" but **WordPress connection fails during initialization**
+
+### Known Issue: Apache Authorization Header
+
+The WordPress Application Passwords authentication returns 401 because **Apache on HostGator shared hosting strips the `Authorization` header** before PHP can read it. 
+
+**Fix required:** Add these lines to the **top** of `.htaccess` in the WordPress root:
+
+```apache
+# Enable Application Passwords auth header
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+```
+
+This can be done via:
+- cPanel → File Manager → edit `.htaccess`
+- Or FTP upload (need FTP credentials for this site)
+
+Once the `.htaccess` fix is applied, the WordPress MCP should connect and allow direct site management from VS Code.
+
+### Local Files
+
+- **Client directory:** `openwebaccess-site/Kliente/Sarvesh/` (created for storing client images)
+- **Images:** Need to be manually downloaded from Facebook (Facebook blocks automated scraping — requires login)
+
+### MCP Tools Available
+
+- **Playwright MCP:** Working — can browse web, take screenshots, interact with pages
+- **WordPress MCP:** Installed but blocked by Apache auth header issue (see above)
+
+### Next Steps
+
+- [ ] Fix `.htaccess` to enable Application Password authentication
+- [ ] Verify WordPress MCP connection works
+- [ ] Download images from Facebook page manually
+- [ ] Build chiropractic website for backontrackwellness.co.za
+
+---
+
 ## Future Tasks
 
 - [ ] Configure Snipcart live API key (pending client payment method decision)
-- [x] Add more demo sites to Open Web Access portfolio (photography demo added)
+- [x] Add more demo sites to Open Web Access portfolio (photography + dental demos added)
 - [x] Set up FTP deployment for openwebaccess.com
 - [ ] Consider adding more product pages to De Beer Bonsmara
 - [ ] Replace Snipcart demo API key with live key for MeHealth
 - [ ] Generate WordPress salts for mehealth.co.za wp-config.php
 - [ ] Consider GitHub Actions for automated deployment on push
+- [ ] Fix `.htaccess` on backontrackwellness.co.za for WP Application Passwords
+- [ ] Build Back on Track Chiropractic website for Dr Sarvesh Maharajh
 
 ---
 
