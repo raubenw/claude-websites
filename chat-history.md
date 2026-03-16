@@ -77,7 +77,10 @@ claude-websites/
 │       └── main.js
 ├── openwebaccess-site/      # Open Web Access agency site
 │   └── demos/
-│       └── chiro-demo/      # SpineAlign Chiropractic demo
+│       ├── chiro-demo/      # SpineAlign Chiropractic demo
+│       ├── dental/          # Ivory Dental Studio demo
+│       ├── mehealth/        # MeHealth e-commerce (mehealth.co.za)
+│       └── photography/     # Lumière Photography demo
 ├── enhancements/
 ├── functions.php
 ├── style.css
@@ -257,32 +260,94 @@ Set up FTP deployment via `curl.exe` in PowerShell to upload demos directly to t
 
 ### FTP Credentials
 
-- **FTP Username:** claude@openwebaccess.com
+> **IMPORTANT:** There are TWO openwebaccess FTP directories in cPanel:
+> - `openwebaccess/` — **CORRECT** (WordPress root, contains `demos/`)
+> - `openwebaccess.com/` — **WRONG** (empty, different directory)
+
+- **FTP Username:** `claude-owa@openwebaccess.com` *(corrected — old `claude@openwebaccess.com` maps to the wrong directory)*
 - **FTP Password:** `K-b#PMY4f59qS,U)M6sXo7G%`
 - **FTP Server (hostname):** ftp.wernerraubenheimer.com (DNS not resolving — use IP)
 - **FTP Server (IP):** 108.167.143.76
 - **FTP Port:** 21 (FTP & explicit FTPS)
-- **Server Directory:** /home2/solutions/openwebaccess.com
-- **FTP Root maps to:** openwebaccess.com/ (website root)
+- **FTP Root maps to:** `openwebaccess/` directory (WordPress root with `demos/`)
 
 ### Upload Method
 
 Using `curl.exe` with passive FTP from PowerShell:
 
 ```powershell
-# Create directory
-curl.exe --ftp-pasv --max-time 10 -u "claude@openwebaccess.com:PASSWORD" ftp://108.167.143.76/ -Q "MKD demos/photography"
-
 # Upload file
-curl.exe --ftp-pasv --max-time 30 -u "claude@openwebaccess.com:PASSWORD" -T "local/file.html" ftp://108.167.143.76/demos/photography/file.html
+$ErrorActionPreference="Continue"; curl.exe --ftp-pasv --max-time 30 -s -u "claude-owa@openwebaccess.com:K-b#PMY4f59qS,U)M6sXo7G%" -T "local/file.html" "ftp://108.167.143.76/demos/dental/file.html" 2>&1
+
+# List directory (save to temp file to avoid PS stderr issues)
+$ErrorActionPreference="Continue"; curl.exe --ftp-pasv --max-time 20 -s -u "claude-owa@openwebaccess.com:K-b#PMY4f59qS,U)M6sXo7G%" "ftp://108.167.143.76/demos/" -o "$env:TEMP\ftplist.txt" 2>&1; Get-Content "$env:TEMP\ftplist.txt"
 ```
 
-### Deployed
+### Deployed Demos
 
-- **Photography demo:** uploaded to `openwebaccess.com/demos/photography/`
-  - `index.html` (65,866 bytes)
-  - `css/styles.css`
-  - `js/main.js`
+- **Photography demo:** `openwebaccess.com/demos/photography/`
+- **Dental demo:** `openwebaccess.com/demos/dental/`
+- Other demos on server: chiro, chiro_old, flooring-after, flooring-before, health, italianrestaurant-after, italianrestaurant-before, photography, womenshealth-after, womenshealth-before
+
+---
+
+## Dental Demo Site — Ivory Dental Studio
+
+### Date: March 16, 2026
+
+### Overview
+
+Created a full dental practice demo site for the Open Web Access agency portfolio, located at `openwebaccess-site/demos/dental/`. A premium single-page site designed for South African dental practices.
+
+### Demo Brand
+
+- **Name:** Ivory Dental Studio
+- **Location:** Pretoria, South Africa
+- **Style:** Clean, professional, teal + warm coral accents
+
+### Files Created
+
+- `openwebaccess-site/demos/dental/index.html` — Full single-page site (43,107 bytes)
+- `openwebaccess-site/demos/dental/css/styles.css` — Complete responsive stylesheet (29,784 bytes)
+- `openwebaccess-site/demos/dental/js/main.js` — All interactivity (7,251 bytes)
+
+### Features
+
+- **Hero:** 3-slide image slider with semi-transparent overlay, dual CTAs (Book/Call)
+- **Trust Strip:** 4 trust indicators — HPCSA Registered, 15+ Years, Gentle Dentistry, 5-Star Google
+- **About:** Overlapping image layout with 15+ years badge (gradient), lead paragraph, feature checklist
+- **Services:** 6 cards — General, Cosmetic, Orthodontics, Dental Implants, Emergency, Paediatric. Alternating teal/coral top borders and icon colours
+- **Before/After CTA:** Parallax section with lightened overlay and warm tint
+- **Team:** 3 members — Dr. James van der Merwe, Dr. Naledi Mokoena, Lisa Botha (hygienist)
+- **Testimonials:** Slider with 4 cards, prev/next arrows, dots, autoplay, gradient background
+- **Pricing:** 3 tiers — Check-up R650 / Professional Clean R950 / Teeth Whitening R3,500. Featured card with gradient badge
+- **Accreditations:** SADA, HPCSA, SAAAD, ITI — gradient text effect
+- **Contact:** Split layout — info (phone/email/WhatsApp/address) + hours table + form with service dropdown
+- **Google Maps:** Embedded map of Pretoria area
+- **WhatsApp Float:** Fixed bottom-right button
+- **Preloader:** Tooth SVG icon with pulse animation
+- **Responsive:** Full breakpoints at 1024/768/480px
+
+### Design
+
+- **Fonts:** DM Serif Display (headings) + Inter (body) via Google Fonts
+- **Palette:** Teal `#0e7490`, warm coral `#e8986d`, gold `#d4a24e`, heading dark `#1a2a33`
+- **Animations:** AOS (Animate on Scroll 2.3.1), CSS transitions on cards/buttons
+- **Images:** Unsplash placeholders (dental themes)
+- **Footer:** "Crafted by Open Web Access" attribution
+
+### Bug Fixes Applied
+
+1. **Mobile horizontal shift** — Fixed with `overflow-x: clip` on body + `overflow: hidden` on `.about-images`
+2. **15+ badge overlap on mobile** — Changed to `position: relative` on mobile, reduced to 80px
+3. **White space under about images** — Reduced margins, changed aspect ratio to 3/4 on mobile
+4. **Hero overlay too blue** — Lightened from 82%/55% to 68%/35% opacity, added warm peach tint
+5. **Site too bland** — Added warm coral accent colour, gradient text effects on section titles and accreditations, coloured top borders on service cards, gradient buttons, richer testimonials background, gradient badges
+6. **Broken Unsplash image** — Replaced dead `photo-1629909615957` with working `photo-1629909613654` for dental interior
+
+### Live URL
+
+https://openwebaccess.com/demos/dental/
 
 ---
 
