@@ -1133,7 +1133,7 @@ input, textarea, select { font-family: inherit; }
   .nav-toggle { display: flex; }
   .nav-menu {
     position: fixed;
-    top: 64px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -1145,11 +1145,22 @@ input, textarea, select { font-family: inherit; }
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
-    z-index: 999;
+    z-index: 9999;
     box-shadow: 0 8px 32px rgba(0,0,0,.12);
   }
   .nav-menu.active { opacity: 1; visibility: visible; }
-  .nav-link { font-size: 1.1rem; padding: 14px 24px; }
+  .nav-link {
+    font-size: 1.25rem;
+    padding: 16px 32px;
+    color: var(--clr-heading);
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--clr-border);
+  }
+  .nav-link:hover, .nav-link.active {
+    background: var(--clr-bg-off);
+    color: var(--clr-primary);
+  }
   .nav-cta { display: none; }
 
   /* Hero */
