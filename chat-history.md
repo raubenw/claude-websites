@@ -538,17 +538,127 @@ https://backontrackwellness.co.za/
 
 ---
 
+---
+
+## MeHealth WordPress + WooCommerce Store
+
+### Date: March 17, 2026
+
+### Overview
+
+Built a full WordPress + WooCommerce e-commerce store for Mariaan at mehealth.co.za, replacing the previous static HTML demo with a live, functional shop. Products include dōTERRA essential oils, natural creams, mushroom coffee, diffusers, and accessories.
+
+### WordPress Custom Theme: `mehealth`
+
+Created a complete custom WordPress theme with WooCommerce integration:
+
+| File | Purpose |
+| --- | --- |
+| `functions.php` | Theme setup, WC support, AJAX add-to-cart, cart fragments, EFT email instructions, contact form handler |
+| `header.php` | DOCTYPE, announcement bar, navigation with WC cart, mobile toggle |
+| `footer.php` | 4-column footer, WhatsApp float, scroll-to-top |
+| `front-page.php` | Full homepage: hero, categories, about, WC product grid, testimonials, contact form |
+| `style.css` | Complete CSS with WooCommerce overrides, responsive design |
+| `page.php` | Generic page template |
+| `woocommerce.php` | WC wrapper template |
+| `index.php` | Required WP fallback |
+| `js/main.js` | AJAX add-to-cart, contact form, preloader, AOS, navbar, product filter |
+
+### Design System
+
+- **Primary:** Sage green `#5b7c5e`
+- **Accent:** Honey `#c8956c`
+- **Fonts:** Cormorant Garamond (headings) + Nunito Sans (body)
+- **Icons:** Emoji-based (🌿, 🛒, etc.)
+
+### WooCommerce Configuration
+
+- **Currency:** ZAR (South African Rand)
+- **Payments:** EFT (Bank Transfer) + Cash on Collection
+- **Shipping:** South Africa only
+- **Email:** mariaan@mehealth.co.za
+- **Permalinks:** /%postname%/
+
+### Products Imported (20 total)
+
+#### Published with prices (10):
+| Product | Price | Category |
+| --- | --- | --- |
+| Essential Oil Gift Package (Lavender & Wintergreen) | R285 | Oils & Creams |
+| Essential Oil Gift Package | R340 | Oils & Creams |
+| dōTERRA Essential Oil 15ml | R340 | Oils & Creams |
+| Tea Tree Essential Oil 15ml | R195 | Oils & Creams |
+| Reishi Mushroom Capsules | R450 | Coffee & Wellness |
+| Mushroom Coffee | R185 | Coffee & Wellness |
+| Alkaline Water 5L | R120 | Coffee & Wellness |
+| Natural Face Cream | R185 | Oils & Creams |
+| Fox Diffuser | R1150 | Diffusers |
+| Cola Diffuser | R1150 | Diffusers |
+
+#### Published without prices (10 — pending Mariaan's pricing):
+- Oil Storage Case, Natural Cream 50ml, Natural Cream 100ml, Oregano Latte Coffee
+- Essential Oil Roller Bottle, dōTERRA Breathe 15ml, dōTERRA Tea Tree 15ml
+- dōTERRA Peppermint 15ml, dōTERRA Lavender 15ml, dōTERRA Oregano 15ml
+
+### Images Deployed (27 total)
+
+- **8 static images:** hero.jpg, mariaan.jpg, category-oils.jpg, category-wellness.jpg, social-1 through social-4
+- **8 existing product images:** From demo site
+- **11 new product images:** From `openwebaccess-site/Kliente/Mehealth/` (long Afrikaans filenames mapped to short names)
+
+### Key Technical Decisions
+
+1. **Static HTML → WordPress:** The old static demo `index.html` was served before WordPress's `index.php`. Renamed to `index-static-backup.html` so WordPress takes over.
+2. **Snipcart removed:** The Snipcart JS/CSS were in the old static HTML, not in WordPress. Renaming `index.html` eliminated all Snipcart references and console errors.
+3. **FTP deployment:** Used PowerShell `[System.Net.FtpWebRequest]` functions for all file operations (upload, list, delete, rename).
+4. **PHP bootstrap scripts:** Created temporary `activate-theme.php` and `import-products.php` for one-time setup, then deleted for security.
+
+### Announcement Bar Update
+
+- **Before:** `✨ Free delivery on orders over R500 | Handmade with love in South Africa 🇿🇦`
+- **After:** `💛 Handmade with love in South Africa 🇿🇦`
+
+### Server Details
+
+- **Host:** HostGator shared hosting
+- **WordPress path:** `/home2/solutions/mehealth.co.za/`
+- **Theme path:** `/mehealth.co.za/wp-content/themes/mehealth/`
+- **FTP:** 108.167.143.76
+- **WP Admin:** me_health_wp_admin
+- **DB:** solution_mehealth
+
+### Site Status
+
+- ✅ WordPress serving at mehealth.co.za (no more static HTML)
+- ✅ All 20 products published and visible in Shop
+- ✅ Zero console errors
+- ✅ Announcement bar updated with yellow heart
+- ✅ Footer shows correct info (Middelburg, mariaan@mehealth.co.za)
+- ⚠️ Site in "Coming soon" mode — needs to be made public when ready
+- ⚠️ 10 products need pricing from Mariaan
+
+### Plugins Active
+
+1. WooCommerce 10.6.1
+2. WooCommerce Payfast Gateway 1.7.5
+3. The Courier Guy Shipping 5.4.0
+4. Wordfence Security 8.1.4
+
+---
+
 ## Future Tasks
 
-- [ ] Configure Snipcart live API key (pending client payment method decision)
 - [x] Add more demo sites to Open Web Access portfolio (photography + dental demos added)
 - [x] Set up FTP deployment for openwebaccess.com
-- [ ] Consider adding more product pages to De Beer Bonsmara
-- [ ] Replace Snipcart demo API key with live key for MeHealth
-- [ ] Generate WordPress salts for mehealth.co.za wp-config.php
-- [ ] Consider GitHub Actions for automated deployment on push
-- [ ] Fix `.htaccess` on backontrackwellness.co.za for WP Application Passwords (workaround: static site deployed instead)
 - [x] Build Back on Track Chiropractic website for Dr Sarvesh Maharajh
+- [x] Build MeHealth WordPress + WooCommerce store
+- [ ] Get pricing from Mariaan for 10 unprice products
+- [ ] Disable "Coming soon" mode on mehealth.co.za when ready to launch
+- [ ] Test add-to-cart and checkout flow end-to-end
+- [ ] Test contact form email delivery
+- [ ] Mobile responsive testing
+- [ ] Consider adding more product pages to De Beer Bonsmara
+- [ ] Consider GitHub Actions for automated deployment on push
 
 ---
 
