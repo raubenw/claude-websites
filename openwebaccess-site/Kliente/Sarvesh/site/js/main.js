@@ -9,15 +9,20 @@
     // ---------- Navbar Scroll ----------
     const navbar = document.getElementById('navbar');
     const backToTop = document.getElementById('backToTop');
+    const topBar = document.getElementById('topBar');
 
     function handleScroll() {
         const scrollY = window.scrollY;
 
-        // Navbar background
-        if (scrollY > 60) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        // Top bar: hide on scroll
+        if (topBar) {
+            if (scrollY > 80) {
+                topBar.classList.add('hidden');
+                navbar.classList.add('scrolled');
+            } else {
+                topBar.classList.remove('hidden');
+                navbar.classList.remove('scrolled');
+            }
         }
 
         // Back to top button
@@ -30,6 +35,17 @@
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
+
+    // ---------- Hero Image Slider ----------
+    var heroImages = document.querySelectorAll('.hero-bg-image');
+    if (heroImages.length > 1) {
+        var currentSlide = 0;
+        setInterval(function() {
+            heroImages[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % heroImages.length;
+            heroImages[currentSlide].classList.add('active');
+        }, 5000);
+    }
 
     // ---------- Back to Top ----------
     backToTop.addEventListener('click', function() {
@@ -68,7 +84,7 @@
 
     // ---------- Scroll Animations ----------
     var animatedElements = document.querySelectorAll(
-        '.service-card, .video-card, .info-card, .rl-benefit, .icon-card, .about-content, .about-visual, .red-light-content, .red-light-images'
+        '.service-card, .video-card, .info-card, .info-bar-item, .rl-benefit, .icon-card, .about-content, .about-visual, .red-light-content, .red-light-images'
     );
 
     animatedElements.forEach(function(el) {

@@ -17,7 +17,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -26,6 +26,33 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Demo Watermark -->
+    <div class="demo-watermark" aria-hidden="true"></div>
+
+    <!-- Top Bar -->
+    <div class="top-bar" id="topBar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <a href="tel:+27848888308" class="top-bar-item contact-highlight">
+                        <i class="fas fa-phone"></i>
+                        <span>+27 84 888 8308</span>
+                    </a>
+                    <a href="mailto:dr.srmaharajh@gmail.com" class="top-bar-item contact-highlight">
+                        <i class="fas fa-envelope"></i>
+                        <span>dr.srmaharajh@gmail.com</span>
+                    </a>
+                </div>
+                <div class="top-bar-right">
+                    <span class="top-bar-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon&ndash;Fri: By Appointment | Sat: By Arrangement</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
@@ -55,8 +82,11 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-bg">
-            <img src="images/hero-banner.jpg" alt="Back on Track Chiropractic and Wellness" loading="eager">
             <div class="hero-overlay"></div>
+            <img src="images/hero-1.jpg" alt="" class="hero-bg-image active" aria-hidden="true">
+            <img src="images/hero-2.jpg" alt="" class="hero-bg-image" aria-hidden="true">
+            <img src="images/hero-3.jpg" alt="" class="hero-bg-image" aria-hidden="true">
+            <img src="images/hero-4.jpg" alt="" class="hero-bg-image" aria-hidden="true">
         </div>
         <div class="container hero-content">
             <div class="hero-badge">
@@ -70,32 +100,22 @@
                     <i class="fas fa-calendar-check"></i>
                     Book Appointment
                 </a>
-                <a href="tel:+27848888308" class="btn btn-outline">
-                    <i class="fas fa-phone"></i>
-                    +27 84 888 8308
+                <a href="#services" class="btn btn-outline">
+                    <span>Our Services</span>
                 </a>
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <i class="fas fa-user-doctor"></i>
-                    <div>
-                        <strong>Qualified</strong>
-                        <span>Chiropractor</span>
-                    </div>
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <span class="hero-feature-icon"><i class="fas fa-check"></i></span>
+                    <span>Registered Chiropractor</span>
                 </div>
-                <div class="stat">
-                    <i class="fas fa-heart-pulse"></i>
-                    <div>
-                        <strong>Holistic</strong>
-                        <span>Approach</span>
-                    </div>
+                <div class="hero-feature">
+                    <span class="hero-feature-icon"><i class="fas fa-check"></i></span>
+                    <span>Medical Aid Accepted</span>
                 </div>
-                <div class="stat">
-                    <i class="fas fa-location-dot"></i>
-                    <div>
-                        <strong>Kloof</strong>
-                        <span>KwaZulu-Natal</span>
-                    </div>
+                <div class="hero-feature">
+                    <span class="hero-feature-icon"><i class="fas fa-check"></i></span>
+                    <span>Red Light Therapy</span>
                 </div>
             </div>
         </div>
@@ -103,6 +123,42 @@
             <a href="#about" aria-label="Scroll down">
                 <i class="fas fa-chevron-down"></i>
             </a>
+        </div>
+    </section>
+
+    <!-- Quick Info Bar -->
+    <section class="info-bar">
+        <div class="container">
+            <div class="info-bar-grid">
+                <div class="info-bar-item">
+                    <div class="info-bar-icon"><i class="fas fa-location-dot"></i></div>
+                    <div>
+                        <div class="info-bar-title">Visit Us</div>
+                        <div class="info-bar-text">16 Pioneer Road, Kloof</div>
+                    </div>
+                </div>
+                <div class="info-bar-item">
+                    <div class="info-bar-icon"><i class="fas fa-phone"></i></div>
+                    <div>
+                        <div class="info-bar-title">Call Us</div>
+                        <div class="info-bar-text">+27 84 888 8308</div>
+                    </div>
+                </div>
+                <div class="info-bar-item">
+                    <div class="info-bar-icon"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <div class="info-bar-title">Working Hours</div>
+                        <div class="info-bar-text">Mon&ndash;Fri: By Appointment</div>
+                    </div>
+                </div>
+                <div class="info-bar-item">
+                    <div class="info-bar-icon"><i class="fas fa-heart-pulse"></i></div>
+                    <div>
+                        <div class="info-bar-title">Holistic Care</div>
+                        <div class="info-bar-text">Chiro, Rehab &amp; Wellness</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
