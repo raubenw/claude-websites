@@ -66,7 +66,7 @@ $theme_uri = get_template_directory_uri();
                     </div>
                 </div>
                 <div class="info-bar-item">
-                    <div class="info-bar-icon"><span class="emoji-icon">📞</span></div>
+                    <div class="info-bar-icon"><i class="fas fa-phone-alt" style="color:#e04040"></i></div>
                     <div>
                         <div class="info-bar-title">Call Us</div>
                         <div class="info-bar-text">+27 84 888 8308</div>
@@ -410,7 +410,7 @@ $theme_uri = get_template_directory_uri();
                     </div>
                     <div class="info-card">
                         <div class="info-icon">
-                            <span class="emoji-icon">📞</span>
+                            <i class="fas fa-phone-alt" style="color:#e04040"></i>
                         </div>
                         <div>
                             <h4>Phone</h4>
