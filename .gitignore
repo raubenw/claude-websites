@@ -22,3 +22,7 @@ mehealth-*.jpeg
 
 # Activation scripts (security)
 activate-theme.php
+
+# Demo source downloads
+demo-dental-source.html
+demo-dental-assets/
