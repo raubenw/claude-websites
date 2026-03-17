@@ -185,8 +185,8 @@ ul {
     z-index: 1001;
     background: var(--dark);
     color: #fff;
-    padding: 14px 0;
-    font-size: 14px;
+    padding: 18px 0;
+    font-size: 16px;
     transition: var(--transition);
 }
 
@@ -215,7 +215,7 @@ ul {
     gap: 10px;
     color: rgba(255,255,255,0.7);
     transition: var(--transition);
-    font-size: 0.9rem;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -224,11 +224,11 @@ ul {
 }
 
 .top-bar-item.contact-highlight {
-    font-size: 1rem;
+    font-size: 22px;
     font-weight: 600;
     color: #fff;
     background: rgba(255,255,255,0.1);
-    padding: 6px 14px;
+    padding: 8px 16px;
     border-radius: var(--radius);
 }
 
@@ -237,14 +237,14 @@ ul {
 }
 
 .top-bar-item i {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: var(--secondary);
 }
 
 /* ---------- Navbar ---------- */
 .navbar {
     position: fixed;
-    top: 56px;
+    top: 62px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -404,7 +404,7 @@ ul {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 180px 0 80px;
+    padding: 200px 0 80px;
     overflow: hidden;
 }
 
@@ -444,7 +444,7 @@ ul {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 700px;
+    max-width: 750px;
 }
 
 .hero-badge {
@@ -465,7 +465,7 @@ ul {
 
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-size: clamp(40px, 6vw, 60px);
     font-weight: 700;
     color: #fff;
     line-height: 1.15;
@@ -489,6 +489,11 @@ ul {
     flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 60px;
+}
+
+.hero-actions .btn {
+    padding: 18px 40px;
+    font-size: 16px;
 }
 
 .hero-stats {
@@ -1451,25 +1456,32 @@ ul {
 /* ---------- WhatsApp Float ---------- */
 .whatsapp-float {
     position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: #25d366;
-    color: #fff;
+    bottom: 30px;
+    right: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
+    gap: 10px;
+    background: #25d366;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
     z-index: 99;
     transition: var(--transition);
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-icon {
+    font-size: 24px;
+}
+
+.whatsapp-text {
+    font-weight: 600;
+    font-size: 14px;
 }
 
 /* ---------- Demo Watermark ---------- */
@@ -1712,6 +1724,17 @@ ul {
     
     .hero-actions .btn {
         justify-content: center;
+    }
+    
+    /* WhatsApp - icon only on mobile */
+    .whatsapp-float {
+        bottom: 20px;
+        right: 15px;
+        padding: 12px 18px;
+    }
+    
+    .whatsapp-text {
+        display: none;
     }
 }
 
