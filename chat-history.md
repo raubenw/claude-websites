@@ -261,10 +261,11 @@ Set up FTP deployment via `curl.exe` in PowerShell to upload demos directly to t
 ### FTP Credentials
 
 > **IMPORTANT:** There are TWO openwebaccess FTP directories in cPanel:
+>
 > - `openwebaccess/` — **CORRECT** (WordPress root, contains `demos/`)
 > - `openwebaccess.com/` — **WRONG** (empty, different directory)
 
-- **FTP Username:** `claude-owa@openwebaccess.com` *(corrected — old `claude@openwebaccess.com` maps to the wrong directory)*
+- **FTP Username:** `claude-owa@openwebaccess.com` _(corrected — old `claude@openwebaccess.com` maps to the wrong directory)_
 - **FTP Password:** `K-b#PMY4f59qS,U)M6sXo7G%`
 - **FTP Server (hostname):** ftp.wernerraubenheimer.com (DNS not resolving — use IP)
 - **FTP Server (IP):** 108.167.143.76
@@ -386,7 +387,7 @@ https://openwebaccess.com/demos/dental/
 
 ### Known Issue: Apache Authorization Header
 
-The WordPress Application Passwords authentication returns 401 because **Apache on HostGator shared hosting strips the `Authorization` header** before PHP can read it. 
+The WordPress Application Passwords authentication returns 401 because **Apache on HostGator shared hosting strips the `Authorization` header** before PHP can read it.
 
 **Fix required:** Add these lines to the **top** of `.htaccess` in the WordPress root:
 
@@ -399,6 +400,7 @@ SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
 ```
 
 This can be done via:
+
 - cPanel → File Manager → edit `.htaccess`
 - Or FTP upload (need FTP credentials for this site)
 
@@ -423,6 +425,119 @@ Once the `.htaccess` fix is applied, the WordPress MCP should connect and allow 
 
 ---
 
+## Back on Track Chiropractic Website — Built & Deployed
+
+### Date: March 16-17, 2026
+
+### Overview
+
+Built a complete HTML/CSS/JS website for Dr Sarvesh Maharajh's "Back on Track Chiropractic and Wellness" practice. WordPress MCP connection issues were unresolvable (Apache strips Authorization headers on HostGator shared hosting), so a static site was built and deployed via FTP instead.
+
+### New FTP Credentials (Broader Access)
+
+- **FTP Username:** `claude-ftp@wernerraubenheimer.com`
+- **FTP Password:** `0*QH+.=Cd^4?B8uKZXdvs$eH`
+- **FTP Server:** `108.167.143.76` (DNS for `ftp.wernerraubenheimer.com` does NOT resolve — must use IP)
+- **FTP Root:** `/home2/solutions/` (has access to ALL sites on this cPanel account)
+- **PowerShell note:** Use single quotes for cred string to preserve literal `$` in password
+
+### Deployment Path
+
+`/home2/solutions/public_html/website_8cdc39b6/`
+
+### Live URL
+
+https://backontrackwellness.co.za/
+
+### Client Details
+
+- **Practitioner:** Dr Sarvesh Maharajh (M.Tech Chiropractic DUT)
+- **Address:** 16 Pioneer Road, Kloof, KZN, 3610
+- **Phone:** +27 84 888 8308
+- **Email:** dr.srmaharajh@gmail.com
+- **Instagram:** @backontrack_chiro_and_wellness
+- **YouTube:** @BackOnTrackWellness (49 subscribers, 16 videos)
+
+### Files Deployed
+
+| File | Size | Purpose |
+| --- | --- | --- |
+| `index.html` | 32,002 bytes | Complete single-page website |
+| `css/styles.css` | 29,569 bytes | Full responsive stylesheet |
+| `js/main.js` | 8,360 bytes | All interactivity |
+| `contact.php` | 3,565 bytes | PHP contact form handler |
+| `images/hero-banner.jpg` | 56,482 bytes | Facebook profile banner |
+| `images/red-light-therapy.jpg` | 240,862 bytes | Red light therapy image |
+| `images/infrared-therapy-info.jpg` | 57,565 bytes | Infrared therapy info graphic |
+| `images/infrared-full-body.jpg` | 147,346 bytes | Full body infrared therapy |
+
+### Local Source Files
+
+- `openwebaccess-site/Kliente/Sarvesh/site/index.html`
+- `openwebaccess-site/Kliente/Sarvesh/site/css/styles.css`
+- `openwebaccess-site/Kliente/Sarvesh/site/js/main.js`
+- `openwebaccess-site/Kliente/Sarvesh/site/contact.php`
+- `openwebaccess-site/Kliente/Sarvesh/images/` (4 source images from Facebook)
+
+### Design
+
+- **Color Scheme:** Primary teal `#0d6e6e`, accent coral `#e8733a`
+- **Red Light Section:** Red `#e04040` on dark bg `#1a1015`
+- **Fonts:** Playfair Display (headings) + Inter (body) via Google Fonts
+- **Layout:** Single-page with smooth scroll navigation
+
+### Site Sections
+
+1. **Navigation** — Sticky nav with mobile hamburger, orange "Book Appointment" CTA
+2. **Hero** — Facebook banner with teal overlay, "Get Your Life Back on Track", stats row
+3. **About** — Dr Maharajh bio, icon grid (Spinal Health/Rehab/Light Therapy/Mental Wellness), quote block
+4. **Services** — 6 cards: Chiropractic Adjustments, Rehabilitation, Red Light Therapy (featured/Popular), Postural Assessment, Wellness Programmes, Sports Injuries
+5. **Red Light Therapy** — Dark featured section with 3-image gallery, benefits list (Reduces Inflammation, Accelerates Healing, Non-Invasive, Improved Circulation)
+6. **Videos** — Featured Sciatica video (YouTube embed) + 5 lazy-loading thumbnail cards (Poor Posture, Core Stability, Levator Scapulae, Low Back Strength, Barefoot Shoes)
+7. **Contact** — Info cards (Location/Phone/Email/Instagram), Google Maps embed, contact form with service dropdown
+8. **Footer** — 4-column (Brand/Quick Links/Services/Contact), social icons, "Website by Open Web Access"
+9. **WhatsApp Float** — Fixed bottom-right CTA
+10. **Back to Top** — Appears on scroll
+
+### YouTube Videos Embedded
+
+| Video ID | Title | Views |
+| --- | --- | --- |
+| `fC6Mjb-qmyA` | Sciatica: Symptoms, Red Flags & Treatment (FEATURED) | 422 |
+| `8obxojxLjLg` | Poor Posture & Correction | 229 |
+| `jl2H06JLseQ` | Core Stability: McGill Big 3 | 158 |
+| `gzwYoo8yt1M` | Levator Scapulae & Neck Pain | 101 |
+| `jy7R26fHZG0` | Low Back Strength & Mobility | 54 |
+| `6cSsa3hAOfU` | Barefoot Shoes: What's the Hype? | 1,252 |
+
+### Contact Form (contact.php)
+
+- **Method:** POST only
+- **Security:** Session-based rate limiting (30s), honeypot field, input sanitization, header injection prevention
+- **Sends to:** dr.srmaharajh@gmail.com via PHP `mail()`
+- **From:** noreply@backontrackwellness.co.za
+- **Response:** JSON (success/error)
+- **Note:** HostGator bot protection (Imunify) sets a JS cookie challenge on first PHP request — transparent to real browser users
+
+### WordPress Coexistence
+
+- WordPress is still installed in the same directory
+- Apache's `DirectoryIndex` serves `index.html` before `index.php`
+- WordPress `.htaccess` has `RewriteCond %{REQUEST_FILENAME} !-f` which skips existing static files
+- Our static files (index.html, css/, js/, images/, contact.php) are served directly
+
+### Testing Completed
+
+- [x] Desktop visual review — all sections render correctly
+- [x] Mobile responsive (375px) — hamburger nav, stacked cards, no overflow
+- [x] Contact form — submission successful, emails sent
+- [x] YouTube embeds — featured video embeds, thumbnails lazy-load on click
+- [x] Google Maps — renders correctly with Kloof location
+- [x] WhatsApp float and Back to Top buttons working
+- [x] Server cleanup — removed test.txt and placeholder.txt files
+
+---
+
 ## Future Tasks
 
 - [ ] Configure Snipcart live API key (pending client payment method decision)
@@ -432,8 +547,8 @@ Once the `.htaccess` fix is applied, the WordPress MCP should connect and allow 
 - [ ] Replace Snipcart demo API key with live key for MeHealth
 - [ ] Generate WordPress salts for mehealth.co.za wp-config.php
 - [ ] Consider GitHub Actions for automated deployment on push
-- [ ] Fix `.htaccess` on backontrackwellness.co.za for WP Application Passwords
-- [ ] Build Back on Track Chiropractic website for Dr Sarvesh Maharajh
+- [ ] Fix `.htaccess` on backontrackwellness.co.za for WP Application Passwords (workaround: static site deployed instead)
+- [x] Build Back on Track Chiropractic website for Dr Sarvesh Maharajh
 
 ---
 

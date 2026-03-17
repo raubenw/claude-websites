@@ -9,6 +9,9 @@ Thumbs.db
 # Zip files
 *.zip
 
+# Playwright MCP
+.playwright-mcp/
+
 # Temp files
 *.tmp
 *.temp
