@@ -432,6 +432,9 @@ ul {
     position: relative;
     z-index: 2;
     max-width: 750px;
+    text-align: left;
+    margin-left: max(24px, 8vw);
+    margin-right: auto;
 }
 
 .hero-badge {
@@ -679,6 +682,12 @@ ul {
     font-size: 1.1rem;
 }
 
+.feature-emoji {
+    font-size: 1.3rem;
+    min-width: 28px;
+    text-align: center;
+}
+
 .about-visual {
     display: flex;
     flex-direction: column;
@@ -851,7 +860,7 @@ ul {
     width: 60px;
     height: 60px;
     border-radius: 16px;
-    background: var(--bg-teal);
+    background: var(--primary-dark);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -860,7 +869,26 @@ ul {
 
 .service-icon i {
     font-size: 1.5rem;
-    color: var(--primary);
+    color: #fff;
+}
+
+/* Native emoji icon styling */
+.emoji-icon {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Android Emoji", sans-serif;
+    font-style: normal;
+    line-height: 1;
+}
+
+.service-icon .emoji-icon {
+    font-size: 1.6rem;
+}
+
+.info-bar-icon .emoji-icon {
+    font-size: 1.3rem;
+}
+
+.info-icon .emoji-icon {
+    font-size: 1.3rem;
 }
 
 .service-card h3 {
@@ -995,12 +1023,15 @@ ul {
     height: 48px;
     min-width: 48px;
     border-radius: 12px;
-    background: rgba(224, 64, 64, 0.15);
+    background: rgba(224, 64, 64, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--red-glow);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+}
+
+.rl-benefit-icon .emoji-icon {
+    font-size: 1.3rem;
 }
 
 .rl-benefit h4 {
@@ -1171,11 +1202,11 @@ ul {
     height: 48px;
     min-width: 48px;
     border-radius: 12px;
-    background: var(--bg-teal);
+    background: var(--primary-dark);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
+    color: #fff;
     font-size: 1.1rem;
 }
 

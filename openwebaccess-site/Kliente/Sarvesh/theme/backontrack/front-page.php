@@ -59,28 +59,28 @@ $theme_uri = get_template_directory_uri();
         <div class="container">
             <div class="info-bar-grid">
                 <div class="info-bar-item">
-                    <div class="info-bar-icon"><i class="fas fa-location-dot"></i></div>
+                    <div class="info-bar-icon"><span class="emoji-icon">📍</span></div>
                     <div>
                         <div class="info-bar-title">Visit Us</div>
                         <div class="info-bar-text">16 Pioneer Road, Kloof</div>
                     </div>
                 </div>
                 <div class="info-bar-item">
-                    <div class="info-bar-icon"><i class="fas fa-phone"></i></div>
+                    <div class="info-bar-icon"><span class="emoji-icon">📞</span></div>
                     <div>
                         <div class="info-bar-title">Call Us</div>
                         <div class="info-bar-text">+27 84 888 8308</div>
                     </div>
                 </div>
                 <div class="info-bar-item">
-                    <div class="info-bar-icon"><i class="fas fa-clock"></i></div>
+                    <div class="info-bar-icon"><span class="emoji-icon">🕐</span></div>
                     <div>
                         <div class="info-bar-title">Working Hours</div>
                         <div class="info-bar-text">Mon&ndash;Fri: By Appointment</div>
                     </div>
                 </div>
                 <div class="info-bar-item">
-                    <div class="info-bar-icon"><i class="fas fa-heart-pulse"></i></div>
+                    <div class="info-bar-icon"><span class="emoji-icon">💚</span></div>
                     <div>
                         <div class="info-bar-title">Holistic Care</div>
                         <div class="info-bar-text">Chiro, Rehab &amp; Wellness</div>
@@ -105,19 +105,19 @@ $theme_uri = get_template_directory_uri();
                     <p>Whether you're dealing with chronic back pain, recovering from an injury, or seeking to improve your overall wellness, Back on Track provides personalised treatment plans tailored to your unique needs.</p>
                     <div class="about-features">
                         <div class="feature">
-                            <i class="fas fa-check-circle"></i>
+                            <span class="emoji-icon feature-emoji">🎓</span>
                             <span>Manual Therapy &amp; Spinal Adjustments</span>
                         </div>
                         <div class="feature">
-                            <i class="fas fa-check-circle"></i>
+                            <span class="emoji-icon feature-emoji">🔬</span>
                             <span>Rehabilitation &amp; Exercise Prescription</span>
                         </div>
                         <div class="feature">
-                            <i class="fas fa-check-circle"></i>
+                            <span class="emoji-icon feature-emoji">❤️</span>
                             <span>Red Light &amp; Infrared Therapy</span>
                         </div>
                         <div class="feature">
-                            <i class="fas fa-check-circle"></i>
+                            <span class="emoji-icon feature-emoji">📊</span>
                             <span>Ergonomic &amp; Postural Assessment</span>
                         </div>
                     </div>
@@ -165,7 +165,7 @@ $theme_uri = get_template_directory_uri();
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-hands"></i>
+                        <span class="emoji-icon">🤲</span>
                     </div>
                     <h3>Chiropractic Adjustments</h3>
                     <p>Precise manual adjustments to restore proper spinal alignment, relieve nerve pressure, and promote natural healing throughout the body.</p>
@@ -177,7 +177,7 @@ $theme_uri = get_template_directory_uri();
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-person-running"></i>
+                        <span class="emoji-icon">🏃</span>
                     </div>
                     <h3>Rehabilitation</h3>
                     <p>Structured exercise programmes designed to strengthen weak areas, improve mobility, and prevent re-injury for long-term results.</p>
@@ -190,7 +190,7 @@ $theme_uri = get_template_directory_uri();
                 <div class="service-card featured">
                     <div class="service-badge">Popular</div>
                     <div class="service-icon">
-                        <i class="fas fa-sun"></i>
+                        <span class="emoji-icon">☀️</span>
                     </div>
                     <h3>Red Light Therapy</h3>
                     <p>Advanced photobiomodulation using red and near-infrared light to accelerate tissue repair, reduce inflammation, and relieve pain.</p>
@@ -202,7 +202,7 @@ $theme_uri = get_template_directory_uri();
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-clipboard-check"></i>
+                        <span class="emoji-icon">📋</span>
                     </div>
                     <h3>Postural Assessment</h3>
                     <p>Thorough ergonomic and postural evaluations to identify imbalances and create corrective strategies for daily life and work.</p>
@@ -214,7 +214,7 @@ $theme_uri = get_template_directory_uri();
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-heartbeat"></i>
+                        <span class="emoji-icon">❤️</span>
                     </div>
                     <h3>Wellness Programmes</h3>
                     <p>Comprehensive wellness plans addressing physical and mental health, including lifestyle guidance, stress management, and preventive care.</p>
@@ -226,7 +226,7 @@ $theme_uri = get_template_directory_uri();
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-bolt"></i>
+                        <span class="emoji-icon">⚡</span>
                     </div>
                     <h3>Sports Injuries</h3>
                     <p>Specialist treatment for sports-related injuries with focused recovery programmes to get athletes back to peak performance safely.</p>
@@ -265,7 +265,7 @@ $theme_uri = get_template_directory_uri();
                     <div class="rl-benefits">
                         <div class="rl-benefit">
                             <div class="rl-benefit-icon">
-                                <i class="fas fa-shield-heart"></i>
+                                <span class="emoji-icon">🛡️</span>
                             </div>
                             <div>
                                 <h4>Reduces Inflammation</h4>
@@ -274,7 +274,7 @@ $theme_uri = get_template_directory_uri();
                         </div>
                         <div class="rl-benefit">
                             <div class="rl-benefit-icon">
-                                <i class="fas fa-cell"></i>
+                                <span class="emoji-icon">🧠</span>
                             </div>
                             <div>
                                 <h4>Accelerates Healing</h4>
@@ -283,7 +283,7 @@ $theme_uri = get_template_directory_uri();
                         </div>
                         <div class="rl-benefit">
                             <div class="rl-benefit-icon">
-                                <i class="fas fa-circle-radiation"></i>
+                                <span class="emoji-icon">✨</span>
                             </div>
                             <div>
                                 <h4>Non-Invasive</h4>
@@ -292,7 +292,7 @@ $theme_uri = get_template_directory_uri();
                         </div>
                         <div class="rl-benefit">
                             <div class="rl-benefit-icon">
-                                <i class="fas fa-arrows-rotate"></i>
+                                <span class="emoji-icon">🔄</span>
                             </div>
                             <div>
                                 <h4>Improved Circulation</h4>
@@ -401,7 +401,7 @@ $theme_uri = get_template_directory_uri();
                 <div class="contact-info">
                     <div class="info-card">
                         <div class="info-icon">
-                            <i class="fas fa-location-dot"></i>
+                            <span class="emoji-icon">📍</span>
                         </div>
                         <div>
                             <h4>Location</h4>
@@ -410,7 +410,7 @@ $theme_uri = get_template_directory_uri();
                     </div>
                     <div class="info-card">
                         <div class="info-icon">
-                            <i class="fas fa-phone"></i>
+                            <span class="emoji-icon">📞</span>
                         </div>
                         <div>
                             <h4>Phone</h4>
@@ -419,7 +419,7 @@ $theme_uri = get_template_directory_uri();
                     </div>
                     <div class="info-card">
                         <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
+                            <span class="emoji-icon">✉️</span>
                         </div>
                         <div>
                             <h4>Email</h4>
@@ -428,7 +428,7 @@ $theme_uri = get_template_directory_uri();
                     </div>
                     <div class="info-card">
                         <div class="info-icon">
-                            <i class="fab fa-instagram"></i>
+                            <span class="emoji-icon">📸</span>
                         </div>
                         <div>
                             <h4>Instagram</h4>
