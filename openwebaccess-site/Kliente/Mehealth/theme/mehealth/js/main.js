@@ -44,8 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (announcementBar) {
     announcementBar.style.transition = "transform 0.3s ease";
-    announcementBar.style.position = "relative";
-    announcementBar.style.zIndex = "1001";
   }
 
   window.addEventListener("scroll", handleNavScroll, { passive: true });

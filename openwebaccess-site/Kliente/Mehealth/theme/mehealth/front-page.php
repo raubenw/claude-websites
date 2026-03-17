@@ -41,7 +41,7 @@ get_header();
             <div class="hero-trust">
               <div class="trust-item"><span>🧴</span> <span>Essential Oils</span></div>
               <div class="trust-item"><span>🍃</span> <span>All Natural</span></div>
-              <div class="trust-item"><span>🚚</span> <span>Free Delivery 500+</span></div>
+              <div class="trust-item"><span>�</span> <span>Made with Love</span></div>
             </div>
           </div>
         </div>
@@ -280,9 +280,9 @@ get_header();
               <p>Essential oils, mushroom coffee &amp; alkaline water for wellness</p>
             </div>
             <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
-              <span class="benefit-icon">🚚</span>
-              <h3>Free Delivery</h3>
-              <p>Free shipping on all orders over R500 nationwide</p>
+              <span class="benefit-icon">�</span>
+              <h3>Made with Love</h3>
+              <p>Handmade wellness products crafted with care in South Africa</p>
             </div>
           </div>
         </div>

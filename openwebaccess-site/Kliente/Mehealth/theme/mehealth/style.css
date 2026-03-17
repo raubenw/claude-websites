@@ -316,6 +316,11 @@ ul {
 
 /* ---------- Announcement Bar ---------- */
 .announcement-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
   background: var(--clr-primary);
   color: var(--clr-white);
   padding: 8px 0;
@@ -328,7 +333,7 @@ ul {
 /* ---------- Navbar ---------- */
 .navbar {
   position: fixed;
-  top: 0;
+  top: 36px;
   left: 0;
   right: 0;
   width: 100%;
@@ -338,12 +343,11 @@ ul {
   border-bottom: 1px solid transparent;
   padding: 16px 0;
   transition: var(--transition);
-  transform: translateY(36px);
   overflow: visible;
 }
 
 .navbar.scrolled {
-  transform: translateY(0);
+  top: 0;
   padding: 10px 0;
   border-bottom-color: var(--clr-border);
   box-shadow: var(--shadow-sm);
