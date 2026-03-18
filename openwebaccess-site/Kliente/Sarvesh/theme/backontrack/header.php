@@ -20,6 +20,9 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
+    <!-- Demo Watermark -->
+    <div class="demo-watermark" aria-hidden="true"></div>
+
     <!-- Top Bar -->
     <div class="top-bar" id="topBar">
         <div class="container">
