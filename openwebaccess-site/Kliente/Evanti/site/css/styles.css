@@ -1130,7 +1130,8 @@ input, textarea, select { font-family: inherit; }
 
   /* Navbar */
   .navbar .container { height: 64px; }
-  .nav-toggle { display: flex; }
+  .navbar { position: relative; z-index: 10001; }
+  .nav-toggle { display: flex; position: relative; z-index: 10002; }
   .nav-menu {
     position: fixed;
     top: 0;
@@ -1142,20 +1143,21 @@ input, textarea, select { font-family: inherit; }
     align-items: center;
     justify-content: center;
     gap: 0;
-    opacity: 0;
+    transform: translateX(100%);
     visibility: hidden;
-    transition: var(--transition);
-    z-index: 9999;
-    box-shadow: 0 8px 32px rgba(0,0,0,.12);
+    transition: transform .3s ease, visibility .3s ease;
+    z-index: 10000;
+    box-shadow: -4px 0 32px rgba(0,0,0,.15);
   }
-  .nav-menu.active { opacity: 1; visibility: visible; }
+  .nav-menu.active { transform: translateX(0); visibility: visible; }
   .nav-link {
     font-size: 1.25rem;
-    padding: 16px 32px;
+    padding: 18px 32px;
     color: var(--clr-heading);
     width: 100%;
     text-align: center;
     border-bottom: 1px solid var(--clr-border);
+    background: #ffffff;
   }
   .nav-link:hover, .nav-link.active {
     background: var(--clr-bg-off);
