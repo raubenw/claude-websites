@@ -805,12 +805,17 @@ ul {
 .product-image {
   position: relative;
   overflow: hidden;
+  background: var(--clr-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-image img {
   width: 100%;
   height: 260px;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   transition: transform 0.5s ease;
 }
 
@@ -1496,6 +1501,11 @@ ul {
 
 .woocommerce ul.products li.product a img {
   border-radius: 0;
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  object-position: center;
+  background: var(--clr-cream);
 }
 
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
