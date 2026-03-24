@@ -100,7 +100,7 @@ get_header();
                 functional wellness products.
               </p>
               <p class="about-text">
-                As a proud dōTERRA advocate, Mariaan brings you CPTG Certified
+                As a proud dōTERRA agent, Mariaan brings you CPTG Certified
                 Pure Tested Grade essential oils alongside her own handmade
                 creams and premium mushroom coffee — known for incredible health
                 benefits including enhanced focus, immune support, and natural
