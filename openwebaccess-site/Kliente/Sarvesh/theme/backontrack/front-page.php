@@ -69,14 +69,21 @@ $theme_uri = get_template_directory_uri();
                     <div class="info-bar-icon"><i class="fas fa-phone-alt" style="color:#e04040"></i></div>
                     <div>
                         <div class="info-bar-title">Call Us</div>
-                        <div class="info-bar-text">+27 84 888 8308</div>
+                        <div class="info-bar-text">066 087 3258</div>
                     </div>
                 </div>
                 <div class="info-bar-item">
                     <div class="info-bar-icon"><span class="emoji-icon">🕐</span></div>
                     <div>
                         <div class="info-bar-title">Working Hours</div>
-                        <div class="info-bar-text">Mon&ndash;Fri: By Appointment</div>
+                        <div class="info-bar-text">Mon&ndash;Sat: By Appointment</div>
+                    </div>
+                </div>
+                    <div class="info-bar-item">
+                    <div class="info-bar-icon"><span class="emoji-icon">📋</span></div>
+                    <div>
+                        <div class="info-bar-title">Practice No.</div>
+                        <div class="info-bar-text">0395129</div>
                     </div>
                 </div>
                 <div class="info-bar-item">
@@ -246,13 +253,7 @@ $theme_uri = get_template_directory_uri();
             <div class="red-light-grid">
                 <div class="red-light-images">
                     <div class="rl-image-main">
-                        <img src="<?php echo $theme_uri; ?>/images/red-light-therapy.jpg" alt="Red light and infrared therapy treatment" loading="lazy">
-                    </div>
-                    <div class="rl-image-secondary">
-                        <img src="<?php echo $theme_uri; ?>/images/infrared-therapy-info.jpg" alt="Infrared and red light therapy information" loading="lazy">
-                    </div>
-                    <div class="rl-image-tertiary">
-                        <img src="<?php echo $theme_uri; ?>/images/infrared-full-body.jpg" alt="Full body infrared light therapy session" loading="lazy">
+                        <img src="<?php echo $theme_uri; ?>/images/red-light-sessions.jpg" alt="Back on Track red light therapy sessions" loading="lazy">
                     </div>
                 </div>
                 <div class="red-light-content">
@@ -262,43 +263,8 @@ $theme_uri = get_template_directory_uri();
                     </div>
                     <h2>Red Light &amp; Infrared <span class="text-accent">Therapy</span></h2>
                     <p class="rl-lead">Experience the healing power of photobiomodulation &mdash; a non-invasive treatment that uses specific wavelengths of light to promote cellular repair and reduce pain.</p>
-                    <div class="rl-benefits">
-                        <div class="rl-benefit">
-                            <div class="rl-benefit-icon">
-                                <span class="emoji-icon">🛡️</span>
-                            </div>
-                            <div>
-                                <h4>Reduces Inflammation</h4>
-                                <p>Calms inflamed tissues and joints, providing relief from chronic pain conditions.</p>
-                            </div>
-                        </div>
-                        <div class="rl-benefit">
-                            <div class="rl-benefit-icon">
-                                <span class="emoji-icon">🧠</span>
-                            </div>
-                            <div>
-                                <h4>Accelerates Healing</h4>
-                                <p>Stimulates mitochondrial activity to speed up tissue repair and recovery.</p>
-                            </div>
-                        </div>
-                        <div class="rl-benefit">
-                            <div class="rl-benefit-icon">
-                                <span class="emoji-icon">✨</span>
-                            </div>
-                            <div>
-                                <h4>Non-Invasive</h4>
-                                <p>A safe, drug-free treatment option with no downtime or side effects.</p>
-                            </div>
-                        </div>
-                        <div class="rl-benefit">
-                            <div class="rl-benefit-icon">
-                                <span class="emoji-icon">🔄</span>
-                            </div>
-                            <div>
-                                <h4>Improved Circulation</h4>
-                                <p>Enhances blood flow to treated areas, supporting the body's natural healing process.</p>
-                            </div>
-                        </div>
+                    <div class="rl-benefits-image">
+                        <img src="<?php echo $theme_uri; ?>/images/benefits-redlight-therapy.jpg" alt="Benefits of red light therapy" loading="lazy">
                     </div>
                     <a href="#contact" class="btn btn-primary">
                         <i class="fas fa-calendar-check"></i>
@@ -386,6 +352,61 @@ $theme_uri = get_template_directory_uri();
         </div>
     </section>
 
+    <!-- Shop / Products Section -->
+    <section class="shop section" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">
+                    <i class="fas fa-shopping-bag"></i>
+                    Our Products
+                </div>
+                <h2>Natural <span class="text-accent">Supplements</span></h2>
+                <p>Premium natural health supplements to support your wellness journey.</p>
+            </div>
+            <div class="shop-grid">
+                <?php
+                $products = wc_get_products(array(
+                    'status'  => 'publish',
+                    'limit'   => 6,
+                    'orderby' => 'date',
+                    'order'   => 'DESC',
+                ));
+                if ($products) :
+                    foreach ($products as $product) :
+                        $image = wp_get_attachment_image_src(get_post_thumbnail_id($product->get_id()), 'medium');
+                        $image_url = $image ? $image[0] : $theme_uri . '/images/placeholder.jpg';
+                ?>
+                <div class="shop-product" data-product-id="<?php echo esc_attr($product->get_id()); ?>">
+                    <div class="shop-product-image">
+                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($product->get_name()); ?>" loading="lazy">
+                    </div>
+                    <div class="shop-product-info">
+                        <h3><?php echo esc_html($product->get_name()); ?></h3>
+                        <p class="shop-product-desc"><?php echo esc_html($product->get_short_description()); ?></p>
+                        <div class="shop-product-footer">
+                            <span class="shop-product-price">R<?php echo esc_html($product->get_price()); ?></span>
+                            <div class="shop-qty-controls">
+                                <button type="button" class="qty-btn qty-minus" aria-label="Decrease quantity">-</button>
+                                <span class="qty-value">0</span>
+                                <button type="button" class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                    endforeach;
+                endif;
+                ?>
+            </div>
+            <div class="shop-cart-link">
+                <a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="btn btn-outline">
+                    <i class="fas fa-shopping-cart"></i>
+                    View Cart &amp; Checkout
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact section" id="contact">
         <div class="container">
@@ -414,7 +435,7 @@ $theme_uri = get_template_directory_uri();
                         </div>
                         <div>
                             <h4>Phone</h4>
-                            <p><a href="tel:+27848888308">+27 84 888 8308</a></p>
+                            <p><a href="tel:+27660873258">066 087 3258</a></p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -423,7 +444,16 @@ $theme_uri = get_template_directory_uri();
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <p><a href="mailto:dr.srmaharajh@gmail.com">dr.srmaharajh@gmail.com</a></p>
+                            <p><a href="mailto:backontrackwellness13@gmail.com">backontrackwellness13@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <span class="emoji-icon">🏥</span>
+                        </div>
+                        <div>
+                            <h4>Practice Number</h4>
+                            <p>0395129</p>
                         </div>
                     </div>
                     <div class="info-card">

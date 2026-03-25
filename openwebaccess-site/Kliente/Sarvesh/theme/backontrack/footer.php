@@ -11,7 +11,7 @@
                     <div class="footer-social">
                         <a href="https://www.instagram.com/backontrack_chiro_and_wellness" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.youtube.com/@BackOnTrackWellness" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="mailto:dr.srmaharajh@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:backontrackwellness13@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -39,8 +39,8 @@
                     <h4>Contact</h4>
                     <ul>
                         <li><i class="fas fa-location-dot"></i> 16 Pioneer Road, Kloof, 3610</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+27848888308">+27 84 888 8308</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:dr.srmaharajh@gmail.com">dr.srmaharajh@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+27660873258">066 087 3258</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:backontrackwellness13@gmail.com">backontrackwellness13@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,7 +57,7 @@
     </button>
 
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/27848888308" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/27660873258" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
         <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
         <span class="whatsapp-text">Chat with us</span>
     </a>

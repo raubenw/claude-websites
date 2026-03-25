@@ -178,7 +178,7 @@
             })
             .catch(function() {
                 formStatus.className = 'form-status error';
-                formStatus.textContent = 'Something went wrong. Please try calling us at +27 84 888 8308 or emailing dr.srmaharajh@gmail.com directly.';
+                formStatus.textContent = 'Something went wrong. Please try calling us at 066 087 3258 or emailing backontrackwellness13@gmail.com directly.';
             })
             .finally(function() {
                 submitBtn.disabled = false;
@@ -221,6 +221,59 @@
             newIframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;';
             placeholder.remove();
             wrapper.appendChild(newIframe);
+        });
+    });
+
+    // ---- Shop Quantity +/- AJAX Controls ----
+    document.querySelectorAll('.shop-product').forEach(function(card) {
+        var productId = card.getAttribute('data-product-id');
+        if (!productId) return;
+        var minusBtn = card.querySelector('.qty-minus');
+        var plusBtn = card.querySelector('.qty-plus');
+        var qtyDisplay = card.querySelector('.qty-value');
+        if (!minusBtn || !plusBtn || !qtyDisplay) return;
+
+        function updateCart(action) {
+            minusBtn.disabled = true;
+            plusBtn.disabled = true;
+            var formData = new FormData();
+            formData.append('action', 'bot_update_cart');
+            formData.append('nonce', botAjax.cartNonce);
+            formData.append('product_id', productId);
+            formData.append('cart_action', action);
+
+            fetch(botAjax.ajaxUrl, { method: 'POST', body: formData, credentials: 'same-origin' })
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    if (data.success) {
+                        qtyDisplay.textContent = data.qty;
+                        qtyDisplay.classList.toggle('has-items', data.qty > 0);
+                        // Update cart link count if present
+                        var cartLink = document.querySelector('.shop-cart-link .btn-outline');
+                        if (cartLink && data.cart_total > 0) {
+                            cartLink.innerHTML = '<i class="fas fa-shopping-cart"></i> View Cart (' + data.cart_total + ')';
+                        } else if (cartLink) {
+                            cartLink.innerHTML = '<i class="fas fa-shopping-cart"></i> View Cart &amp; Checkout';
+                        }
+                    }
+                })
+                .finally(function() {
+                    minusBtn.disabled = false;
+                    plusBtn.disabled = false;
+                });
+        }
+
+        plusBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            updateCart('add');
+        });
+
+        minusBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            var current = parseInt(qtyDisplay.textContent, 10) || 0;
+            if (current > 0) {
+                updateCart('remove');
+            }
         });
     });
 

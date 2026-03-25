@@ -177,7 +177,7 @@
             })
             .catch(function() {
                 formStatus.className = 'form-status error';
-                formStatus.textContent = 'Something went wrong. Please try calling us at +27 84 888 8308 or emailing dr.srmaharajh@gmail.com directly.';
+                formStatus.textContent = 'Something went wrong. Please try calling us at 066 087 3258 or emailing backontrackwellness13@gmail.com directly.';
             })
             .finally(function() {
                 submitBtn.disabled = false;

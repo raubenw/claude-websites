@@ -28,19 +28,19 @@
         <div class="container">
             <div class="top-bar-content">
                 <div class="top-bar-left">
-                    <a href="tel:+27848888308" class="top-bar-item contact-highlight">
+                    <a href="tel:+27660873258" class="top-bar-item contact-highlight">
                         <i class="fas fa-phone"></i>
-                        <span>+27 84 888 8308</span>
+                        <span>066 087 3258</span>
                     </a>
-                    <a href="mailto:dr.srmaharajh@gmail.com" class="top-bar-item contact-highlight">
+                    <a href="mailto:backontrackwellness13@gmail.com" class="top-bar-item contact-highlight">
                         <i class="fas fa-envelope"></i>
-                        <span>dr.srmaharajh@gmail.com</span>
+                        <span>backontrackwellness13@gmail.com</span>
                     </a>
                 </div>
                 <div class="top-bar-right">
                     <span class="top-bar-item">
                         <i class="fas fa-clock"></i>
-                        <span>Mon&ndash;Fri: By Appointment | Sat: By Arrangement</span>
+                        <span>Monday to Saturday: By Appointment</span>
                     </span>
                 </div>
             </div>
@@ -67,6 +67,7 @@
                 <li><a href="<?php echo esc_url(home_url('/#services')); ?>" class="nav-link">Services</a></li>
                 <li><a href="<?php echo esc_url(home_url('/#red-light')); ?>" class="nav-link">Red Light Therapy</a></li>
                 <li><a href="<?php echo esc_url(home_url('/#videos')); ?>" class="nav-link">Videos</a></li>
+                <li><a href="<?php echo esc_url(home_url('/#shop')); ?>" class="nav-link">Shop</a></li>
                 <li><a href="<?php echo esc_url(home_url('/#contact')); ?>" class="nav-link">Contact</a></li>
                 <li><a href="<?php echo esc_url(home_url('/#contact')); ?>" class="nav-link nav-cta">Book Appointment</a></li>
             </ul>

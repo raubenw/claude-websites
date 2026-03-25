@@ -74,7 +74,7 @@ $serviceNames = [
 $serviceName = $serviceNames[$service] ?? 'Not specified';
 
 // Build email
-$to = 'dr.srmaharajh@gmail.com';
+$to = 'backontrackwellness13@gmail.com';
 $subject = "New Enquiry from {$firstName} {$lastName} - Back on Track Website";
 
 $body  = "New website enquiry received:\n\n";
@@ -98,5 +98,5 @@ if ($sent) {
     $_SESSION['last_submit'] = $now;
     echo json_encode(['success' => true, 'message' => 'Thank you! Your message has been sent successfully. Dr Maharajh will get back to you soon.']);
 } else {
-    echo json_encode(['success' => false, 'message' => 'There was an issue sending your message. Please try calling us at +27 84 888 8308.']);
+    echo json_encode(['success' => false, 'message' => 'There was an issue sending your message. Please try calling us at 066 087 3258.']);
 }

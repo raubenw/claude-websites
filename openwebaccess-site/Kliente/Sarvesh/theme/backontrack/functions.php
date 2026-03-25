@@ -30,6 +30,8 @@ function backontrack_scripts() {
     wp_localize_script('backontrack-main', 'botAjax', array(
         'ajaxUrl' => admin_url('admin-ajax.php'),
         'nonce'   => wp_create_nonce('bot_contact_nonce'),
+        'cartNonce' => wp_create_nonce('bot_cart_nonce'),
+        'cartUrl' => wc_get_cart_url(),
     ));
 }
 add_action('wp_enqueue_scripts', 'backontrack_scripts');
@@ -76,7 +78,7 @@ function backontrack_contact_form() {
     );
     $serviceName = $serviceNames[$service] ?? 'Not specified';
 
-    $to = 'dr.srmaharajh@gmail.com';
+    $to = 'backontrackwellness13@gmail.com';
     $subject = "New Enquiry from {$firstName} {$lastName} - Back on Track Website";
 
     $body  = "New website enquiry received:\n\n";
@@ -99,8 +101,52 @@ function backontrack_contact_form() {
         set_transient($rate_key, true, 30);
         wp_send_json(array('success' => true, 'message' => 'Thank you! Your message has been sent successfully. Dr Maharajh will get back to you soon.'));
     } else {
-        wp_send_json(array('success' => false, 'message' => 'Something went wrong. Please try calling us at +27 84 888 8308 or emailing dr.srmaharajh@gmail.com directly.'));
+        wp_send_json(array('success' => false, 'message' => 'Something went wrong. Please try calling us at 066 087 3258 or emailing backontrackwellness13@gmail.com directly.'));
     }
 }
 add_action('wp_ajax_bot_contact', 'backontrack_contact_form');
 add_action('wp_ajax_nopriv_bot_contact', 'backontrack_contact_form');
+
+// AJAX add/remove cart handler
+function backontrack_update_cart() {
+    check_ajax_referer('bot_cart_nonce', 'nonce');
+
+    $product_id = absint($_POST['product_id'] ?? 0);
+    $action = sanitize_text_field($_POST['cart_action'] ?? '');
+
+    if (!$product_id || !wc_get_product($product_id)) {
+        wp_send_json(array('success' => false, 'message' => 'Invalid product.'));
+    }
+
+    if ($action === 'add') {
+        WC()->cart->add_to_cart($product_id, 1);
+    } elseif ($action === 'remove') {
+        foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
+            if ($cart_item['product_id'] == $product_id) {
+                if ($cart_item['quantity'] > 1) {
+                    WC()->cart->set_quantity($cart_item_key, $cart_item['quantity'] - 1);
+                } else {
+                    WC()->cart->remove_cart_item($cart_item_key);
+                }
+                break;
+            }
+        }
+    }
+
+    // Get quantity for this product in cart
+    $qty = 0;
+    foreach (WC()->cart->get_cart() as $cart_item) {
+        if ($cart_item['product_id'] == $product_id) {
+            $qty = $cart_item['quantity'];
+            break;
+        }
+    }
+
+    wp_send_json(array(
+        'success' => true,
+        'qty' => $qty,
+        'cart_total' => WC()->cart->get_cart_contents_count(),
+    ));
+}
+add_action('wp_ajax_bot_update_cart', 'backontrack_update_cart');
+add_action('wp_ajax_nopriv_bot_update_cart', 'backontrack_update_cart');
