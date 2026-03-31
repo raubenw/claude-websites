@@ -460,16 +460,16 @@ https://backontrackwellness.co.za/
 
 ### Files Deployed
 
-| File | Size | Purpose |
-| --- | --- | --- |
-| `index.html` | 32,002 bytes | Complete single-page website |
-| `css/styles.css` | 29,569 bytes | Full responsive stylesheet |
-| `js/main.js` | 8,360 bytes | All interactivity |
-| `contact.php` | 3,565 bytes | PHP contact form handler |
-| `images/hero-banner.jpg` | 56,482 bytes | Facebook profile banner |
-| `images/red-light-therapy.jpg` | 240,862 bytes | Red light therapy image |
-| `images/infrared-therapy-info.jpg` | 57,565 bytes | Infrared therapy info graphic |
-| `images/infrared-full-body.jpg` | 147,346 bytes | Full body infrared therapy |
+| File                               | Size          | Purpose                       |
+| ---------------------------------- | ------------- | ----------------------------- |
+| `index.html`                       | 32,002 bytes  | Complete single-page website  |
+| `css/styles.css`                   | 29,569 bytes  | Full responsive stylesheet    |
+| `js/main.js`                       | 8,360 bytes   | All interactivity             |
+| `contact.php`                      | 3,565 bytes   | PHP contact form handler      |
+| `images/hero-banner.jpg`           | 56,482 bytes  | Facebook profile banner       |
+| `images/red-light-therapy.jpg`     | 240,862 bytes | Red light therapy image       |
+| `images/infrared-therapy-info.jpg` | 57,565 bytes  | Infrared therapy info graphic |
+| `images/infrared-full-body.jpg`    | 147,346 bytes | Full body infrared therapy    |
 
 ### Local Source Files
 
@@ -501,14 +501,14 @@ https://backontrackwellness.co.za/
 
 ### YouTube Videos Embedded
 
-| Video ID | Title | Views |
-| --- | --- | --- |
-| `fC6Mjb-qmyA` | Sciatica: Symptoms, Red Flags & Treatment (FEATURED) | 422 |
-| `8obxojxLjLg` | Poor Posture & Correction | 229 |
-| `jl2H06JLseQ` | Core Stability: McGill Big 3 | 158 |
-| `gzwYoo8yt1M` | Levator Scapulae & Neck Pain | 101 |
-| `jy7R26fHZG0` | Low Back Strength & Mobility | 54 |
-| `6cSsa3hAOfU` | Barefoot Shoes: What's the Hype? | 1,252 |
+| Video ID      | Title                                                | Views |
+| ------------- | ---------------------------------------------------- | ----- |
+| `fC6Mjb-qmyA` | Sciatica: Symptoms, Red Flags & Treatment (FEATURED) | 422   |
+| `8obxojxLjLg` | Poor Posture & Correction                            | 229   |
+| `jl2H06JLseQ` | Core Stability: McGill Big 3                         | 158   |
+| `gzwYoo8yt1M` | Levator Scapulae & Neck Pain                         | 101   |
+| `jy7R26fHZG0` | Low Back Strength & Mobility                         | 54    |
+| `6cSsa3hAOfU` | Barefoot Shoes: What's the Hype?                     | 1,252 |
 
 ### Contact Form (contact.php)
 
@@ -552,17 +552,17 @@ Built a full WordPress + WooCommerce e-commerce store for Mariaan at mehealth.co
 
 Created a complete custom WordPress theme with WooCommerce integration:
 
-| File | Purpose |
-| --- | --- |
-| `functions.php` | Theme setup, WC support, AJAX add-to-cart, cart fragments, EFT email instructions, contact form handler |
-| `header.php` | DOCTYPE, announcement bar, navigation with WC cart, mobile toggle |
-| `footer.php` | 4-column footer, WhatsApp float, scroll-to-top |
-| `front-page.php` | Full homepage: hero, categories, about, WC product grid, testimonials, contact form |
-| `style.css` | Complete CSS with WooCommerce overrides, responsive design |
-| `page.php` | Generic page template |
-| `woocommerce.php` | WC wrapper template |
-| `index.php` | Required WP fallback |
-| `js/main.js` | AJAX add-to-cart, contact form, preloader, AOS, navbar, product filter |
+| File              | Purpose                                                                                                 |
+| ----------------- | ------------------------------------------------------------------------------------------------------- |
+| `functions.php`   | Theme setup, WC support, AJAX add-to-cart, cart fragments, EFT email instructions, contact form handler |
+| `header.php`      | DOCTYPE, announcement bar, navigation with WC cart, mobile toggle                                       |
+| `footer.php`      | 4-column footer, WhatsApp float, scroll-to-top                                                          |
+| `front-page.php`  | Full homepage: hero, categories, about, WC product grid, testimonials, contact form                     |
+| `style.css`       | Complete CSS with WooCommerce overrides, responsive design                                              |
+| `page.php`        | Generic page template                                                                                   |
+| `woocommerce.php` | WC wrapper template                                                                                     |
+| `index.php`       | Required WP fallback                                                                                    |
+| `js/main.js`      | AJAX add-to-cart, contact form, preloader, AOS, navbar, product filter                                  |
 
 ### Design System
 
@@ -582,20 +582,22 @@ Created a complete custom WordPress theme with WooCommerce integration:
 ### Products Imported (20 total)
 
 #### Published with prices (10):
-| Product | Price | Category |
-| --- | --- | --- |
-| Essential Oil Gift Package (Lavender & Wintergreen) | R285 | Oils & Creams |
-| Essential Oil Gift Package | R340 | Oils & Creams |
-| dōTERRA Essential Oil 15ml | R340 | Oils & Creams |
-| Tea Tree Essential Oil 15ml | R195 | Oils & Creams |
-| Reishi Mushroom Capsules | R450 | Coffee & Wellness |
-| Mushroom Coffee | R185 | Coffee & Wellness |
-| Alkaline Water 5L | R120 | Coffee & Wellness |
-| Natural Face Cream | R185 | Oils & Creams |
-| Fox Diffuser | R1150 | Diffusers |
-| Cola Diffuser | R1150 | Diffusers |
+
+| Product                                             | Price | Category          |
+| --------------------------------------------------- | ----- | ----------------- |
+| Essential Oil Gift Package (Lavender & Wintergreen) | R285  | Oils & Creams     |
+| Essential Oil Gift Package                          | R340  | Oils & Creams     |
+| dōTERRA Essential Oil 15ml                          | R340  | Oils & Creams     |
+| Tea Tree Essential Oil 15ml                         | R195  | Oils & Creams     |
+| Reishi Mushroom Capsules                            | R450  | Coffee & Wellness |
+| Mushroom Coffee                                     | R185  | Coffee & Wellness |
+| Alkaline Water 5L                                   | R120  | Coffee & Wellness |
+| Natural Face Cream                                  | R185  | Oils & Creams     |
+| Fox Diffuser                                        | R1150 | Diffusers         |
+| Cola Diffuser                                       | R1150 | Diffusers         |
 
 #### Published without prices (10 — pending Mariaan's pricing):
+
 - Oil Storage Case, Natural Cream 50ml, Natural Cream 100ml, Oregano Latte Coffee
 - Essential Oil Roller Bottle, dōTERRA Breathe 15ml, dōTERRA Tea Tree 15ml
 - dōTERRA Peppermint 15ml, dōTERRA Lavender 15ml, dōTERRA Oregano 15ml
@@ -663,3 +665,81 @@ Created a complete custom WordPress theme with WooCommerce integration:
 ---
 
 _This chat history is maintained as part of the claude-websites repository._
+
+---
+
+## Dentist On Olifants Website Fixes
+
+### Date: March 31, 2026
+
+### Overview
+
+Applied fixes to the Dentist On Olifants static website hosted on HostGator.
+
+### Location & FTP Details
+
+- **Live URL:** https://openwebaccess.com/clients/dentistonolifants/
+- **Server path:** `/openwebaccess/clients/dentistonolifants/`
+- **FTP:** 108.167.143.76 with `claude-ftp@wernerraubenheimer.com`
+
+### Fixes Applied
+
+| Issue | Fix |
+|-------|-----|
+| Location button not linking to maps | Updated icon/button to link to Google Maps: `https://www.google.com/maps/search/25+Olifants+Road+Emmarentia+Randburg` |
+| Incorrect address | Changed to "25 Olifants Road, Emmarentia" everywhere (hero, contact section, footer) |
+| Saturday hours showing open | Added "Saturday: Closed" row to practice hours table |
+| Top bar hours incorrect | Updated from "Mon–Sat" to "Mon–Fri: 8am – 5pm \| Sat: Closed" |
+| Wrong team member showing | Removed Kayshree Mudly (team-1.png), replaced with Dr. Evanti Sims (team-2.png) as Lead Dental Surgeon |
+
+### Files Modified
+
+- `index.html` — All content fixes applied
+
+---
+
+## MeHealth Shop Page Styling & Lightbox
+
+### Date: March 31, 2026
+
+### Overview
+
+Fixed the MeHealth.co.za shop page styling to match the homepage tile design, and added a lightbox popup feature for product images.
+
+### Problems Fixed
+
+1. **Shop page images cropped/zoomed** — WooCommerce default styling was showing products cropped at 300x300. Fixed with inline CSS in `woocommerce.php` template that loads after WooCommerce's CSS.
+
+2. **Homepage images too zoomed** — Changed `object-fit: cover` to `object-fit: contain` with padding so full products are visible.
+
+### Features Added
+
+- **Image lightbox popup** — Click any product image (homepage or shop) to see a larger version in a modal overlay
+  - Dark semi-transparent backdrop
+  - Close via X button, click outside, or ESC key
+  - Loads full-size image (strips WooCommerce thumbnail suffixes)
+  - Mobile-friendly
+
+### Technical Solution
+
+Added inline `<style>` block directly in `woocommerce.php` template (loads after WooCommerce CSS) with:
+- `object-fit: contain` for full product display
+- `padding: 25px` for breathing room
+- `background-color: #f5f1ec` (cream) for consistent look
+- CSS Grid layout for product cards
+- Card shadows and hover effects
+- Styled add-to-cart buttons
+
+### Files Modified
+
+| File | Changes |
+|------|---------|
+| `style.css` | Added homepage product image `object-fit: contain`, lightbox CSS, WooCommerce shop selectors |
+| `woocommerce.php` | Added inline CSS block for shop page styling (bypasses WooCommerce CSS specificity) |
+| `main.js` | Added lightbox module with click handlers for product images |
+
+### Path
+
+`/mehealth.co.za/wp-content/themes/mehealth/`
+
+---

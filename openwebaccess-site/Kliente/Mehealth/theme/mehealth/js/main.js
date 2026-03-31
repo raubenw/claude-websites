@@ -201,10 +201,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const href = anchor.getAttribute("href");
       // Only handle hash-only or same-page hash links
       if (!href || href === "#") return;
-      
+
       const hashIndex = href.indexOf("#");
       if (hashIndex === -1) return;
-      
+
       const hash = href.substring(hashIndex);
       const target = document.querySelector(hash);
       if (target) {
@@ -217,29 +217,32 @@ document.addEventListener("DOMContentLoaded", () => {
   // -------- WooCommerce AJAX Add to Cart feedback --------
   // WooCommerce fires this event when item is added to cart via AJAX
   if (typeof jQuery !== "undefined") {
-    jQuery(document.body).on("added_to_cart", function (e, fragments, cart_hash, $button) {
-      // Update cart count from fragments
-      if (fragments && fragments[".cart-count"]) {
-        document.querySelectorAll(".cart-count").forEach((el) => {
-          el.textContent = fragments[".cart-count"];
-        });
-      }
+    jQuery(document.body).on(
+      "added_to_cart",
+      function (e, fragments, cart_hash, $button) {
+        // Update cart count from fragments
+        if (fragments && fragments[".cart-count"]) {
+          document.querySelectorAll(".cart-count").forEach((el) => {
+            el.textContent = fragments[".cart-count"];
+          });
+        }
 
-      // Button feedback
-      if ($button && $button.length) {
-        const btn = $button[0];
-        const original = btn.textContent;
-        btn.textContent = "✓ Added!";
-        btn.style.background = "#4caf50";
-        btn.style.borderColor = "#4caf50";
+        // Button feedback
+        if ($button && $button.length) {
+          const btn = $button[0];
+          const original = btn.textContent;
+          btn.textContent = "✓ Added!";
+          btn.style.background = "#4caf50";
+          btn.style.borderColor = "#4caf50";
 
-        setTimeout(() => {
-          btn.textContent = original;
-          btn.style.background = "";
-          btn.style.borderColor = "";
-        }, 1500);
-      }
-    });
+          setTimeout(() => {
+            btn.textContent = original;
+            btn.style.background = "";
+            btn.style.borderColor = "";
+          }, 1500);
+        }
+      },
+    );
   }
 
   // -------- Contact Form (AJAX → WordPress) --------
@@ -281,7 +284,8 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.style.borderColor = "#e74c3c";
             if (msgDiv) {
               msgDiv.className = "form-message error";
-              msgDiv.textContent = data.data || "Something went wrong. Please try again.";
+              msgDiv.textContent =
+                data.data || "Something went wrong. Please try again.";
               msgDiv.style.display = "block";
             }
           }
