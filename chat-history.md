@@ -698,6 +698,79 @@ Applied fixes to the Dentist On Olifants static website hosted on HostGator.
 
 ---
 
+## MeHealth Mobile Layout Fixes
+
+### Date: March 31, 2026
+
+### Overview
+
+Applied three mobile layout improvements to mehealth.co.za after user feedback from mobile screenshots.
+
+### Issues Reported & Fixed
+
+| Issue | User Request | Fix Applied |
+|-------|--------------|-------------|
+| Hero badge cut off at top | "The top button gets cut off. Please add more spacing" | Added `margin-top: 20px` to `.hero-badge` in mobile media query (line 1791) |
+| Product footer crowded on mobile | "Place vertically centered underneath each other" | Added mobile CSS for `.product-footer`: `flex-direction: column; align-items: center; gap: 12px;` (lines 1794-1797) |
+| Testimonial text incorrect | "Change the line to 'the Lavender and peppermint gift set...'" | Changed "Wintergreen" to "Peppermint" in testimonials section (front-page.php line 312) |
+
+### Files Modified
+
+| File | Changes |
+|------|---------|
+| `style.css` | Added `margin-top: 20px` to `.hero-badge` mobile styles; Added `.product-footer` mobile stacking rule |
+| `front-page.php` | Changed "Lavender & Wintergreen Gift Set" to "Lavender & Peppermint Gift Set" in first testimonial |
+
+### Deployment
+
+- **Uploaded via FTP:** Both files uploaded to `/mehealth.co.za/wp-content/themes/mehealth/`
+- **Verified live:** CSS changes confirmed at lines 1791-1797; Testimonial text shows "Peppermint"
+- **QC check:** All 3 changes verified exact match to user requirements
+
+### CSS Changes (style.css mobile query)
+
+```css
+.hero-badge {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    margin-top: 20px;  /* NEW - prevents cutoff */
+}
+
+.product-footer {      /* NEW - vertical stacking */
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+```
+
+---
+
+## Fox Diffuser Image Replacement
+
+### Date: March 31, 2026
+
+### Overview
+
+Replaced the Fox Diffuser product image on mehealth.co.za with a new colorful orange fox image provided by the user.
+
+### Details
+
+| Field | Value |
+|-------|-------|
+| Product | Fox Diffuser (R1,150) |
+| Old image | Generic diffuser photo |
+| New image | Colorful orange fox diffuser with small oil bottle |
+| Source file | `Fox Diffuser R1150jpg.jpg` (93,988 bytes) |
+| Server path | `/wp-content/uploads/2026/03/Fox-diffuser-R1150-met-klein-olie.jpg` |
+
+### Deployment
+
+- **Method:** Direct FTP upload to existing image path (overwrites old image)
+- **Verified:** HTTP HEAD shows Content-Length: 93,988 bytes, Last-Modified: 2026-03-31 17:55:14 GMT
+- **No WooCommerce changes needed:** Product already linked to this image path
+
+---
+
 ## MeHealth Shop Page Styling & Lightbox
 
 ### Date: March 31, 2026
