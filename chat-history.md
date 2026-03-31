@@ -816,3 +816,38 @@ Added inline `<style>` block directly in `woocommerce.php` template (loads after
 `/mehealth.co.za/wp-content/themes/mehealth/`
 
 ---
+
+## Web Design Business Market Research Document
+
+### Date: March 31, 2026
+
+### Overview
+
+Created a comprehensive market research document (`market-research.md`) for DijiSol Solutions / Open Web Access covering how to run a successful web design & development business.
+
+### Research Scope
+
+- **265+ sources referenced** across 12 major sections
+- **Focus:** 70% international, 30% South African context
+- **Live research sources used:** Wix Studio Blog (13-step business startup guide), WPBeginner (domain registrar comparison 2026), Nielsen Norman Group (10 Usability Heuristics), Forbes Advisor ("10 Best Web Hosting for Small Businesses of 2026")
+
+### Document Sections
+
+1. **Executive Summary** — Industry size ($56B), growth projections, opportunity analysis
+2. **Starting & Structuring Your Business** — Niche selection, legal structures (international + SA), contracts, business planning
+3. **Services to Offer** — Core services, recurring revenue streams, high-demand add-ons, package pricing
+4. **Design Best Practices** — Nielsen's 10 heuristics, mobile-first design, WCAG accessibility, Core Web Vitals, typography, colour theory, conversion patterns
+5. **Pricing Strategy** — 5 pricing models, international rate benchmarks (US/UK/EU/AU/CA), South African market rates in ZAR, value-based pricing methodology, rate calculation formula
+6. **Marketing & Client Acquisition** — Portfolio site structure, content marketing, social media strategy, SEO, cold outreach, freelance platforms, networking, personal branding
+7. **Hosting & Infrastructure** — Hosting types comparison, 30+ providers across budget/mid-range/premium/cloud/SA categories, agency hosting strategy with revenue model
+8. **Domain Registration** — Top registrars with pricing, SA domain registration (.co.za), management best practices
+9. **Tools & Software Stack** — Design, development, project management, CRM, accounting, communication, AI tools (40+ tools listed with pricing)
+10. **Processes & Workflows** — Project lifecycle, client onboarding, communication best practices, proposal structure, QA checklist, post-launch handover
+11. **Scaling & Growth** — Revenue stages, hiring order, white-labeling, recurring revenue model, continuing education resources
+12. **Sources Referenced** — Full catalog of 265 sites organized by category (business, design, development, SEO, social media, hosting, domains, SA resources, platforms, tools, AI, design inspiration, books, YouTube, podcasts, communities)
+
+### File Created
+
+`market-research.md` — ~1,200 lines, comprehensive Markdown document
+
+---
